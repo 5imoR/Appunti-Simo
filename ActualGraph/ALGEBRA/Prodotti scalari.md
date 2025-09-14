@@ -1,3 +1,4 @@
+[[ALGEBRA]][[Determinante]]
 $$
 V=\mathbb{R}^2\qquad\qquad
 v=(a,b)\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad
@@ -29,3 +30,37 @@ $v,\ w\in \mathbb{R}^n$:
 ### Teorema di Cauchy-Schwarz
 $|v\cdot w|\leq ||v||\ ||w||$  quindi:
 $\displaystyle-1\leq \frac{v\cdot w}{||v||\ ||w||} \leq 1$  è sempre vera  
+
+### Area di un parallelogramma (in $\mathbb{R}^n$)
+
+![[parallelogramma|300]]
+$v,\ w \in\mathbb{R}^n\qquad h=||w||\sin(\alpha)$
+$$
+\begin{align}
+Area(P)=& ||v||\cdot ||w||\cdot\sin(\alpha) = ||v|| \cdot h\\
+(Area(P))^2&= ||v||^2\cdot ||w||^2\cdot\sin^2(\alpha)\\
+&=||v||^2\cdot ||w||^2\cdot(1-\cos^2(\alpha))\\
+&= ||v||^2\cdot ||w||^2-(v\cdot w)^2\\
+&=(v\cdot v)(w\cdot w)-(v\cdot w)^2\\
+&=det
+\begin{bmatrix}
+v\cdot v & v\cdot w\\
+w\cdot v & w\cdot w\\
+\end{bmatrix}
+\end{align}
+$$
+#### Se sono presenti 3 vettori
+![[Cubo|300]]
+$v,\ w,\ u \in\mathbb{R}^n \qquad h=||w||\sin(\alpha)$ 
+$$
+\begin{align}
+&Volume =Area\ di\ base \times h\\
+& det 
+\begin{bmatrix}
+u\cdot u & u\cdot v & u\cdot w\\
+v\cdot u & v\cdot v & v\cdot w\\
+w\cdot u & w\cdot v & w\cdot w\\
+\end{bmatrix}
+= Volume^2
+\end{align}
+$$
