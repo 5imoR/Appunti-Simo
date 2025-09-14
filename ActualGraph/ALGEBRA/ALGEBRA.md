@@ -1,3 +1,6 @@
+[Bottacin](https://www.youtube.com/watch?v=mGQN95Bxxl8&list=PLhEwqlL10MqMSHePf3Kn4T8AaR0ItUUer&index=1)
+Lezioni saltate(35)
+
 $f:V \rightarrow W$ 
 
 
