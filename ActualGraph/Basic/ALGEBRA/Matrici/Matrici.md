@@ -161,6 +161,8 @@ $$ con a sinistra le ultime matrici applicate
 
 
 
+
+## Tipi di Matrici
 ### Matrici simili
 Si dicono simili se rappresentano la stessa funzione rispetto a basi diverse
 $$
@@ -179,6 +181,12 @@ Questo vuol dire che devono esserci massimo n autovalori e ogni autovalore deve 
 #simmetrica
 $A$ è simmetrica se $A^T=A$ 
 A è antisimmetrica se $A^T = -A$ 
+
+### Matrici di Proiezione
+
+
+
+##
 ## Matrice e funzioni lineari
 $A$ matrice $m\times n$ ($m$ righe e $n$ colonne)
 - $A$ corrisponde alla funzione lineare:  

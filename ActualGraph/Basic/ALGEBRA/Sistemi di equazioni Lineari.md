@@ -169,11 +169,15 @@ a_{m1} & a_{m2} & \dots & a_{mn} & \vdots &b_m
 \end{align}
 $$
 $rango(A) = r$
-$rango(A\:\vdots \: B$ se:
-- $= r+1$ $B$ è linearmente indipendente  dalle colonne di $A$
+$rango(A\:\vdots \: B)$ se:
+- $= r+1$ allora $B$ è linearmente indipendente  dalle colonne di $A$
 - $=r$ B è linearmente dipendente dalle colonne di $A$
 
 sono presenti $n$ incognite nel nostro sistema se:
 - $r=n$ la soluzione è unica 
 - $r<n$ ci sono $\infty$ soluzioni  ($\infty^{n-r}$)
 
+# Come risolvere sistemi lineari che non ammettono soluzioni
+
+### Metodo dei minimi quadrati
+Si cerca di minimizzre la somma dei quadrati degli errori (lez. 34)

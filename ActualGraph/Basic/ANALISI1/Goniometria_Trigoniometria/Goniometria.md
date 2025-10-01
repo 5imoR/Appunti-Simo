@@ -1,5 +1,5 @@
 [[ANALISI1]]
-![[Excalidraw/Goniometria|Goniometria|300]]
+![[Excalidraw/Basic/Analisi/Goniometria|Goniometria|300]]
 #### Conversioni
 - $180\degree = \pi$ rad
 ###### Esempio
