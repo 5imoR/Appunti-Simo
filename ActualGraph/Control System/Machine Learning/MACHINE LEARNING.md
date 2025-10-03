@@ -32,20 +32,3 @@ L'output può essere:
 
 - Reinforcement Learning: L'agente viene ricompensato per svolgere il compito correttamente. In control system è l'opposto si guarda la perdita che deve essere più vicino allo zero possibile
 
-# Binary Classification(non mi è chiaro quello che segue)
-- $x \in X (= \mathbb{R}^d)$
-- $y\in \{0,1\}$
-- $S=\{z_i\quad i=1 ... n\}$ 
-
-**Assumption on data**
-- $x\sim \overline S_x$ 
-- $y|x \sim \overline S_{y|x}$ 
-**Loss Function**
-- $l(h,z)\geq 0$
-- close to $0$ if it's good
-- $l(h,z)=\begin{cases}1\quad h(x) \neq y\\0\quad h(x)=y\end{cases}$ 
-**Empirical Loss (Risk)**
-- $L_s=1/m\sum_{i=1}^ml(h,z_i)$ 
-- $h \in H$
-- $S= \{z_i\quad i=1 ...m\}$
-da finire

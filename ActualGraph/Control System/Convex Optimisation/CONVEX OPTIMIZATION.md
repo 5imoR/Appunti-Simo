@@ -104,3 +104,5 @@ $$
 \end{cases}
 $$
 
+#### LQR Example
+[Pagina 5](https://stem.elearning.unipd.it/pluginfile.php/1215074/mod_resource/content/2/Introduction.pdf) 
