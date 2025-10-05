@@ -13,7 +13,7 @@ La trasformata di fourier permette di passare dal dominio del tempo a quello del
 $$
 \int_{-\infty}^{\infty}{f(t)e^{-jwt}dt}\qquad\qquad e^{jt}=\cos(t)+j\sin(t)
 $$
-![[fourier.PNG]]
+![[fourier.png]]
 Nel dominio delle frequenze si vedrà che all'aumentare della frequenza l'ampiezza tende a 0
 
 ![[f1.PNG]]

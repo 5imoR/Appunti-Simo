@@ -322,7 +322,7 @@ J_\lambda=\begin{bmatrix}
 &\lambda&1\\
 &&\ddots&\ddots\\
 &&&\lambda&1
-\end{bmatrix}=\lambda I_\nu+J_0\quad\text{(non importa il veros della moltiplicazione in questo caso)}
+\end{bmatrix}=\lambda I_\nu+J_0\quad\text{(non importa il verso della moltiplicazione in questo caso)}
 $$
  **Newton's binomial formula**
  $\displaystyle(a+b)^t=\sum_{i=0}^t\binom{t}{i}a^{t-i}b^i$  dove $\displaystyle\binom{t}{i}=\frac{n!}{k!(n-k)!}$ 
