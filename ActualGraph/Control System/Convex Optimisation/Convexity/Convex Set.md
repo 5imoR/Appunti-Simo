@@ -1,45 +1,6 @@
-[[CONVEX OPTIMIZATION]] #CO-L2
-
-Convexity è una proprietà chiave per la soluzione ed ottimizzazione dei problemi.
-# Affine Combination
-Dati: $x,y \in \mathbb{R}^N$ chiamiamo affine combination 
-$$
-\begin{align}
-&y=\theta_1x_1+\theta_2x_2\\
-&\theta_1+\theta_2=1 \qquad \theta_1,\theta_2 \in \mathbb R
-\end{align}
-$$
-Andando a mettere tutto insieme si ottiene:
-$$
-y=\theta_1x_1+(1-\theta_1)x_2=x_2+\theta_1(x_1+x_2)
-$$
-
-| ![[affineComb\|200]] | L'affine combination di $x_1,\ x_2$ è una linea che passa su di loro.<br> |
-| -------------------- | ------------------------------------------------------------------------- |
-In generale dati $m$ punti e $m$ moltiplicatori ($\theta$) la combinazione affine è:
-$$
-y=\sum_{i=1}^m\theta_ix_i  \qquad\qquad  \sum_{i=1}^m\theta_i=1
-$$
-### Affine set
-Un set si dice affine se contiene tutte le affine combinations dei suoi punti
-In sintesi un affine set è uno sottospazio vettoriale che non necessita di passare nell'origine
-
-Un affine set $C= V+x_0$ dove $x_0 \in C$ e $V$ è un sottospazio vettoriale e possiamo dire che:$dim(C)=dim(V)$ 
-![[relIntNonFullDimSet]]
-### Affine hull 
-Dato un set $C$ si dice affine hull il set $aff(C)$  di tutti i punti ottenuti tramite combinazioni affini degli elementi di $C$. Questo è anche l' affine set più piccolo contenente $C$  
-### Relative interior
-Il relative interior di $C$ è definito come l'interno di $C$ rispetto al suo affine hull $aff(C)$
-$$
-relint(C)=\{x\in C\ |\ B(x,r)\cap aff(C)\subseteq C\text{ per alcuni }r>0\}\qquad B(x,r)=\text{sfera di raggio r in x}
-$$
-Qundi:
-- regular interior: sarebbe il volume di sfera interna a $C$, vuoto se il set non è *full dimensional* ad esempio il caso di: $dim(C)<dim(\mathbb{R})$ 
-- relative interior: è la sezione della sfera contenuta in $C$ in ogni caso.
-
-Possiamo definire *relative boundary* come $relbd(C)=cl(C)\backslash\ relint(C)$ 
-
-# Convex Combination
+[[Affine Combinations]] #CO-L2 
+## Convex Combination
+Una combinazione convessa è simile ad una affine ma con l'aggiunta che $\theta_1,_2$ devono essere positivi. 
 $$
 \begin{align}
 &y=\theta_1x_1+\theta_2x_2\\
@@ -52,7 +13,7 @@ L'unica differenza da un affine set è che ora: $\theta_1,\theta_2\in \mathbb{R}
 In generale dati $m$ punti e $m$ moltiplicatori la convex combination è:
 	(uguale ad affine) cambia solo il dominio dei moltiplicatori
 $$y=\sum_{i=1}^m\theta_ix_i  \qquad\qquad  \sum_{i=1}^m\theta_i=1$$
-### Convex Set 
+## Convex Set 
 Un set è convex se contiene tutte le combinazioni convesse dei suoi punti
 ![[convexSet|600]]
 
@@ -63,17 +24,17 @@ Dato un set $C$ definiamo il convex hull $conv(C)$ il set di tutti i punti che p
 Alcuni esempi di convex set:
 - $\emptyset\ and\ \mathbb R$
 - qualunque affine set
-- hyperplanes: $\{x|a^\perp x=b\}\qquad \forall a\in\mathbb R^n,\ a\neq0,b\in\mathbb R$  
+- hyperplanes: $\{x|a^T x=b\}\qquad \forall a\in\mathbb R^n,\ a\neq0,b\in\mathbb R$  
 	il piano ortogonale ad un vettore
-- halfspaces: $\{x|a^\perp x\leq b\}\qquad \forall a\in\mathbb R^n,\ a\neq0,b\in\mathbb R$ 
+- halfspaces: $\{x|a^T x\leq b\}\qquad \forall a\in\mathbb R^n,\ a\neq0,b\in\mathbb R$ 
 	quello che è sopra o sotto l'iperpiano
 - Euclidean balls:$B(x_c,r)=\{x|\ \lVert{x-x_c}\rVert\leq r\} \qquad \forall x_c\in\mathbb R^n,\  r>0$ 
-- Ellipsoids:$\xi(x_c, P,r)=\{x| (x-x_c)^\perp P^{-1}(x-x_c)\leq r\}$
+- Ellipsoids:$\xi(x_c, P,r)=\{x| (x-x_c)^T P^{-1}(x-x_c)\leq r\}$
 	per ogni $P\succ 0$ con centro in $x_c\in \mathbb{R}^n$ e raggio $r>0$ 
 - polyhedra $P=\{x| A_x\leq b,Cx=d\}$
 
 
-## Calculus of convex sets
+### Calculus of convex sets
 Per provare che un set sia convesso lo si deve ottenere da un set più semplice(convesso) tramite delle operazioni che lo tengano convesso.
 - **Intersection** Data una famiglia $\mathcal A$ di convex sets la loro intersezione$$C=\bigcap_{\alpha\in\mathcal A} C_\alpha$$
 	Esempio: The positive semidefinite cone $S_+^n$ può essere espresso come:
@@ -86,7 +47,7 @@ Per provare che un set sia convesso lo si deve ottenere da un set più semplice(
 - **Linear Combinations** Dati $M_1\dots M_k$ convex sets in $\mathbb R^n$ e moltiplicatori arbitrari $\lambda_1\dots\lambda_k$ il set $\sum_{i=1}^k\lambda_iM_i$ è un set convesso
 - **Projection** Sia $S\in\mathbb R^m\times\mathbb R^n$ un convex set. La sua proiezione è un convex set$$T=proj_{R^m}(S)=\{x\in \mathbb R^m|(x,y)\in S \text{ per qualche } y\in \mathbb R^n\}$$
 	![[Projection|200]]
-## Topological properties
+### Topological properties
 Per ogni  subset $M\subseteq \mathbb R^n$ possiamo dire che:
 $$relint(M)\subseteq M\subseteq cl(M)$$
 Per i convex set la situazione è migliore. Se $M$ è un convex set allora:
@@ -96,3 +57,42 @@ Per i convex set la situazione è migliore. Se $M$ è un convex set allora:
 - $relint(M)=relint(cl(M))$
 Dalla quale si deduce:
 Se M è un convex set $x\in relint(M)$ e $y\in cl(M)$ allora abbiamo che l'intero segmento$[x,y)\subseteq relint(M)$ 
+
+## Separation Theorem
+![[Separation Theorem]]
+## Convex Functions
+Una funzione $f:\mathbb R^n \rightarrow\mathbb R$ si dice convessa se il suo domino $dom(f)$ è un convex set e per ogni $x,y\in dom(f)$ e per tutti $0\leq \theta\leq 1$ abbiamo:
+$$
+f(\theta x+(1-\theta)y)\leq\theta f(x)+(1-\theta)f(y)
+$$
+![[convex function]]
+In alernativa si può dire che $f(x)$ è convessa se:
+(se quello che sta sopra la funzione è un convex set)
+$$
+epi(f)=\{(x,t)\in\mathbb{R}^{n+1}|x\in dom(f), t\geq f(x)\}
+$$
+è un convex set.
+
+**Definition** Una funzione $f:\mathbb R^n \rightarrow\mathbb R$ è concave se se $-f$ è convessa
+Una qualunque affine function è sia concava che convessa
+
+
+Alcuni esempi di convex/concave functions:
+-  $e^{ax}\rightarrow$ convex $\forall a\in \mathbb R$
+-  $x^{a}\rightarrow$ convex $a\geq 1 \wedge a\leq 0$              $\rightarrow$ concave $0\leq 1\leq 1$
+-  $|x|^p\rightarrow$ convex $p\geq 1$ 
+-  $\log x\rightarrow$ concave 
+-  qualunque norm in $\mathbb R^n\rightarrow$ convex
+-  la funzione max$\rightarrow$ convex
+
+### Calculus of convex functions
+Come per i convex set spesso conviene dimostrare che la funzione è convessa perchè deriva da funzioni convesse più semplici tramite opportune operazioni
+
+- **Non-negative weighted sum** Date $n$ convex function e $n$ non-negative weights la funzione  è una funzione convessa $$f=\sum_{i=1}^nw_if_i$$
+- **Composition with affine mappings** Se $f:\mathbb R^n \rightarrow\mathbb R$ è una funzione convessa, $A\in \mathbb R^{n\times m}$ e $b\in\mathbb R^n$ allora è una funzione convessa
+$$
+f(Ax+b)
+$$
+- **Positive maximum and supremum** Se $f_1$ e $f_2$ sono funzioni convesse il loro *pointwise maximum* $f(x)=\max\{f_1,f_2\}$ è una funzione convessa.Questo si espende and un numero finito di $k$ funzioni o infinito se si considera il supremum.In altre parole data una famiglia di convex function $\mathcal A$  il *pointwise supremum* è:$$g(x)=\sup_{a\in\mathcal A}f_a(x)$$
+	![[pwmax]]
+- **Partial munimization** Se $f(x,y)$ è convessa e $C$ è un convex set allora è una funzione convessa $$g(x)=\inf_{y\in C}f(x,y)$$

@@ -34,12 +34,40 @@ X(z)\triangleq \mathcal{Z}[x(t)]\\
 Y(z)\triangleq \mathcal{Z}[y(t)]
 \end{align}
 $$
-$\color{orange}\text{Lo rivediamo la volta dopo manca la parte finale ma non l'ho capita}$
-
-applicando$\mathcal{Z}[\ \cdot\ ]$  ad entrambi i lati delle equazioni si ottiene:
+#ST-L3 
+soddisfano:
 $$
 \begin{align}
-zX(z)-z\ x_o=FX(z)+GU(z)\longrightarrow (zI-F)X(z)=z\ x_0+GU(z)\\
-
+&X(z)=(zIn-F)^{-1}z\ x_0+(zIn-F)^{-1}GU(z)\\
+&Y(z)=H(zIn-F)^{-1}z\ x_0+[(zIn-F)^{-1}G+D]U(z)\\
 \end{align}
 $$
+Siccome il sistema è lineare ad abbiamo visto che:
+$$
+\begin{align}
+&x(t)=x_l(t)+x_f(t)\\
+&y(t)=y_l(t)+y_f(t)
+\end{align}
+$$
+
+Per composizione possiamo definire che:
+$$
+\begin{align}
+&(zIn-F)^{-1}z\ x_0 &=X_l(z)=\mathcal{Z}[x_l(t)]\\
+&(zIn-F)^{-1}GU(z) &=X_f(z)=\mathcal{Z}[x_f(t)]\\
+&H(zIn-F)^{-1}z\ x_0 &=Y_l(z)=\mathcal{Z}[y_l(t)]\\
+&[(zIn-F)^{-1}G+D]U(z) &=Y_f(z)=\mathcal{Z}[y_f(t)]\\
+\end{align}
+$$
+Definiamo la matrice di trasferimento dello s.s.m. $\Sigma=(F,G,H,D)$ :
+$$
+W(z)\triangleq H(zIn-F)^{-1}G+D
+$$
+
+Sappiamo che questa matrice è invertibile quindi:
+$$
+(zI_1-F)^{-1}=\frac{1}{\det(zI_1-F)}\cdot adj(zI_1-F)=\frac{1}{\Delta_F(z)}{\color {orange}adj}(zIn-F)
+$$
+- $\Delta_F(z)$ è un polinomio monico di grado $n$ (polinomio caratteristico)
+- $adj(zI_1-F)$ è una matrice $n\times n$  polinomiale nella quale le entry hanno il grado $\leq n-1$ 
+	$adj(M)=(-1)^{i+j}det(M\text{ colonna i e riga j})$ 

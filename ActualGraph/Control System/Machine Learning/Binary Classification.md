@@ -59,7 +59,7 @@ Il problema è che la nostra ipotesi si basa sul data set e di conseguenza non �
 Una model class $H$ è in accordo con la realizability assumption (con la distribuzione $\mathcal D$) se 
 $\exists h^*\in H \text{ tale che }L_D(h^*)=0$  ovvero serve che $h=f$ 
 
-### Theorem
+### Theorem 1
 Se abbiamo:
 - Binary Class Problem con una perdita tra $0-1$ 
 - E' data una model class $M$ finita
@@ -70,3 +70,4 @@ Se $\displaystyle m>m_M(\epsilon, \delta)=\frac{1}{\epsilon}\ln(\frac{|H|}{\delt
 allora $P[L_D(\hat h_s >\epsilon ]<\delta$ 
 dove $\hat h_s\in argmin\ L_S(h)$ 
 	Vuol dire che se l'equazione è rispettata  allora la regola ha un errore maggiore di $\epsilon$ con una probabilità minore di $\delta$
+
