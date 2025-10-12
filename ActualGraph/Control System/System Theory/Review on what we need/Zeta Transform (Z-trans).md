@@ -34,12 +34,12 @@ X(z)\triangleq \mathcal{Z}[x(t)]\\
 Y(z)\triangleq \mathcal{Z}[y(t)]
 \end{align}
 $$
-#ST-L3 
+#ST-L4 
 soddisfano:
 $$
 \begin{align}
-&X(z)=(zIn-F)^{-1}z\ x_0+(zIn-F)^{-1}GU(z)\\
-&Y(z)=H(zIn-F)^{-1}z\ x_0+[(zIn-F)^{-1}G+D]U(z)\\
+&X(z)=\underbrace{(zIn-F)^{-1}z\ x_0}_{x_l}+\underbrace{(zIn-F)^{-1}GU(z)}_{x_f}\\
+&Y(z)=\underbrace{H(zIn-F)^{-1}z\ x_0}_{y_l}+\underbrace{[(zIn-F)^{-1}G+D]U(z)}_{y_f}\\
 \end{align}
 $$
 Siccome il sistema è lineare ad abbiamo visto che:
@@ -64,10 +64,28 @@ $$
 W(z)\triangleq H(zIn-F)^{-1}G+D
 $$
 
-Sappiamo che questa matrice è invertibile quindi:
-$$
-(zI_1-F)^{-1}=\frac{1}{\det(zI_1-F)}\cdot adj(zI_1-F)=\frac{1}{\Delta_F(z)}{\color {orange}adj}(zIn-F)
-$$
-- $\Delta_F(z)$ è un polinomio monico di grado $n$ (polinomio caratteristico)
-- $adj(zI_1-F)$ è una matrice $n\times n$  polinomiale nella quale le entry hanno il grado $\leq n-1$ 
+Sappiamo che questa matrice è invertibile quindi:$$(zI_1-F)^{-1}=\frac{1}{\det(zI_1-F)}\cdot adj(zI_1-F)=\frac{1}{\Delta_F(z)}{\color {orange}adj}(zIn-F)$$
+	- $\Delta_F(z)$ è un polinomio monico di grado $n$ (polinomio caratteristico)
+	- $adj(zI_1-F)$ è una matrice $n\times n$  polinomiale nella quale le entry hanno il grado $\leq n-1$ 
 	$adj(M)=(-1)^{i+j}det(M\text{ colonna i e riga j})$ 
+$\color{orange}\text{quindi }v_i\in \{1,...,m\}v_j\in \{1,...,p\}$
+
+quindi:
+$$
+[W(z)]_{ij}=W_{ij}(z)=\frac{e^T_iH\ adj(zIn-F)Ge_j}{\Delta_F(z)}+d_{ij}
+$$
+che è la somma di una *strictly proper* function in $\mathbb R(z)$  ed una costante $d_{ij}$.
+Di conseguenza:
+- $W_{ij}(z)$ è una *proper rational function*
+- $W$ è una *proper rational matrix* $\in \mathbb R(z)^{p\times n}$ 
+- $w(t)$ è l'implulse response $w(t)=D\delta(t)+HF^{t-1}G\delta_{-1}(t-1)$ 
+
+Diciamo che $\lambda\in \mathbb C$ è un polo di $W(z)$ se è un polo per alcune entries quindi:
+$$
+\begin{align}
+\{\text{poli di }W(z)\}&\triangleq\bigcup_{\substack{i \in \{1, \dots, p\} \\ j \in \{1, \dots, m\}}}\ \{\text{poli di } W_{ij}(z)\}\\
+&\subseteq\{\text{zeri di }\Delta_F(z)\}\\
+&=\sigma(F)&\text{spectrum di F(il set dei suoi autovalori)}
+\end{align}
+$$
+

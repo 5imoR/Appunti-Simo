@@ -96,3 +96,90 @@ $$
 - **Positive maximum and supremum** Se $f_1$ e $f_2$ sono funzioni convesse il loro *pointwise maximum* $f(x)=\max\{f_1,f_2\}$ è una funzione convessa.Questo si espende and un numero finito di $k$ funzioni o infinito se si considera il supremum.In altre parole data una famiglia di convex function $\mathcal A$  il *pointwise supremum* è:$$g(x)=\sup_{a\in\mathcal A}f_a(x)$$
 	![[pwmax]]
 - **Partial munimization** Se $f(x,y)$ è convessa e $C$ è un convex set allora è una funzione convessa $$g(x)=\inf_{y\in C}f(x,y)$$
+#CO-L4
+### First order condition
+Se $f$ è differenziabile e quindi il gradiente $\nabla f(x)$ esiste per ogni punto $x\in dom(f)$  allora:
+$f$ è convessa se e solo se:
+$$
+f(y)\geq f(x)+\nabla f(x)^T(y-x)\qquad \forall x,y\in dom(f)
+$$
+![[second order|300]]
+La funzione $f$ è sempre sopra la sua approssimazione
+#### Proof
+##### n=1 Caso unidimensionale
+$$
+f(y)\geq f(x)+ f'(x)(y-x)\qquad \forall x,y\in dom(f)
+$$
+Prendiamo 2 punti $x, y$  e dato che $f$ è convessa vale $(1-\theta)x+\theta y\in domf$
+$$\begin{align}
+&f((1-\theta)x+\theta y)\leq(1-\theta)f(x)+\theta f(y)\\
+&f(x+\theta(y-x))\leq(1-\theta)f(x)+\theta f(y)\\
+\\
+&\frac{f(x+\theta(y-x))-f(x)}{\theta}\leq f(y)-f(x)\\
+&f(y)\geq f(x)+\frac{f(x+\theta(y-x))-f(x)}{\theta}\\
+&f(y)\geq f(x)+{f'(x)(y-x)}\qquad \theta\rightarrow 0\\
+\end{align}
+$$
+Prrendiamo altri 2 puntie consideriamo
+$z=\theta x+(1-\theta)y$ 
+Applicando la condizione richesta si ottiene:
+$$
+\begin{align}
+f(x)\geq f(z)+ f'(z)(x-z)\\
+f(y)\geq f(z)+ f'(z)(y-z)\\
+\end{align}
+$$
+Possiamo moltiplicarli per $\theta$ e $(1-\theta)$ ottenendo:
+$$
+\begin{align}
+&\theta f(x)\geq f(z)+ f'(z)(x-z)\\
+&(1-\theta)f(y)\geq f(z)+ f'(z)(y-z)\\
+\\
+&\theta f(x)+(1-\theta)f(y)\geq f(z)+f(z)'\underbrace{[\theta(x-z)+(1-\theta)(y-z)]}_{\theta x+(1-\theta)y-z=0}
+\end{align}
+$$
+quindi $f$ è convessa.
+
+##### Caso multidimensionale
+Il prof ha detto che non è importante,(BALZATO)
+$$
+\begin{align}
+&g(t)=f(ty+1-t)x)\\
+&g'(t)=\nabla f(ty+(1-t)x)^T(y-x)
+\end{align}
+$$
+###
+$$
+\begin{align}
+&\nabla f(x^*)=0\\
+&f(x)\geq f(x^*)+\cancel{\nabla f(x^*)^T(y-x)}
+\end{align}
+$$
+Sei nel punto ottimale, minimo 
+### Second order Condition
+Se la funzione è doppiamente differenziabile allora possiamo dire che:
+*Una funzione è convessa  se e solo se $\nabla^2 f(x)\succeq0 \quad \forall x\in dom(f)$* 
+- $\nabla^2f(x)$ si chiama Hessian matrix di $f$ nel punto $x$
+- se $succ$ allora è strictly convex
+	Non posso dire l'opposto esempio: $x^4$ 
+### Global optimality theorem
+Prendendo in considerazione 
+- $C$ convex set
+- $f(x)$ convex function
+$$\min_x\{f(x)|x\ in\ C\}$$
+Ogni minimo locale è considerato un minimo globale
+#### Proof
+- $\hat x$ una soluzione locale ottima
+- esiste $\epsilon>0$ per definizione tale che:
+$$
+f(\hat x)\leq f(z)\quad \forall z\in B(\tilde{x},\epsilon)\cap C=\mathcal N_\epsilon(\tilde{x})
+$$
+Prendiamo un punto $y$ qualunque in $C$ e scegliamo $z=\lambda\tilde{x}+(1-\lambda)y$  qualunque sia $\lambda$ c'è sempre un valore $z$ interno a $N_\epsilon(\tilde{x})$ 
+$$
+f(\tilde{x})\leq f(z) =f(\lambda\tilde{x}+(1-\lambda)y)\leq \lambda f(\tilde x) +(1-\lambda)f(y)
+$$
+Dal quale si può facilmente ottenere:
+$$
+\cancel{(1-\lambda)}f(\tilde x) \leq \cancel{(1-\lambda)} f(y)
+$$
+![[global min]]
