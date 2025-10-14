@@ -212,6 +212,8 @@ $$
 #ST-L5 
 Il corso si basa principalmente su  sistemi lineari ma non fa mai male sapere qualcosa riguardo[[Non linear d.t. s.s.m.]]
 
+# Linear discrete time s.s.m.
+
 Supponiamo di avere un d.t. s.s.m. lineare autonomo
 $$x(t+1)=Fx(t)+\cancel{Gu(t)}$$ 
 Allora ad effetto a cascata possiamo dire che:
@@ -257,7 +259,7 @@ $\displaystyle\binom{t}{k}\lambda^{t-k}$  ha 3 casi
 - diverge in ogni altro caso
 $$x_e=0\Leftrightarrow \forall\lambda\in\sigma(F)\ \ $$
 In d.t. systems $x_e$ è attrattivo e stabile
-se$|\lambda|<1$  $F$ si dice Schur stable
+se$|\lambda|<1$  $F$ si dice Shur stable
 
 Nel caso lineare se $x_e=\underline 0$ è un attractive equilibrium point e pure stable.
 
@@ -271,3 +273,14 @@ $$
 \text{ e}\\\quad &|\lambda|<1\quad\\\text{ oppure }\\&|\lambda|=1\ \text{e tutti i J mini-block associati hanno dimensione 1 } n_{i1}=1
 \end{align}
 $$
+
+#ST-L6
+## Riassunto
+- $x_e=\underline 0$ è sempre un punto di equilibrio
+- $\exists x_e\neq\underline 0 \iff \ker(In-F)\neq\{\underline0\}\iff \lambda=1\in\sigma(F)$ (e $x_e$ è l'autovettore corrispondente)
+- $x_e=\underline 0$  è un attractive eq. point $\iff$  tutte le elementary modes associate ad $F$ convergono a $\underline 0\iff\forall\lambda\in\sigma(F)\quad |\lambda|<1$  F è chiamata *Shur Stable*
+- se $x_e=\underline0$ è un attractive eq. point  allora è anche stabile equindi è asymptotically stable
+- $x_e=\underline0$a  è stabile$\iff$ tutte le elementary modes associate ad $F$ sono bounded $\quad\qquad\qquad\qquad\iff\forall\lambda\in\sigma(F)$  se $|\lambda|<1$ o $|\lambda|=1$  e tutti i $J$ mini-block associati sono scalari.
+	 Vuol dire che la molteplicità di $\lambda$ come uno zero di $\Psi_F(z)$ è $1$ 
+- Un l.d.t.s.s.m. è asintoticamente stabile$\iff x_e=\underline0$ è un punto d'equilibrio asintoticamente stabile 
+

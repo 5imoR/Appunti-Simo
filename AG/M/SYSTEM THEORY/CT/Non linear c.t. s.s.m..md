@@ -1,4 +1,5 @@
-#ST-L5
+#ST-L7
+### Definition
 Un non linear discrete time time-invariant s.s.m. è descritto come segue:
 
 $$
@@ -11,7 +12,7 @@ y(t)=h(x(t),u(t))&h:\mathbb R^n\times \mathbb R^m\rightarrow\mathbb R^p\\
 \end{align}
 $$
 $dim\ x=n\quad dim\ u=m\quad dim\ y=p\quad$ 
-#### Equilibrium Point
+### Equilibrium Point
 Uno stato $x_e\in\mathbb R^n$ è detto in un punto d'equilibrio del sistema in corrispondenta ad un $u(t)=\overline{u}$ costante.
 
 $$
@@ -24,7 +25,7 @@ $$
 E' immediato vedere che $x_e$ è il punto di equilibrio corrispondente a $u(t)=\overline{u}\Leftrightarrow x_e=f(x_e, \overline u)$ 
 Se $x_e$ è un punto di equilibrio anche $y_e$ sarà constante per qualunque valore di $t$ 
 
-#### Autonomous system
+### Autonomous system
 Se il n.l d.t. s.s.m. non è affetto da alcun input allora è detto sistema autonomo ed ha la seguente forma:
 $$
 \begin {align}

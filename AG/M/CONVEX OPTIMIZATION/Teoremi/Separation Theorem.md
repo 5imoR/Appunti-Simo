@@ -49,7 +49,7 @@ Allora esiste $\overline x \in A$ alla distanza minima    $d(y,\overline x)\leq 
 - $A'=A\cap\{x| d(x,y)\leq d(y,\hat x)\}$
 	![[A']]
 A' è *closed* e *bounded* (*compact*) inoltre $f(x)=d(x,A')$ è continua.
-Per il [Teorema di Weierstrass](ActualGraph/Basic/ANALISI1/Teoremi/Teoremi.md#Weierstrass)  possiamo dire che:
+Per il [Teorema di Weierstrass](Teoremi.md#Weierstrass)  possiamo dire che:
 $$
 \exists \overline x\in A'\subseteq A\ s.t.\ d(y,\overline x)=d(y,A')=d(y,A)
 $$
@@ -60,7 +60,7 @@ Definiamo
 e sono entrambi non vuoti, allora esiste $x\in C$ e $y\in D$ s.t. $d(x,y)=d(C,D)$
 ###### Proof
 - $f:D\rightarrow\mathbb R$ definita come $f(z)=d(z,C)$ 
-dato che $D$ è compatto ed $f$ è continua per il [Teorema di Weierstrass](ActualGraph/Basic/ANALISI1/Teoremi/Teoremi.md#Weierstrass)  si può dire che 
+dato che $D$ è compatto ed $f$ è continua per il [Teorema di Weierstrass](Teoremi.md#Weierstrass)  si può dire che 
 $\exists y\in D$ s.t. $d(D,C)=d(y,C)$ 
 Da **L2** possiamo dire che 
 $$

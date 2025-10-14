@@ -1,0 +1,4 @@
+# Stable
+# Attractive
+
+# Asymptotically stable
