@@ -1,4 +1,4 @@
-#ST-L6 ![[Non linear d.t. s.s.m.#Definition]]
+#ST-L6 ![[Non linear discrete time s.s.m.#Definition of d.t.s.s.m.]]
 # Linearizzazione vicino ad un equilibrio
 Assumiamo che:
 1. $x_e\in X=\mathbb R^n$ è un eq. point corrispondente a $u(t)=\overline u$ 
@@ -6,15 +6,15 @@ Assumiamo che:
 
 Definiamo
 - $\delta(x(t))\triangleq x(t)-x_e$
-- $\delta(u(t))\triangleq u(t)-\overline u$
+- $\delta(u(t))\triangleq u(t)-\bar u$
 - $\delta(y(t))\triangleq y(t)-y_e$
-#### Matrici di f
+#### Matrici della state equation
 Tramite la seconda assunzione possiamo usare l'espansione di [[Taylor]] di  e   attorno a $(x_e,\overline u)$ 
 $$
 \begin{align}
 x(t+1)&=f(x(t),u(t)) \\
-\cancel{x_e+}\delta x(t+1)&= f(x_e+\delta x(t),\overline u+\delta u(t))\\
-Taylor\ expansion&= \cancel{f(x_e,\overline u)}+
+\cancel{x_e+}\delta x(t+1)&= f(x_e+\delta x(t),\bar u+\delta u(t))\\
+Taylor\ expansion&= \cancel{f(x_e,\bar u)}+
 \left.\frac{\partial f}{\partial x}\right|_{\substack{x = x_e \\ u = u_e}}\delta x(t)+
 \left.\frac{\partial f}{\partial u}\right|_{\substack{x = x_e \\ u = u_e}}\delta u(t)+
 o(\delta_x,\delta_u)
@@ -32,7 +32,7 @@ $$\delta x(t+1)=F\ \delta x(t)+G\ \delta u(t)$$
 $F,G$ sono dette matrici Jiacobiane $J$ di $f$ a rispetto di $x$ e $u$
 
 
-#### Matrici di h
+#### Matrici  della output equation
 In modo analogo otteniamo:
 $$
 \begin{align}
@@ -49,8 +49,26 @@ $$
 - andiamo ad approssimare escludendo $o(\cdot)$
 - $H=\displaystyle\left.\frac{\partial h}{\partial x}\right|_{\substack{x = x_e \\ u = u_e}}$ è una matrice $n\times n$ dove al posto $i,j$ è $\displaystyle\frac{\partial h_i}{\partial x_j}$
  - $D=\displaystyle\left.\frac{\partial h}{\partial u}\right|_{\substack{x = x_e \\ u = u_e}}$ è una matrice $m\times m$ dove al posto $i,j$ è $\displaystyle\frac{\partial h_i}{\partial u_j}$
-$\Rightarrow$ $$\delta x(t+1)=F\ \delta x(t)+G\ \delta u(t)$$ $H,D$ sono dette matrici Jiacobiane $J$ di $h$ rispetto a $x$ e $u$
+$\Rightarrow$ $$\delta y(t)=H\ \delta x(t)+D\ \delta u(t)$$ $H,D$ sono dette matrici Jiacobiane $J$ di $h$ rispetto a $x$ e $u$
 
+### Preposition \[Linearization method]
+Consideriamo un non linear d.t. autonomous s.s.m.
+$x(t+1)=f(x(t))\quad t\in \mathbb Z+\quad dim(x)=n\quad (A)$
+assumiamo:
+- $x_e$ è un punto d'equilibrio di $(A)$
+- $f$ è continua nelle sue derivate parziali
+Allora se  mettiamo $\delta x(t)\triangleq x(t)-x_e$ abbiamo il modello linearizzato:
+$$
+\delta x(t+1)=F\ \delta x(t)\quad\text{ dove }F\triangleq\left.\frac{\partial f}{\partial x}\right|_{x = x_e }
+$$
+Allora:
+1. se $F$ è shur stable( $|\lambda|<1$ ) allora $x_e$ è un asymptotic stable equilibrium point di $(A)$
+2. se $\exists \lambda\in\sigma(F)$ con $|\lambda|>1$ allora $x_e$ NON è un equilibrium point di $(A)$
+3. se $\exists \lambda\in\sigma(F)$con $|\lambda|=1$ e nessun autovalore con $|\lambda|>1$ allora non possiamo dire nulla riguardo $x_e$ 
+	questo è dovuto all'approssimazione di o-piccolo
+![[lambdaEqLG|700]]
+### Nota
+Se la trace (ovvero la diagonale sommata $F_{11}+F_{22}...$) è maggiore di $1$ allora $\lambda$ non possono essere di modulo $<1$
 
 #### Esercizio 1
 Consideriamo il d.t. n.l. s.s.m
@@ -116,23 +134,6 @@ Determinare:
 	\end{bmatrix}
 	$$
 ---
-### Preposition
-Consideriamo un non linear d.t. autonomous s.s.m.
-$x(t+1)=f(x(t))\quad t\in \mathbb Z+\quad dim(x)=n\quad (A)$
-assumiamo:
-- $x_e$ è un punto d'equilibrio di $(A)$
-- $f$ è continua nelle sue derivate parziali
-Allora se  mettiamo $\delta x(t)\triangleq x(t)-x_e$ abbiamo il modello linearizzato:
-$$
-\delta x(t+1)=F\ \delta x(t)\text{ dove }F\triangleq\left.\frac{\partial f}{\partial x}\right|_{x = x_e }
-$$
-Allora:
-1. se $F$ è shur stable( $|\lambda|<1$ ) allora x_e è un asymptotic stable equilibrium point di $(A)$
-2. se $\exists \lambda\in\sigma(F)$ con $|\lambda|>1$ allora $x_e$ non è un equilibrium point di $(A)$
-3. se $\exists \lambda\in\sigma(F)$con $|\lambda|=1$ e nessun autovalore con $|\lambda|>1$ allora non possiamo dire nulla riguardo $x_e$ 
-![[lambdaEqLG|700]]
-
-
 #### Esercizio 2
 Consideriamo 
 $$
@@ -169,5 +170,3 @@ F=\begin{bmatrix}
 $$
 - $x_e=(0,0)\rightarrow F=\begin{bmatrix}0&0\\	0&\frac 1 2 \end{bmatrix}$     $\sigma(F)=(0,\ 1/2)$  quindi $x_e(0,0)$ è un punto asymptoticaly stable del sistema non lineare
 - $x_e=(0,0)\rightarrow F=\begin{bmatrix}1&-\frac 1 2\\	-1&1 \end{bmatrix}$  non è un punto asintoticamente stabile
-### Nota
-Se la trace (ovvero la diagonale sommata $F_{11}+F_{22}...$) è maggiore di $1$ allora $\lambda$ non possono essere di modulo $<1$

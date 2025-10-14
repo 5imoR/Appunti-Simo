@@ -1,5 +1,5 @@
-#ST-L7
-### Definition
+#ST-L5
+### Definition of d.t.s.s.m.
 Un non linear discrete time time-invariant s.s.m. è descritto come segue:
 
 $$
@@ -23,7 +23,7 @@ $$
 \end{align}
 $$
 E' immediato vedere che $x_e$ è il punto di equilibrio corrispondente a $u(t)=\overline{u}\Leftrightarrow x_e=f(x_e, \overline u)$ 
-Se $x_e$ è un punto di equilibrio anche $y_e$ sarà constante per qualunque valore di $t$ 
+Se $x_e$ è un punto di equilibrio anche $y_e$ sarà constante per qualunque valore di $t>0$ 
 
 ### Autonomous system
 Se il n.l d.t. s.s.m. non è affetto da alcun input allora è detto sistema autonomo ed ha la seguente forma:
@@ -38,7 +38,7 @@ y(t)=h(x(t))&h:\mathbb R^n\rightarrow\mathbb R^p\\
 $$
 $dim\ x=n\quad dim\ y=p\quad$
 
-### Definition
+### Definition of equilibrium point
 Diciamo che $x_e$ è un punto di equilibrio di un s.s.m autonomo se:
 $$\begin {align}
 &x(0)=x_e\Rightarrow x(t)=x_e\quad \forall t\in \mathbb Z+\\
@@ -58,12 +58,5 @@ y(t)=h(x(t))\\
 $$
 $dim\ x=n\quad dim\ y=p\quad$ 
 
-### Definition
-Sia $x_e \in \mathbb R^n$ un punto di equilibrio del sistema $(A)$  allora:
-- $x_e$ è un *stable equilibrium point* se   $\forall \epsilon>0\quad \exists\delta>0$   tale che se $||x(0)-x_e||<\delta$  allora possiamo assicurare che   $||x(t)-x_e||<\epsilon\quad\forall t\in \mathbb Z+$ 
-- $x_e$ è un *attractive equilibrium point* se   $\exists\overline \delta>0$    tale che se   $||x(0)-x_e||<\overline\delta$ allora $\lim_{t\rightarrow+\infty}||x(t)-x_e)=0$ 
-- $x_e$ è un *asymptotically stable equilibrium point* se  è sia stable che attractive
-![[typeofeq|700]]
 
-
-
+![[Equilibrium points type#Definition of equilibrium point types]]
