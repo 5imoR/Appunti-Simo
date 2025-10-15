@@ -183,3 +183,5 @@ $$
 \cancel{(1-\lambda)}f(\tilde x) \leq \cancel{(1-\lambda)} f(y)
 $$
 ![[global min]]
+
+## Problem type

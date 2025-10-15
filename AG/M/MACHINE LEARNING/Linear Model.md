@@ -121,3 +121,6 @@ y_1-x_1^Tw\\y_2-x_2^Tw\\\vdots\\y_m-x_m^Tw
 $$
 
 $L_S(w)=\frac 1 m \sum_1^m e_i^2=\frac 1 m E^T E=\large\frac 1 m [Y^TY-T^TXw-w^TX^TY+w^TX^TXw]$ 
+
+## Regression 
+#ML-L7

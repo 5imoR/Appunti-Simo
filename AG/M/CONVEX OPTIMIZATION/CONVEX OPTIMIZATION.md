@@ -78,7 +78,8 @@ $$
 x_j\in \{0,1\}\quad j=1\dots n
 \end{cases}
 $$
-## Convex Programming(non so il nome)
+## Convex Programming
+[[Convex Set]]
 $$
 P=
 \begin{cases}

@@ -1,4 +1,4 @@
-[[CONVEX OPTIMIZATION]] #CO-L2
+#CO-L2
 # Affine Combination
 Dati: $x,y \in \mathbb{R}^N$ chiamiamo affine combination 
 $$
