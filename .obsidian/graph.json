@@ -1,0 +1,79 @@
+{
+  "collapse-filter": false,
+  "search": "path:AG/ ",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:AG/B/ANALISI1  ",
+      "color": {
+        "a": 1,
+        "rgb": 4484943
+      }
+    },
+    {
+      "query": "path:AG/B/ALGEBRA  ",
+      "color": {
+        "a": 1,
+        "rgb": 2383216
+      }
+    },
+    {
+      "query": "path:AG/B/FISICA1  ",
+      "color": {
+        "a": 1,
+        "rgb": 8349236
+      }
+    },
+    {
+      "query": "path:AG/B/FCA  ",
+      "color": {
+        "a": 1,
+        "rgb": 7810092
+      }
+    },
+    {
+      "query": "path:\"AG/M/SYSTEM THEORY\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:\"AG/M/CONVEX OPTIMIZATION\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 8822525
+      }
+    },
+    {
+      "query": "path:\"AG/M/MACHINE LEARNING\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16688682
+      }
+    },
+    {
+      "query": "path:AG/B/PROBABILITY  ",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.63125,
+  "lineSizeMultiplier": 1.50364583333333,
+  "collapse-forces": false,
+  "centerStrength": 0,
+  "repelStrength": 11.6666666666667,
+  "linkStrength": 0.692708333333333,
+  "linkDistance": 498,
+  "scale": 0.11660891579457436,
+  "close": false
+}
