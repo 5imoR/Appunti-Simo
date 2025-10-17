@@ -24,32 +24,9 @@ Un vertice è un punto del polyhedron che non può essere rappresentato come str
 Data una lista di vertici si può ottenere il polyhedron unico
 ![[polyhedron|200]]
 
-### Theorem (Minkowski Weyl)
-Ogni punto del polytope può essere espresso come convex combination dei suoi vertici
-	Questo non si applica ai polyhedron
 
-In altre parole un polytope può essere descritto in due modi diversi:
-- $H$: ovvero l'intersezione dei suoi linear constraint 
-- $V$: dai suoi vertici
+ ### ![[Theorem (Minkowski Weyl)#Theorem (Minkowski Weyl)]]
 
-#### Corollary
-Se il feasible set $P$ di un linear program è bounded e non empty allora esiste almeno un optimal vertex.
-
-#### Proof
-- $x_1\dots x_k$ i vertici
-- $y\in P$ una feasible solution arbitraria
-- $z^*=\min \{c^T x^i : i=1\dots k\}$ 
-
-$$
-\begin{align}
-c^Ty&=c^T\left(\sum_{i=1}^k\lambda_ix^i\right)\\
-&=\sum_{i=1}^k\lambda_i(c^Tx^i)\geq\sum_{i=1}^k\lambda_iz^*\\
-\end{align}
-$$
-- $\sum_{i=1}^k\lambda_i$  è pari a $1$ dato che siamo in un caso particolare di *convex program*
-$$
-c^Ty\geq z^*
-$$
 
 ## Standard form
 $$
@@ -88,15 +65,4 @@ Se $x_R =0$ si ottiene
 - *basic solution*: $x_B=B^{-1}b$ 
 - *basic feasible solution*: se viene anche rispettato il vincolo di non negatività
 
-### Theorem Bases=Vertex
-Un punto $x\in\mathbb R^n$ è il vertice di un non empty polyhedron
-$$P=\{x|Ax=b,x\geq0\} \iff x \text{ è una b.f.s. del sistema } Ax=b$$
-#### Proof
-- $x$ è una b.f.s. associata ad una base $B$
-	è un set di variabili(non vettori)
-- possiamo fare permutazioni su $B$ per ottenere i valori positivi di $x$ sulle prime $k$ colonne 
-$$
-x=[x_1\dots x_k,0\dots 0]^T
-$$
-- dato che $k<m$  una variabile della base può essere 0. Quando questo succede si dice che la base è *degenerate* 
-- 
+![[Theorem basis= vertex#Theorem Bases=Vertex]]
