@@ -20,7 +20,7 @@ Di per se non ha molti utilizzi ma può essere usato per risolvere altri tipo di
 	polyhedron è la versione unbounded di polytope.
 
 ### Definition Vertex
-Un vertice è un punto del polyhedron che non può essere rappresentato come strict combination dei punti di $P$.
+Un vertice è un punto del polyhedron che non può essere rappresentato come strict convex combination dei punti di $P$.
 Data una lista di vertici si può ottenere il polyhedron unico
 ![[polyhedron|200]]
 
@@ -46,10 +46,10 @@ La matrice $A$ ha $rank(A)=m$
 
 ## Bases
 Una basis è definita come il set di $m$ colonne lineari indipendenti
-- $\mathcal B=\{k_1,\dots,k_m\}$ il set di colonne indipendenti
+- $\mathcal B=\{k_1,\dots,k_m\}$ il set di indici delle colonne indipendenti
 - $B$ la matrice formata dalle colonne della base
 
-- $\mathcal R$ le colonne non presenti nella base
+- $\mathcal R$ il set di indici delle colonne dipendenti
 - $R$ la matrice formata dalle colonne di $\mathcal R$ 
 
 Possiamo quindi riscrivere il problema come:
@@ -58,7 +58,7 @@ $$
 Ax&=b\\
 Bx_B+Rx_R&=b\\
 B^{-1}(Bx_B+Rx_R)&=B^{-1}b\\
-x_B&=B^{-1}b-BRx_R
+x_B&=B^{-1}b-B^{-1}Rx_R
 \end{align}
 $$
 Se $x_R =0$ si ottiene
@@ -66,3 +66,7 @@ Se $x_R =0$ si ottiene
 - *basic feasible solution*: se viene anche rispettato il vincolo di non negatività
 
 ![[Theorem basis= vertex#Theorem Bases=Vertex]]
+
+**NOTA** Il rapporto tra basi e vertici non è $1:1$  dato che un vertice può essere rappresentato da più matrici diverse nel caso siano degenerate.
+
+## ![[The Primal Simplex Algorithm#Primal Simplex]]
