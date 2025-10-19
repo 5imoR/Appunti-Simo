@@ -1,4 +1,16 @@
  #ST-L5
+## Linear DT ssm
+
+$$
+\begin {align}
+&\begin{cases}
+x(t+1)=Fx(t)+Gu(t)\qquad\qquad\qquad&t\in \mathbb Z+\\\\
+y(t)=Hx(t)+Du(t)
+\end{cases}
+\end{align}
+$$
+$dim\ x=n\quad dim\ u=m\quad dim\ y=p\quad$ 
+
 ## Autonomous Case
 Supponiamo di avere un d.t. s.s.m. lineare autonomo
 $$x(t+1)=Fx(t)+\cancel{Gu(t)}$$ 
@@ -61,51 +73,4 @@ $$
 $$
 
 
-# Rechability
-#ST-L7 
-[[Rechability and controllability problems]]
-![[Non linear discrete time s.s.m.#Definition of d.t.s.s.m.]]
 
-### Definition
-Dato $k\in\mathbb Z,\ k>0$ uno stato $x_f\in X\in \mathbb R^n$ è detto *reachable* al tempo $t=k$ (in $k$ steps) se $\exists u(0),u(1),\dots u(k-1)\in U=\mathbb R^m$ che guida lo stato da $x(0)=\underline 0$  a $x(u)=x_f$ 
-$$\large
-(x(0)\xrightarrow[u(0),u(1),\dots,u(k-1)]{} x(k)=x_f)
-$$
-$$\begin{align}
-\displaystyle x_k=x_f(k)&=\sum_{i=0}^kF^{k-1-i}Gu(i)\\
-&=\begin{bmatrix}G|FG|F^2G|\dots|F^{k-1}G\end{bmatrix}\begin{bmatrix}u(k-1)\\u(k-2)\\\vdots\\u(0)\end{bmatrix}
-\end{align}$$
-
-$\begin{bmatrix}G|FG|F^2G|\dots|F^{k-1}G\end{bmatrix}$ è chiamata $\mathcal R_k$ (rechability matrix at time $k$)
-
-Quindi:
-$x_f$ è reachable al tempo $k\iff\exists u(0),u(1),\dots, u(k-1)\in \mathbb R^n=U$ 
-tale che $$x_f=\mathcal R_k\begin{bmatrix}u(k-1)\\u(k-2)\\\vdots\\u(0)\end{bmatrix}\iff x_f\in Im\mathcal R_k$$
-
-Se definiamo $X_k^R$ il set di stati che sono raggiungibili in $k$ steps
-	$X_k^R\triangleq\{x_f\in X=\mathbb R^n:\exists u(0),u(1),\dots u(k-1):x(0)\xrightarrow[u(0),u(1),\dots,u(k-1)]{} x(k)=x_f\}$ 
-allora:
-$X_k^R\equiv Im\mathcal R_k$ 
-di conseguenza $X_k^R$ è un sottospazio vettoriale di $X=\mathbb R^n$ 
-
-##### In Generale
-Per ogni $k \in \mathbb Z\quad k>0$ 
-$X_k^R\subseteq X_{k+1}^R$ 
-Che ci permette di dire che:
-$$
-X_k^R=\begin{bmatrix}G|FG|F^2G|\dots|F^{k-1}G\end{bmatrix}\subseteq\begin{bmatrix}G|FG|F^2G|\dots|F^{k}G\end{bmatrix}=X_{k+1}^R
-$$
-Una caratteristica è che:
-se uno stato è raggiungibile in $k$ steps allora può essere raggiunto anche in $k+1$ step andando a shiftare di 1 i vari steps
-![[shifted|700]]
-Di conseguenza:
-$$
- X_1^R\subset X_2^R\subset... \subset X_k^R\subset ... \subset X=\mathbb R^n
- 
-$$
-
-Siccome ogni $X_k^R$  è un sottospazio vettoriale di $X$ e $X_k^R\subset X_{k+1}^R\Rightarrow dim X_{k+1}^R\geq dim X_k^R+1$ 
-e quindi
-$$
-\exists \bar k\in \mathbb Z\quad \bar k >0\quad\text{ s.t.}\quad X_\bar k^R=X_k^R \quad \forall k\geq\bar k
-$$

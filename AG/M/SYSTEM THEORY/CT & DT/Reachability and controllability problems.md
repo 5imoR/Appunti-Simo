@@ -1,5 +1,5 @@
 #ST-L7
-### Rechability question
+### Reachability question
 Dato un tempo $T>0$ e uno stato finale $x_f\in X$ è possibile trovare il segnale in input
 $u(t)\quad t\in[\ 0, T\ )$  che porta lo stato del sistema da $x(0)=\underline 0$ a $x(T)=x_f$?
 ### Controllability (to zero) question

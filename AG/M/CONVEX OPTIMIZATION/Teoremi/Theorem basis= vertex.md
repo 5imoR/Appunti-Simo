@@ -1,7 +1,7 @@
 ### Theorem Bases=Vertex
 Un punto $x\in\mathbb R^n$ è il vertice di un non empty polyhedron
 $$P=\{x|Ax=b,x\geq0\} \iff x \text{ è una b.f.s. del sistema } Ax=b$$
-#CE-L6
+#CO-L6
 #### Corollario
 Se il feasible set $P$ di un linear program è bounded e non empty allora esiste almeno una b.f.s.
 ### Proof
