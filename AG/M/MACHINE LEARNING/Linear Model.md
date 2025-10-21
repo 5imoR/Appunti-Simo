@@ -81,12 +81,16 @@ $$
 $$
 tramite uno sfracello di passaggi del prof si arriva ad ottenere:
 	$x_i^Tw=w^Tx_i$
-$$\begin{align}
-\nabla_wLs(w)&=-\frac 2 m \left(\sum_1^my_ix_i-\sum_1^m(x_ix_i^T)w\right)\\&=
--\frac 2 m \left(\sum_1^m\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}-\sum_1^m(\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\begin{bmatrix}\cdot&\cdot&\cdot\end{bmatrix})\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\right)\\
-&=-\frac 2 m \left(\sum_1^m\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}-\sum_1^m(\begin{bmatrix}\cdot&\cdot&\cdot\\\cdot&\cdot&\cdot\\\cdot&\cdot&\cdot\\\end{bmatrix})\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\right)
-\end{align}
 $$
+\nabla_wLs(w)=-\frac 2 m \left(\sum_1^my_ix_i-\sum_1^m(x_ix_i^T)w\right)
+$$
+Esempio con le dimensioni
+	$$
+	\begin{align}
+	\nabla_wLs(w)&=-\frac 2 m \left(\sum_1^m\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}-\sum_1^m(\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\begin{bmatrix}\cdot&\cdot&\cdot\end{bmatrix})\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\right)\\
+	&=-\frac 2 m \left(\sum_1^m\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}-\sum_1^m(\begin{bmatrix}\cdot&\cdot&\cdot\\\cdot&\cdot&\cdot\\\cdot&\cdot&\cdot\\\end{bmatrix})\begin{bmatrix}\cdot\\\cdot\\\cdot\end{bmatrix}\right)
+	\end{align}
+	$$
 $\hat w_s$ è la soluzione di $\nabla_w L_S(w)=0$  e si ottiene:
 $$
 \hat w_s=(\sum^m_1 x_ix_i^T)^{-1}\sum_1^m y_ix_i
@@ -206,49 +210,35 @@ Quindi possiamo vedere $X^TY=(X^TX)w$ come: $b=Aw$
 	$\exists \tilde w\neq0\ s.t.\ A\tilde w=0$ ovvero $\tilde w\ in \ker A$ 
 	quindi $w^* + \tilde w$ è una soluzione $\forall \tilde w \in ker(A)$   
 - Come le troviamo?
-## The Singular Value Decomposition SVD
-**MATRICI $A=\mathbb R^{n\times m}$**
-$$
-\forall A \in \mathbb R^{n\times m}\quad \exists\quad U\in\mathbb R^{n\times n}
-\quad V\in\mathbb R^{m\times m}
-\quad S\in\mathbb R^{n\times m}
-$$
-Dove:
-$$
-U^TU=UU^T=Im\qquad
-V^TV=VV^T=Im
-$$
-Quindi le colonne di $U$ sono ortonormali(righe di $U^T$ ortonormali)
-$$
-S=\begin{bmatrix}
-\sigma_1&&0\\
-&\ddots&&&0&\\
-0&&\sigma_k\\
-&&&0\\
-&0&&&0
-\end{bmatrix}
-$$
-	La matrice formata dalle prime $k$ righe e colonne è diagonale metre il resto è tutto a $0$.
-$\sigma_1\geq \sigma_2\geq\dots\geq\sigma_k$ 
+	
+#ML-L8 
+$w\in \arg\min L_s(w)=\frac 1 m ||Y-Xw||^2\iff (X^TX)w=X^TY$ 
 
-$k=rank(A)$  tale che: $$A=USV^T$$ Possiamo dire che:
-$$
-\begin{align}
-U=[\overbrace{U_1}^k\vdots \overbrace{U_1^\perp}^{n-k}]\qquad
-V=[\overbrace{V_1}^k\vdots \overbrace{V_1^\perp}^{m-k}]\qquad
-S=\begin{bmatrix}S_1&0\\0&0\end{bmatrix} S_1=\begin{bmatrix}\sigma_1&0\\0&\sigma_k\end{bmatrix}
-\end{align}
-$$
-Le colonne di $U_1$ sono ortonormali ma le righe di$U_1^T$  non lo sono più ( $U_1U_1^T\neq Im$ )
+Se  $X^TX$ non è invertibile?[[Singular Value Decomposition|Si usa SVD]]
+- $X=USV^T=U_1S_1V^T_1\qquad rank (X)=k<d$  
+- $X\in \mathbb R^{m\times d}\quad X^TX\in\mathbb R^{d\times d}$    $m\geq d$ 
+	Un esempio per $m\geq d$ è che se sei su $\mathbb R^2$ e devi rappresentare una retta ti servono almeno $2$ o più punti 
+- $X^TX=(V_1S_1\cancel{U_1^T})(\cancel{U_1}S_1V_1^T)=V_1S^2V_1^T$  
+$w$ è tale da:
+$(V_1S_1^2V_1^T)w=V_1S_1U_1^TY\iff (X^TX)w=X^TY$
+  \*                        **   
+### Lemma
+$w^*=V_1S_1^{-1}U^T_1Y$ 
+- $w^*$ è una soluzione di  * e **
+	$(V_1S_1^2\cancel{V_1^T})\underbrace{(\cancel{V_1}S_1^{-1}U_1^TY_1)}_{w^*}=V_1S_1U_1^TY_1=$ right hand side of ** questo prova che $w^*$ è una soluzione 
+- $w^*$ è la norma della soluzione minima
+	$\forall\hat w$ s.t. $(X^TX)\hat w=X^TY\qquad ||\hat w||\geq||w^*||$
+	- $(X^TX)\hat w=X^TY$
+	- $(X^TX)w^*=X^TY$ 
+	$\Rightarrow (X^TX)(\hat w-w^*=0$ 
+	
+	$\forall \hat w =w^*+\tilde w\quad \tilde w=\hat w-w^*$  con $\tilde w\in \ker(X^TX)=Im(V_1^\perp)$ 
+	$\downarrow$ 
+	$X^TX=V_1S_1^2V_1^T$  questo è l'SVD dove $V_1^\perp$ s.t. $V=[V_1V_1^\perp]\quad V^TV=VV^T=I\qquad \tilde w\perp V_1$
+	
+	$w^*=V_1S_1^{-1}U_1^TY\rightarrow w^*\in Im (V_1)$
+	
+	$\longrightarrow w^*\perp\tilde w$ 
+	$||\hat w||^2=||w^*||^2+||\tilde w||^2$ sono tutti numeri non negativi quindi $$||\hat w||^2\geq||w^*||^2
 
-#### Interpretazione geometrica
-Data una matrice $A\in \mathbb R^{n\times m}$
-$A$ può essere vista coe la matrice che rappresenta una trasformazione lineare
-$$
-\begin{align}
-L(A):&\mathbb R^m\longrightarrow\mathbb R^n\\
-&\ \ \ \, v\longrightarrow u=Av
-\end{align}
-$$
 
-Qual'è la direzione in $\mathbb R ^m$ lungo la quale la nostra trasformazione lineare($L(A)$ ) da l'amplificazione massima?   $\sup_{v\in\mathbb R^m}||Av||=\sigma_1$ 
