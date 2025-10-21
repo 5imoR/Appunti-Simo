@@ -65,7 +65,7 @@ Se $x_R =0$ si ottiene
 - *basic solution*: $x_B=B^{-1}b$ 
 - *basic feasible solution*: se viene anche rispettato il vincolo di non negatività
 
-![[Theorem basis= vertex#Theorem Bases=Vertex]]
+![[Theorem basis = vertex#Theorem Bases=Vertex]]
 
 **NOTA** Il rapporto tra basi e vertici non è $1:1$  dato che un vertice può essere rappresentato da più matrici diverse nel caso siano degenerate.
 

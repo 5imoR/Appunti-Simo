@@ -1,0 +1,1 @@
+con quello che ha fatto oggi possiamo dire che $V_1^TV_1=I_K$?  [[Singular Value Decomposition]]

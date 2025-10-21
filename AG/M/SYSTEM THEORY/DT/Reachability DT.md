@@ -1,13 +1,14 @@
 # Reachability
 #ST-L7 
 [[Reachability and controllability problems]]
-![[Non linear discrete time s.s.m.#Definition of d.t.s.s.m.]]
+![[Linear discrete time s.s.m.#Linear DT ssm]]
 
 ### Definition
 Dato $k\in\mathbb Z,\ k>0$ uno stato $x_f\in X\in \mathbb R^n$ è detto *reachable* al tempo $t=k$ (in $k$ steps) se $\exists u(0),u(1),\dots u(k-1)\in U=\mathbb R^m$ che guida lo stato da $x(0)=\underline 0$  a $x(u)=x_f$ 
 $$\large
 (x(0)\xrightarrow[u(0),u(1),\dots,u(k-1)]{} x(k)=x_f)
 $$
+Il generico stato al tempo $k$ è:
 $$\begin{align}
 \displaystyle x_k=x_f(k)&=\sum_{i=0}^kF^{k-1-i}Gu(i)\\
 &=\begin{bmatrix}G|FG|F^2G|\dots|F^{k-1}G\end{bmatrix}\begin{bmatrix}u(k-1)\\u(k-2)\\\vdots\\u(0)\end{bmatrix}
@@ -42,7 +43,7 @@ $$
  
 $$
 
-Siccome ogni $X_k^R$  è un sottospazio vettoriale di $X$ e $X_k^R\subset X_{k+1}^R\Rightarrow dim X_{k+1}^R\geq dim X_k^R+1$ 
+Siccome ogni $X_k^R$  è un sottospazio vettoriale di $X$ e $X_k^R\subsetneq X_{k+1}^R\Rightarrow dim X_{k+1}^R\geq dim X_k^R+1$ 
 e quindi
 $$
 \exists \bar k\in \mathbb Z\quad \bar k >0\quad\text{ s.t.}\quad X_\bar k^R=X_k^R \quad \forall k\geq\bar k
@@ -53,8 +54,9 @@ $$
 2. se $\bar k \triangleq \min\{ k\in\mathbb Z\ k\geq 1:X_k^R=X_{k+1}^R\}$ allora $\bar k \leq n$
 
 #### Proof
-*1*
+**1**
 E' sempre vero che $X_{k+1}^R\subseteq X_{k+2}^R$  serve quindi provare che se $X_{k}^R=X_{k+1}^R$ allora $X_{k+2}^R\subseteq X_{k+1}^R$ così possiamo assumere che $x_f\in X_{k+2}^R$ 
+
 Questo vuol dire che:$\exists u(t)=u_t\quad t=1,...k+1$ tale che:
 
 | Time  | $0$            | $1$   | $\cdots$ | $k+1$     | $k+2$ |
@@ -63,6 +65,7 @@ Questo vuol dire che:$\exists u(t)=u_t\quad t=1,...k+1$ tale che:
 | Input | $u_0$          | $u_1$ | $\cdots$ | $u_{k+1}$ |       |
 Siccome  $x_{k+1}\in X_{k+1}^R=X_k^R$
 $\exists u(t)=\bar u_t$  tale che:
+
 
 | Time  | $0$            | $1$        | $\cdots$ | $k-1$          | $k$       | $k+1$ |
 | ----- | -------------- | ---------- | -------- | -------------- | --------- | ----- |
@@ -124,7 +127,7 @@ D'ora in poi quando un paio è reachable chiameremo $\bar k$ il suo indice di re
 Dato un paio$(F,G)\quad F\in\mathbb R^{n\times n}\quad G\in\mathbb R^{n\times m}$  sia 
 $X^R=Im[G|FG|\ldots|F^{n-1}G]$ il sio reachable subspace
 Allora $X^R$ è il più piccolo sottospazio *F-Invariant* di $X=\mathbb R^n$ che include $Im(G)$ 
-![[Drawing 2025-10-19 11.53.41.excalidraw]]
+![[insiemi FInvariant]]
 #### Proof 
 $X^R=Im[G|FG|\ldots|F^{n-1}G]$ 
 Vogliamo provare che $X^R$ sia F-invariant
@@ -171,5 +174,120 @@ In generale possiamo sempre assumere che  abbiamo basi fissate in ognuno dei nos
  \vdots\\x_n(t)\end{bmatrix}_{=x(t)}
  $$
  Cosa succede alla rappresentazione del sistema se cambiamo la base di $X$ 
- - da: $\mathcal B_x=\set{x_1,\ldots,v_m}$
- - a:  $\bar{\mathcal B_x}=\set{\bar x_1,\ldots,\bar v_m}$
+ - da: $\mathcal B_x=\set{v_1,\ldots,v_m}$
+ - a:  $\bar{\mathcal B_x}=\set{\bar v_1,\ldots,\bar v_m}$
+ 
+ #ST-L9
+ $$
+ \begin{align}
+ &\bar v_j=\sum_{i=1}^mv_it_{ij}=
+ \begin{bmatrix}
+ v_1&v_2&\dots &v_n
+ \end{bmatrix}
+ \begin{bmatrix}
+ t_{1j}\\t_{2j}\\\vdots\\t_{nj}
+ \end{bmatrix}\\
+ &\Rightarrow 
+ \begin{bmatrix}
+ \bar v_1&\bar v_2&\dots &\bar v_n
+ \end{bmatrix}=
+ \begin{bmatrix}
+ v_1&v_2&\dots &v_n
+ \end{bmatrix}
+ \begin{bmatrix}
+ t_{11}&t_{12}&\dots&t_{1n}\\t_{21}&t_{22}&\dots&t_{2n}\\\vdots&\vdots&\ddots&\vdots\\t_{1n}&t_{2n}&\dots&t_{nn}
+ \end{bmatrix}
+ \end{align}
+ $$ 
+ - $T\in\mathbb C^{n \times n}$ matrice non singolare quadrata
+ 
+ Di conseguenza possiamo anche dire l'opposto:
+ $$
+\begin{align}
+ \begin{bmatrix}
+ v_1&v_2&\dots &v_n
+ \end{bmatrix}=
+ \begin{bmatrix}
+ \bar v_1&\bar v_2&\dots &\bar v_n
+ \end{bmatrix}
+ \begin{bmatrix}
+ s_{11}&s_{12}&\dots&s_{1n}\\s_{21}&s_{22}&\dots&s_{2n}\\\vdots&\vdots&\ddots&\vdots\\s_{1n}&s_{2n}&\dots&s_{nn}
+ \end{bmatrix}
+ \end{align}
+ 
+ $$ 
+ - $S\in\mathbb C^{n \times n}$ matrice non singolare quadrata
+
+Quindi possiamo dire che 
+$\begin{bmatrix}v_1&v_2&\dots &v_n\end{bmatrix}=\begin{bmatrix}v_1&v_2&\dots &v_n\end{bmatrix}\Big[T\Big]\Big[S\Big]$ 
+Questo implica che  $T\ S=Im\quad T=S^{-1}$  
+
+
+Se $\bar x(t)$ è il vettore delle coordinate dello stato al tempo $t$ w.r.t. la nuova base $\bar {\mathcal B_x}$ si vuole sapere la relazione tra $\bar x(t)$ e $x(t)$ 
+
+$\begin{bmatrix}\bar v_1&\bar v_2&\dots &\bar v_n\end{bmatrix}\Big[\bar X(t)\Big]=$ stato al tempo $t$ $= \begin{bmatrix}v_1&v_2&\dots &v_n\end{bmatrix}\Big[X(t)\Big]$
+$\Rightarrow\begin{bmatrix}\bar v_1&\bar v_2&\dots &\bar v_n\end{bmatrix}\Big[\bar X(t)\Big]=\begin{bmatrix}v_1&v_2&\dots &v_n\end{bmatrix}\Big[T\Big]\Big[\bar X(t)\Big]$ 
+Quindi si può capire che:
+$\Big[T\Big]\Big[\bar X(t)\Big]=\Big[X(t)\Big]\qquad\Rightarrow \qquad\Big[\bar X(t)\Big]=\Big[T\Big]^{-1}\Big[ X(t)\Big]$
+
+Come risultato otteniamo:
+$$
+\begin{align}
+\bar x(t+1)&=T^{-1}x(t+1)\\&=T^{-1}Fx(t)+T^{-1}Gu(t)\\&=T^{-1}FTx(t)+T^{-1}Gu(t)\\
+\end{align}
+$$$$
+\begin{cases}
+\bar x(t+1)=T^{-1}FxT(t)+T^{-1}Gu(t)\\\\
+y(t)=HT\bar x(t)+Du(t)
+\end{cases}
+$$
+
+| Vecchia base                    | Nuova base                                                                                |
+| ------------------------------- | ----------------------------------------------------------------------------------------- |
+| $\mathcal B_x\{v_1,\dots v_n\}$ | $\bar{\mathcal B_x}\{\bar v_1,\dots\bar v_n\}$                                            |
+| $x(t)$                          | $\bar x(t)=T^{-1}x(t)$                                                                    |
+| $\Sigma (F,G,H,D)$              | $\begin{align}&\bar \Sigma(\bar F,\bar G,\bar H,\bar D)\\&=(T^{-1}FT,TG,HT,D)\end{align}$ |
+### Definition algebraically equivalent
+Dati due s.s.m. $\Sigma (F,G,H,D)$ e $\bar \Sigma(\bar F,\bar G,\bar H,\bar D)$ 
+- con stessa dimensione
+- con lo stesso numero di input e output
+Diciamo che $\Sigma$ e $\bar\Sigma$ sono algebricamente equivalenti  se rappresentano lo stesso stistema w.r.t. a 2 basi differenti in $X$ che significa che $\exists n\times n$ matrice non singolare $T$ s.t.
+- $\bar F =T^{-1}FT$
+- $\bar G =TG$
+- $\bar H = HT$
+- $\bar D=D$
+
+#### Proprietà 1
+Due sistemi alg. equiv. hanno la stessa transfor matrix
+$$
+\begin{align}
+\bar W(z)&=\bar H(zIm-F)^{-1}\bar G+\bar D\\
+&=HT[zT^{-1}ImT-T^{-1}FT]^{-1}T^{-1}G+D\\
+&=HT[T^{-1}(zIm-F)T]^{-1}T^{-1}G+D
+\end{align}
+$$
+se $A$, $B$, $C$ sono 3 matrici non singolari quadrate allora possiamo dire che:
+$[A\ B\ C]^{-1}=C^{-1}B^{-1}A^{-1}$ 
+$$
+\begin{align}
+&=H\cancel{T\ T^{-1}}(zIm-F)^{-1}\cancel{T\ T^{-1}}G+D\\
+&=H(zIm-F)^{-1}G+D=W(z)
+\end{align}
+$$
+#### Proprietà 2 
+C'è una relazione tra le reachability matrix di $\Sigma$ e $\bar\Sigma$  chiamate $\mathcal R$ e $\bar {\mathcal R}$ 
+$$
+\begin{align}
+\bar {\mathcal R}&=[\bar G|\bar F\bar G|\ldots|\bar F^{n-1}\bar G]\\
+&=\bar F^k\bar G=T^{-1}F^k\cancel{T\ T^-1}G=T^{-1}F^kG\\
+&=[T^{-1}G|T^{-1}FG|\ldots|T^{-1}F^{n-1}G]\\
+&=T^{-1}[G|FG|\ldots|F^{n-1}G]\\
+&=T^{-1} {\mathcal R}
+\end{align}
+$$
+- $\bar {\mathcal R}, {\mathcal R}$ matrici $n\times mn$
+- $T^{-1}$ matricxe $n\times n$ 
+Di conseguenza abbiamo che $\bar {\mathcal R}$ e ${\mathcal R}$ hanno lo stesso rango e quindi se $\Sigma$ è reachable lo è pure  $\bar\Sigma$
+##### Remark
+Se $m=1$ e $\Sigma$ e $\bar\Sigma$ reachables (è il caso di un sistema con un solo input) allora:
+$\bar{\mathcal R}=T^{-1}{\mathcal R}\qquad\Rightarrow T\bar {\mathcal R}={\mathcal R}\qquad\Rightarrow T={\mathcal R}\bar{\mathcal R}^{-1}$ 

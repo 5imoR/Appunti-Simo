@@ -87,4 +87,4 @@ $$
 - $U_1$ sono l'immagine di $A$
 
 Non abbiamo provato che $U^T_1U_1=I_k$ ma potremmo(non l'ha fatto) 
-	con quello che ha fatto oggi possiamo dire che $V_1^TV_1=I_K$? #DomandaML 
+

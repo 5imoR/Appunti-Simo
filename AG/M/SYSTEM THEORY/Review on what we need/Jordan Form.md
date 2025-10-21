@@ -73,7 +73,7 @@ $$
 - $n=9$
 - $rank(J-2I)=7$
 - $dim(ker(2I-J))={\color{orange}2}$
-molteplicità 2
+molteplicità geometrica 2
 
 $$
 J-3I=
