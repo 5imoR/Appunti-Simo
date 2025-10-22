@@ -3,7 +3,20 @@
 [[Reachability and controllability problems]]
 ![[Linear discrete time s.s.m.#Linear DT ssm]]
 
+#ST-L10 
+$(F,G)$ è reachable $\iff \mathcal R=n \iff Im \mathcal R=\mathbb R^n$
+
+Se $(F,G)$ è reachable è anche controllable
+$$
+\begin{align}
+(F,G)\text{ è reachable}&\Rightarrow Im\mathcal R=\mathbb R^n\\
+&\Rightarrow ImF^n\subseteq Im\mathcal R=\mathbb R^n\\
+&\Rightarrow (F,G) \text{ è controllable}
+\end{align}
+$$
+
 ### Definition
+#ST-L9
 Dato $k\in\mathbb Z,\ k>0$ uno stato $x_f\in X\in \mathbb R^n$ è detto *reachable* al tempo $t=k$ (in $k$ steps) se $\exists u(0),u(1),\dots u(k-1)\in U=\mathbb R^m$ che guida lo stato da $x(0)=\underline 0$  a $x(u)=x_f$ 
 $$\large
 (x(0)\xrightarrow[u(0),u(1),\dots,u(k-1)]{} x(k)=x_f)

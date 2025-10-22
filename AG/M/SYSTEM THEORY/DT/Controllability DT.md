@@ -9,8 +9,21 @@ $$
 $dim\ x=n\quad dim\ u=m$  
 - $F\in R^{n\times n}$ State Matrix
 - $G\in R^{m\times m}$ Input Matrix
-### Definition
+#ST-L10
+$(F,G)$ è controllable $\iff Im F^n\subseteq Im\mathcal R$
 
+Supponendo che $F$ sia non singular Allora $F^n$ è non singular $\Rightarrow ImF^n=\mathbb R^n$ allora:
+Se $(F,G)$ è controllable è anche reachable se $F$ è non singular
+$$
+\begin{align}
+(F,G)\text{ è controllable}&\Rightarrow Im F^n=\mathbb R^n\subseteq Im \mathcal R\subseteq \mathbb R^n\\
+&\Rightarrow Im\mathcal R=\mathbb R^n\\
+&\Rightarrow (F,G) \text{ è reachable}
+\end{align}
+$$
+
+### Definition
+#ST-L9
 Dato $k\in \mathbb Z\quad k \geq 1$  diciamo che lo stato $x_0\in X=\mathbb R^n$  è controllable in 0 in $k$ steps (at time $k$) se 
 $\exists u(0),u(1),\dots u(k-1)\in U=\mathbb R^m$  che guida lo stato da 
 $x(0)=x_0$  a $x(u)=\underline 0$ 
@@ -61,7 +74,7 @@ $$
 E' sempre vero che $X_{k+1}^C\subseteq X_{k+2}^C$  serve quindi provare che se
 $X_{k}^C=X_{k+1}^C$ allora $X_{k+2}^C\subseteq X_{k+1}^C$
 
-Questo vuol dire che:$\exists u(t)=u_t\quad t=1,...k+1$ tale che:
+Questo vuol dire che: $\exists u(t)=u_t\quad t=1,...k+1$ tale che:
 
 | Time  | $0$   | $1$   | $\cdots$ | $k+1$     | $k+2$          |
 | ----- | ----- | ----- | -------- | --------- | -------------- |
@@ -89,4 +102,17 @@ Di conseguenza:
 $X_1^C\subset X_2^C\subset\ldots\subset X_\bar k^C= X_{\bar k+1}^C=\ldots\subseteq X=\mathbb C^n\quad X_\bar k ^C\equiv X_n^C$  (è raggiungibile in $n$ passaggi)
 ###
 #ST-L10 
+Di conseguenza $X_1^C\subset X_2^C\subset...\subset X_\bar k^C= X_{\bar k+1}^C\subseteq X=\mathbb R^n$.
+Se oriac chiamiamo $X^C$ il set di stati che possono essere controllati a zero in un numero finito di step allora:
+$$
+X^C=X_n^C\Big\{x\in X:F^nx\in Im\mathcal R_n=Im\mathcal R\Big\}
+$$
+Diciamo quindi che il sistema DT (equivalentemente $(F, G)$) è controllabile a zero se tutti gli stati sono controllabili a zero in un numero finito di steps i.e. $X^C=\mathbb R^n$
 
+**RECAP**
+$$\begin{align}
+(F,G) {\Large\substack{\text{ is controllable }\\\text{to 0 in k steps}}}&\iff X^C =\set{x\in X:F^nx\in Im\mathcal R} =\mathbb R^n=X\\
+&\iff\forall x \in X F^nx\in Im\mathcal R\\
+&\iff ImF^n\subseteq Im \mathcal R
+\end{align}
+$$

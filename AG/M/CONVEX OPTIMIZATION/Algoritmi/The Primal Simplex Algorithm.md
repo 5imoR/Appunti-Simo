@@ -4,6 +4,8 @@ L'idea dietro questo algoritmo è:
 - Si parte da una feasible base $B$ del problema lineare
 - Ci si sposta sulle basi adiacenti(o vertici) finche non raggiungiamo una optimal basis
 	Per spostarci di base simette una colonna a 0 e se ne aggiunge un altre con costo migliore, si rivede più avanti
+	
+Al caso peggiore è esponenziale ma si è dimostrato che nella maggior parte dei casi risulta polinomiale o anche lineare, per questo è molto usato.
 ![[PrimalSimplex|500]]
  [[Convex Set#Global optimality theorem|Essendo convesso se trovi un minimo locale è un minimo globale]]
 
@@ -70,3 +72,82 @@ Per $t=\theta$ la blocking variable diventa $0$ quindi possiamo sostituirla con 
 ![[basispostate|700]]
 Se $\mathcal I=\emptyset$ vuol dire che il problema è unbounded e che possiamo aumentare quanto vogliamo $x_q$ 
 Se c'è una base degenerata il ratio test può dare 0 di conseguenza c'è il rischio di cambiare base ma rimanere sullo stesso vertice rischiando a sua volta di creare un loop. Queste sono chiamate *degenerate simplex interations* 
+
+## Pseudocodice
+#CO-L7
+- step 0:
+	- input $B$: matrice composta dalle colonne della base
+	- compute $B^{-1}$ 
+	- $\beta=B^{-1}b$ : basic solution
+	- $z=c_B^TB^{-1}b=c_B^T \beta=c_B^Tx_B$ : objective function
+- step 1:
+	$\pi^T=c_B^TB^{-1}$: vector of multiplierism
+- step 2: \[ pricing ]
+	- $d_j=c_j-\pi^TA_j \quad \forall j\in\mathcal R$ : reduced cost
+	
+	if $d_j\geq0\quad \forall j\in\mathcal R$: 
+		mi fermo
+	else: 
+		$x_q$ è la variabile della colonna
+		prendo $x_q$ con $d_q<0$ 
+- step 3:
+	- $\alpha_q=B^{-1}A_q$
+- step 4: \[ Pivot/Ratio ]
+	- $\mathcal I =\set{i:\alpha_q^i>0}$ 
+		if $\mathcal I=\emptyset$ caso unbounded
+	- $\theta= \min_{i\in \mathcal I}\{\frac {\beta_i}{\alpha_q^i}\}$ 
+	- $x_{kp}$ variabile che viene rimossa dalla base
+- step 5: \[ update ]
+	si aggiornano  $B$, $B^{-1}$ e poi $\beta$ e $z$
+	$\begin{cases}\beta_i=\beta_i-\theta\alpha_q^i\quad i\neq p\\\beta_p=\theta\\z=z+\theta d_q\quad \theta d_q\leq 0\end{cases}$ 
+
+## Initialization
+Finora abbiamo sempre avuto una base di partenza, cosa si fa se  la base non è disponibile da subito?
+Si usa il *two-phase simplex method* ovvero nella prima fase  si risolve un altro sistema allo scopo di ottenere una feasible basis che verrà usata nella seconda fase.
+$$
+\begin{cases}
+\min\ c^Tx\\
+Ax=b\\
+x\geq0
+\end{cases}
+\longrightarrow
+\begin{cases}
+\min\ e^Ty=\sum_{i=1}^my_i\\
+Ax+Iy=b\\
+x\geq0\quad y\geq0
+\end{cases}
+$$
+Consideriamo $w^*=(x^*,y^*)$
+	il valore di $w^*$ è il risultato della sommatoria, è presente anche $x$ perchè è dentro il sistema
+- $w^*>0$  vuol dire che non c'è un minimo con $y=0$ e di conseguenza il sistema iniziale non era feasible.
+- $w^*=0$ 
+	- $\forall y$ non fanno parte della base allora abbiamo trovato $B$
+	- $\exists y$ che sono della base (succede nel caso di una base degenerate) allora tramite dei *degenerate pivot* li rendiamo diversi dalla vase
+
+## Convergence
+Questo algoritmo  riscontra un problema nel caso di basi degeneri, dato che corre il rischio di entrare in loop infiniti.
+Esistono 2 soluzioni:
+- *Bland's rule*: si cedono 2 gradi di liberta (la possibilità di scegliere $x_q$ e $x_{kp}$  quando sono prensenti più valori ugualmente validi) andando a scegliere sempre quello con indice minimo. Così fancendo si ha la certezza di  convergere.
+	Nella pratica è inutile ma è utilizzato per delle dimostrazioni
+- *Perturbation* Quando viene individuato un loop vengono aggiunte delle perturbazioni al sistema andando a rompere il ciclo. Sucessivamente si vanno a rimuovere tornando al problema iniziale
+# Exercise
+![[SIMPLEEX|300]]
+
+$$
+\begin{cases}
+\max\quad x_1+x_2\\
+6x_1+4x_2\leq 24\\
+3x_1-2x_2\leq 6\\
+x_1, x_2\geq 0
+\end{cases}
+\qquad c^T=\begin{bmatrix}6&4\\3&-2\end{bmatrix}\quad x=\begin{bmatrix}x_1\\x_2\end{bmatrix}
+$$
+Lo si trasforma il [[Linear Programming#Standard form|standard form]] 
+$$
+\begin{cases}
+\min\quad -x_1-x_2\\
+6x_1+4x_2+x_3= 24\\
+3x_1-2x_2+x_4= 6\\
+x_1, x_2,x_3, x_4\geq 0
+\end{cases}
+$$
