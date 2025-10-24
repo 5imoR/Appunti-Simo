@@ -29,13 +29,17 @@ Data una lista di vertici si può ottenere il polyhedron unico
 
 
 ## Standard form
+Non viene persa generalità
+### Problem
 $$
 \begin{cases}
 &\min c^Tx\\
-&Ax=b\quad \text{non viene persa generalità}\\
+&Ax=b\quad \text{}\\
 &x\geq 0
 \end{cases}
 $$
+
+### Info
 - $a^Tx\geq b$ può essere riscritto come $a^Tx+s=b$ al costo di introdurre un variablie $s=b-a^Tx\geq 0$ 
 - $x\geq g$ può essere visto come $x-g\geq 0$ 
 - Una variabile $x_j$ che non ha limitazioni può essere espressa come due variabili non negative $x_j=x_j^+-x_j^-$   con $x_j^+,x_j^-\geq 0$
@@ -69,4 +73,4 @@ Se $x_R =0$ si ottiene
 
 **NOTA** Il rapporto tra basi e vertici non è $1:1$  dato che un vertice può essere rappresentato da più matrici diverse nel caso siano degenerate.
 
-## ![[The Primal Simplex Algorithm#Primal Simplex]]
+## ![[Primal Simplex Algorithm#Primal Simplex]]

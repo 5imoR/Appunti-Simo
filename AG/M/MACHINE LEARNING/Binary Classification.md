@@ -1,4 +1,5 @@
 [[MACHINE LEARNING]]
+#ML-L2 
 - $x \in X (= \mathbb{R}^d)$
 - $y\in \{0,1\}$
 - $S=\{z_i\quad i=1 ... n\}$ 

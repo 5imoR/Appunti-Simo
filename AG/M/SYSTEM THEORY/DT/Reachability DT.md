@@ -173,7 +173,7 @@ Se 2 sottospazi vettoriali $W1, W2$ sono inclusi in uno spazio vettoriale $V$ al
 
 
 #### Proprietà 1
-[[Review of Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|Algebraically equivalent]] 
+[[Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|Algebraically equivalent]] 
 Due sistemi alg. equiv. hanno la stessa transfor matrix
 $$
 \begin{align}
