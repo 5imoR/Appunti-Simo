@@ -1,5 +1,28 @@
 [[Linearization of a n.l. continuous time s.s.m.]] [[Laplace Transform]]
-## Definition
+## Linear CT ssm
+### State equation
+$$
+\dot x(t)=Fx(t)+Gu(t)\qquad\qquad\qquad t\in \mathbb R+
+$$
+$dim\ x=n\quad dim\ u=m$  
+- $F\in R^{n\times n}$ State Matrix
+- $G\in R^{m\times m}$ Input Matrix
+### General
+$$
+\begin {align}
+&\begin{cases}
+\dot x(t)=Fx(t)+Gu(t)\qquad\qquad\qquad&t\in \mathbb R+\\\\
+y(t)=Hx(t)+Du(t)
+\end{cases}
+\end{align}
+$$
+$dim\ x=n\quad dim\ u=m\quad dim\ y=p\quad$ 
+- $F\in R^{n\times n}$ State Matrix
+- $G\in R^{m\times m}$ Input Matrix
+- $H\in R^{p\times n}$ Output Matrix
+- $D\in R^{p\times m}$ Feedforward Matrix
+
+
 
 ## Ripasso di State Space Models a tempo continuo
 #ST-L4

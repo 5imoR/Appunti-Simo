@@ -1,0 +1,1 @@
+Proprietà adjoint numero 2 seconda uguaglianza

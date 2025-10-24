@@ -1,6 +1,13 @@
 [[Linearization of a n.l. discrete time s.s.m.]] [[Zeta Transform (Z-trans)]]
 ## Linear DT ssm
-
+### State equation
+$$
+x(t+1)=Fx(t)+Gu(t)\qquad\qquad\qquad t\in \mathbb Z+
+$$
+$dim\ x=n\quad dim\ u=m$  
+- $F\in R^{n\times n}$ State Matrix
+- $G\in R^{m\times m}$ Input Matrix
+### General
 $$
 \begin {align}
 &\begin{cases}

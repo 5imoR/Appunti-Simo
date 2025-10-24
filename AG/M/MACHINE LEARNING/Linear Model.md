@@ -239,6 +239,6 @@ $w^*=V_1S_1^{-1}U^T_1Y$
 	$w^*=V_1S_1^{-1}U_1^TY\rightarrow w^*\in Im (V_1)$
 	
 	$\longrightarrow w^*\perp\tilde w$ 
-	$||\hat w||^2=||w^*||^2+||\tilde w||^2$ sono tutti numeri non negativi quindi $$||\hat w||^2\geq||w^*||^2
+	$||\hat w||^2=||w^*||^2+||\tilde w||^2$ sono tutti numeri non negativi quindi $||\hat w||^2\geq||w^*||^2$
 
 

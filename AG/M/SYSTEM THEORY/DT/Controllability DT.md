@@ -1,14 +1,7 @@
 #ST-L9 
 # Controllability
 [[Reachability and controllability problems]]
-[[Linear discrete time s.s.m.]]
-**State equation**
-$$
-x(t+1)=Fx(t)+Gu(t)\qquad\qquad\qquad t\in \mathbb Z+
-$$
-$dim\ x=n\quad dim\ u=m$  
-- $F\in R^{n\times n}$ State Matrix
-- $G\in R^{m\times m}$ Input Matrix
+![[Linear discrete time s.s.m.#State equation]]
 #ST-L10
 $(F,G)$ è controllable $\iff Im F^n\subseteq Im\mathcal R$
 
