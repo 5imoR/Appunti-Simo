@@ -127,7 +127,32 @@ $$
 $L_S(w)=\frac 1 m \sum_1^m e_i^2=\frac 1 m E^T E=\large\frac 1 m [Y^TY-Y^TXw-w^TX^TY+w^TX^TXw]$ 
 
 ## Regression 
-#ML-L7
+#ML-L7 
+### Linear Regression
+$$
+Y=\begin{bmatrix}
+y_1\\y_2\\\vdots\\y_m
+\end{bmatrix}
+\in\mathbb R^m
+\qquad
+X=\begin{bmatrix}
+x^T_1\\x^T_2\\\vdots\\x^T_m
+\end{bmatrix}
+\in\mathbb R^{m\times d}\quad
+E=\begin{bmatrix}
+e_1\\e_2\\\vdots\\e_m
+\end{bmatrix}
+=
+\begin{bmatrix}
+y_1-x_1^Tw\\y_2-x_2^Tw\\\vdots\\y_m-x_m^Tw
+\end{bmatrix}
+=Y-Xw
+$$
+
+$$L_S(w)=-\frac 2 m\left[X^TY-X^TXw\right]$$ 
+- $w^*=V_1S_1^{-1}U^T_1Y$  è la soluzione minima
+
+###
 
 $$
 Y=\begin{bmatrix}

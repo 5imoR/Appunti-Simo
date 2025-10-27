@@ -98,11 +98,11 @@ $$
 1. $\mathbb E[e_i]=0$ la media è 0
 2. $Var\{e_i\}=\sigma^2$ 
 3. $e_i$ sono i.i.d.
+####
 4. più avanti altre
 	Spesso faremo assunzioni più importanti s.t. $e_i\sim \mathcal N(0,\sigma^2)$ 
 		$\mathcal N$ è una distribuzione normale o gaussiana
 		motivato dal teorema del limite centrale
-
 Possiamo dire che:
 $$\begin{align}
 &E=\begin{bmatrix}e_1\\\vdots\\e_m\end{bmatrix}\rightarrow \mathbb E(E)=0\rightarrow \mathbb{E}(E)=\begin{bmatrix}0\\\vdots\\0\end{bmatrix} \\
