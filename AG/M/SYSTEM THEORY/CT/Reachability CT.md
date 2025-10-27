@@ -49,7 +49,7 @@ $$
 Im\ R_t\equiv Im(R_tR^*_t)
 $$
 Cos'è $R_tR^*_t$?
-
+#### Gramiant
 $$
 \begin{aligned}
 R_t &: X \xrightarrow[R_t^* ]{\hspace{1cm} }\mathcal U|_{[0,t]}\xrightarrow[R_t ]{\hspace{1.8cm} } X\\

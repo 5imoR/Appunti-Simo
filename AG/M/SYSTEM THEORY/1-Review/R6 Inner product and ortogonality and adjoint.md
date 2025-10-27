@@ -92,9 +92,9 @@ $$
 \end{align}
 $$
 
-#### Proprietà
+#### Proprietà adjoint
 - $\ker\mathcal A\equiv(Im\mathcal A^*)^\perp$
 - $\ker \mathcal A=\ker[\mathcal A^*A]=$
 - $Im \mathcal A\subseteq(\ker \mathcal A^*)^\perp$ 
 - $Im \mathcal A\supseteq Im(\mathcal A \mathcal A^*)$
-Nelle ultime due se $Im \mathcal A$ è finite dimensional allora sono due uguaglianze
+Nelle ultime due se $Im \mathcal A$ è un  finite dimensional  vector space allora sono due uguaglianze
