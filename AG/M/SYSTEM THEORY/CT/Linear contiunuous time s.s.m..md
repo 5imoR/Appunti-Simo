@@ -1,4 +1,4 @@
-[[Linearization of a n.l. continuous time s.s.m.]] [[Laplace Transform]]
+[[Linearization of a n.l. continuous time s.s.m.]] [[R2 Laplace Transform]]
 ## Linear CT ssm
 ### State equation
 $$
@@ -61,7 +61,7 @@ $$
 - $D\in R^{p\times m}$ Feedforward Matrix
 
 se conosciamo $x(0)=x_0\in X$ e $u(t)\quad t\in \mathbb R+$ qual'è l'espressione di $x(t)$ e $y(t)$?
-Usando il concetto di [[Exponential Matrix|matrice esponenziale]] possiamo dire che:
+Usando il concetto di [[R5 Exponential Matrix|matrice esponenziale]] possiamo dire che:
 $$\Large
 \begin{align}
 &{\color{lightgreen} x(t)}=\underbrace{e^{Ft}x_0}_{x_l(t)}

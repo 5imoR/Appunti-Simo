@@ -19,7 +19,7 @@ $$
 &\text{varianza}\\
 &Var[X]=E[(X-\mu x)^2]\qquad \mu x=E[X]\\\\
 &\text{derivazione di X}\\
-&\sigma x=\sqrt{var[X]}
+&\sigma^2 x={Var[X]}
 
 \end{align}
 $$

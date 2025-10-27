@@ -73,7 +73,11 @@ $$
 $V=\mathcal U|_{[0,t]}$  è il set di piece wise continuous function definito in $[0,t]$ e prendendo i valori in $U=\mathbb R^n$ 
 $w=X=\mathbb R^n$
 Assumiamo l'inner product:
-$$<u_1,u_2>_{\mathcal U|_{[0,t]}}\triangleq\int_0^tu_1(\tau)u_2(\tau)d\tau$$
+$$<u_1,u_2>_{\mathcal U|_{[0,t]}}\triangleq\int_0^tu_1^T(\tau)u_2(\tau)d\tau$$
+$$<x_1,x_2>_X\triangleq x_1^Tx_2\qquad \forall x_1,x_2\in X$$
+
+
+
 $$\begin{align}\mathcal A&:\mathcal U|_{[0,t]}\rightarrow X\\
 &:u(\tau)\rightarrow\int_0^tM(\tau)u(\tau)d\tau\end{align}$$
 $M(\tau$) è una matrix valued function $\in \mathbb R^{n\times m}$

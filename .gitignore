@@ -1,2 +1,3 @@
 # Ignora la cartella .obsidian
 .obsidian/
+.script.py

@@ -7,7 +7,7 @@ Dato un Sample serve trovare una funzione adeguata
 $y=w^T x+b=\sum_{i=1}^dw_i[x]_i$ 
 
 ## Classification
-![[Drawing 2025-10-13 18.16.31.excalidraw]]
+![[classification]]
 L'esempio è di binary combination
 $w^Tx+b=w_1[x]_1+w_2[x]_2+b=0$
 Graficamente $w^Tx+b=0$ è l'iperpiano che interseca  $[x]_1$ e $[x]_2$

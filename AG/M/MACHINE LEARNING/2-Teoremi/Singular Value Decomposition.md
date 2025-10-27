@@ -1,4 +1,9 @@
 #ML-L7
+#### Riassunto
+$$\begin{align}
+A=USV^T=U_1S_1V^T_1
+\end{align}
+$$
 ## The Singular Value Decomposition SVD
 **MATRICI $A=\mathbb R^{n\times m}$**
 $$
@@ -44,7 +49,8 @@ L(A):&\mathbb R^m\longrightarrow\mathbb R^n\\
 \end{align}
 $$
 
-Qual'è la direzione in $\mathbb R ^m$ lungo la quale la nostra trasformazione lineare($L(A)$ ) da l'amplificazione massima?   $\sup_{v\in\mathbb R^m}||Av||=\sigma_1$ 
+Qual'è la direzione in $\mathbb R ^m$ lungo la quale la nostra trasformazione lineare($L(A)$ ) da l'amplificazione massima?
+$\sup_{v\in\mathbb R^m}||Av||=\sigma_1$ 
 
 #ML-L8
 $\arg \max _{\substack{v\in\mathbb R^m\\||v||=1}}||Av||\subseteq\arg\max_{v\in\mathbb R^m}\frac{||Av||}{||v||}$ 

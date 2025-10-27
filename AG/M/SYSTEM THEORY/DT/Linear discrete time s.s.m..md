@@ -1,4 +1,4 @@
-[[Linearization of a n.l. discrete time s.s.m.]] [[Zeta Transform (Z-trans)]]
+[[Linearization of a n.l. discrete time s.s.m.]] [[R1 Zeta Transform (Z-trans)]]
 ## Linear DT ssm
 ### State equation
 $$
@@ -73,7 +73,7 @@ Dove $n1, n2,...,nr$ sono interi positivi chiamati molteplicità algebrica di $\
 
 
 ### Espressione di *state and output* ad un tempo generico $t>0$
-Usando il concetto di [[Power of a Square Matrix and Jordan Form|potenza di una matrice]] possiamo dire che:
+Usando il concetto di [[R4 Power of a Square Matrix and Jordan Form|potenza di una matrice]] possiamo dire che:
 $$
 \Large
 \begin{align}

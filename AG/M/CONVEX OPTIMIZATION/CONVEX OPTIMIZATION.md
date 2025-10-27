@@ -1,4 +1,4 @@
-[[ALGEBRA]][[ANALISI1]] #CO-L1
+ #CO-L1
 Come è strutturato un problema:
 $$
 P=

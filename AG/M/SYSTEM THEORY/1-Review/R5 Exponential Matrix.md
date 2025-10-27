@@ -11,7 +11,7 @@ $$
 
 ### Exponential Matrix in Jordan form
 
-![[Jordan Form#Jordan Form]]
+![[R3 Jordan Form#Jordan Form]]
 
 dato che $J$ e $J_i$ sono matrici diagonali a blocchi allora $J^k$ e $J_i^k$ sono diagonali a blocchi $\forall k\geq 0$ 
 Guardando alla definizione di esponeziale si deduce che:

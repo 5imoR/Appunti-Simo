@@ -1,6 +1,6 @@
 #ST-L2
 [[SYSTEM THEORY]]
-![[Jordan Form#Jordan Form]]
+![[R3 Jordan Form#Jordan Form]]
 
 ## Power of a Jordan mini-block
 #ST-L3

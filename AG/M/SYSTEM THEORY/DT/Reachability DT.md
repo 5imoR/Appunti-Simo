@@ -149,7 +149,7 @@ $$
 \begin{align}
 FX^R&=F\ \Big(Im[G|FG|\ldots|F^{n-1}G]\Big)\\
 &=Im\Big({\color{orange}F}\big[G|FG|\ldots|F^{n-1}G\big]\Big)\\
-&=Im\Big(Im[{\color{orange}F}|G|FG|\ldots|F^{n-1}G|{\color {orange} F^{n}G}]\Big)\\
+&=Im\Big(Im[{\color{orange}F}G|F^2G|\ldots|F^{n-1}G|{\color {orange} F^{n}G}]\Big)\\
 &\subseteq Im[G|FG|\ldots|F^{n}G]\\
 Hamilton\rightarrow&\equiv Im[G|FG|\ldots|F^{n-1}G]=X^R\\
 \Rightarrow FX^R\subseteq X^R
@@ -173,7 +173,7 @@ Se 2 sottospazi vettoriali $W1, W2$ sono inclusi in uno spazio vettoriale $V$ al
 
 
 #### Proprietà 1
-[[Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|Algebraically equivalent]] 
+[[R7 Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|Algebraically equivalent]] 
 Due sistemi alg. equiv. hanno la stessa transfor matrix
 $$
 \begin{align}
