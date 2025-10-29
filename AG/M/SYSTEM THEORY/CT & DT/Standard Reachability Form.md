@@ -53,10 +53,126 @@ $$
 
 Siccome $(F,G)$ e $(\bar F,\bar G)$ sono [[R7 Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|algebricamente equivalenti]]  sappiamo che $\bar {\mathcal R}=T^{-1}\mathcal R$ 
 e quindi $rank\bar{\mathcal R}=rank \mathcal R =\rho<n$
-Tramite [[Cayley-Hamilton's theorem]] possiamo dire che 
+Tramite [[Cayley-Hamilton's theorem]] possiamo dire che da $F_11^{\rho}G_1$ in poi è tutto inutile per la reachability quindi:
 $$
+\bar{\mathcal R}=
 \begin{bmatrix}
-G_1 & F_{11}G_1 & F_{11}^2G_1 & \dots & F_{11}^{\rho-1}G_1 & \dots & F_{11}^{n-1}G_1 \\
+G_1 & F_{11}G_1 & F_{11}^2G_1 & \dots & F_{11}^{\rho-1}G_1 & \cancel{\dots} & \cancel{F_{11}^{n-1}G_1} \\
 0 & 0 & 0 & \dots & 0&\dots & 0 \\
 \end{bmatrix}
+$$
+Per hemilton il rank della matrice è $\rho$ e di conseguennza $(F_{11}G_1)$ è **raggiungibile**
+
+# Riassunto 
+Un paio$(\bar F,\bar G)$ è in S.F.R. è:
+$$
+\bar F=\begin{bmatrix}F_{11}&F_{12}\\0& F_{22}\\\end{bmatrix}
+\qquad
+\bar G=\begin{bmatrix}G_1\\ 0\end{bmatrix}
+$$
+e $(F_{11}G_{1})$ è un paio raggiungibile
+
+**NOTA**
+Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F.
+
+Gli autovalori di $F_{11} F_{22}$ non dipendono da $T$ mentre $F_{12}$ può essere portato a $0$
+
+
+# Exercise
+Consideriamo un CT s.s.m.
+$$
+\dot x(t)=Fx(t)+gu(t)=
+\begin{bmatrix}
+0 & 1 & 1 \\
+2 & 1 & 0 \\
+1 & 1 & 2 \\
+\end{bmatrix}x(t)+
+\begin{bmatrix}
+0 \\
+1 \\
+-1 \\
+\end{bmatrix}u(t)
+$$
+Prova  che il sistema non è reachable e derivalo nella sua S.R.F.
+$$
+\begin{align}
+\mathcal R= [g|Fg|F^2g]=
+\begin{bmatrix}
+0 & 0 & 0 \\
+1 & 1 & 1 \\
+-1 & -1 & -1 \\
+\end{bmatrix}\qquad rank \mathcal R=1=\rho\\
+
+\end{align}
+$$
+$$
+T=
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+-1 & 0 & 0 \\
+\end{bmatrix}
+\qquad T^{-1}=
+\begin{bmatrix}
+0 & 0 & -1 \\
+1 & 0 & 0 \\
+0 & 1 & 1 \\
+\end{bmatrix}
+$$
+$$\begin{align}
+\bar F=T^{-1}FT&=
+\begin{bmatrix}
+0 & 0 & -1 \\
+1 & 0 & 0 \\
+0 & 1 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 1 & 1 \\
+2 & 1 & 0 \\
+1 & 1 & 2 \\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+-1 & 0 & 0 \\
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+-1 & -1 & -2 \\
+0 & 1 & 1 \\
+3 & 2 & 2 \\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+-1 & 0 & 0 \\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+{\color {orange}1} & -1 & -1 \\
+0 & 0 & 1 \\
+0 & 3 & 2 \\
+\end{bmatrix}
+\end{align}
+$$
+
+- $F_{11}$ è $\color{orange}1$ 
+- $F_{22}$ è $\begin{bmatrix}0 & 1 \\3 & 2 \\\end{bmatrix}$
+
+$$\bar g=T^{-1}g=\begin{bmatrix}
+0 & 0 & -1 \\
+1 & 0 & 0 \\
+0 & 1 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+0 \\
+1 \\
+-1 \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \\
+0 \\
+0 \\
+\end{bmatrix}
+
 $$

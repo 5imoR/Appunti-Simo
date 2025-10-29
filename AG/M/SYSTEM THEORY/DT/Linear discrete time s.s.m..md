@@ -208,3 +208,89 @@ $$
 
 
 
+
+## Standard Case 
+#ST-L13
+Riscriviamo il sistema in [[Standard Reachability Form]] senza perdita di generalità w.l.o.g.
+- $\bar H=[H_1|H_2]$ dove $H_1$ con $\rho$ colonne ed $H_2$ con $n-\rho$ colonne
+- $\bar x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\end{bmatrix}$ dove $x_1$ con $\rho$ righe e $x_2$ con $n-\rho$ righe
+riscriviamo il sistema equivalente:
+$$
+\begin{cases}
+\begin{bmatrix}
+x_1(t+1)\\x_2(t+1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+F_{11}&F_{12}\\
+0&F_{22}\\
+\end{bmatrix}
+\begin{bmatrix}
+x_1(t)\\x_2(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+G_1\\0
+\end{bmatrix}
+u(t)\\\\
+y(t)=
+\begin{bmatrix}
+H_1&H_2
+\end{bmatrix}
+\begin{bmatrix}
+x_1(t)\\x_2(t)
+\end{bmatrix}
++
+\bar Du(t)
+\end{cases}
+$$
+$(F_{11},G_1)$ è reachable
+
+![[AdvancedBDofDT|700]]
+In breve si può disegnare come:
+
+| ![[SmoladvBDofDT\|300]] | La parte importante è quella che non possiamo controllare.<br>Bisogna analizzare $\color{orange}\Sigma_{NR}$  per essere sicuri che non<br> ci siano autovalori problematici.<br> Altrimenti ci toccherà ridisegnare il sistema,<br> in particolare $G$ che è la matrice degli input.<br>$\color{orange}\Sigma_{NR}$ è completamente autonomous.<br>Inutile mettere le condizioni iniziali a 0. Se è instabile<br> rende le dinamiche del sistema incontrollabili<br>Noi analiziamo $\sigma(F_{22})$ chiamato:<br> *Spectrum of the non reachable subsystem* |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+La funzione di trasferimento dell'intero sistema $\bar \Sigma$ dipende interamente da $\Sigma_R$ 
+	dato che $\Sigma_{NR}$ è autonoma e quindi non influisce
+Di conseguenza coincide con la matrice di trasferimento di $\Sigma_R=(F_{11},G_1,H_1,\bar D)$ 
+$$
+\begin{align}
+\bar W(z)&=
+\begin{bmatrix}
+H_1&H_2
+\end{bmatrix}
+\begin{bmatrix}
+zI-F_{11}&-F_{12}\\
+0&zI-F_{22}\\
+\end{bmatrix}^{-1}\begin{bmatrix}
+G_1\\0
+\end{bmatrix}+\bar D\\\\
+&=
+\begin{bmatrix}
+H_1&H_2
+\end{bmatrix}
+\begin{bmatrix}
+(zI-F_{11})^{-1}&*\\
+0&(zI-F_{22})^{-1}\\
+\end{bmatrix}\begin{bmatrix}
+G_1\\0
+\end{bmatrix}+\bar D\\\\
+&=
+\begin{bmatrix}
+H_1&H_2
+\end{bmatrix}
+\begin{bmatrix}
+(zI-F_{11})^{-1}G_1\\0
+\end{bmatrix}
++\bar D\\\\
+&=
+H_1(zI-F_{11})^{-1}G_1+\bar D\\
+&\equiv\color{lightgreen} W_R(z)
+\end{align}
+$$
+$$
+W_\Sigma(z)=W_\bar \Sigma(z)=\color{lightgreen} W_{\Sigma_R}(z)
+$$
+Ogni volta che abbiamo un non reachable subsystem $W(z)$  avrà un grado minore di $n$ al denominatore dovuto alle cancellazioni.Le cancellazioni servono ad evitare il missbehaving di $\Sigma_{NR}$ 

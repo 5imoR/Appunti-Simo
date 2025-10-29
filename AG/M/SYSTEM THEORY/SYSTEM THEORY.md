@@ -48,3 +48,4 @@ Sono presenti sistemi a tempo discreto e a tempo continuo che a loro volta posso
 	 Vuol dire che la molteplicità di $\lambda$ come uno zero di $\Psi_F(z)$ è $1$ 
 - Un l.d.t.s.s.m. è asintoticamente stabile$\iff x_e=\underline0$ è un punto d'equilibrio asintoticamente stabile 
 
+
