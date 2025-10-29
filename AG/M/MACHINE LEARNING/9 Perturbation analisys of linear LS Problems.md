@@ -96,7 +96,7 @@ $$
 ##### Assunzioni probabilistiche su E
 [[PROBABILITY]]
 1. $\mathbb E[e_i]=0$ la media è 0
-2. $Var\{e_i\}=\sigma^2$ 
+2. $Var\{e_i\}=\sigma^2$           $\qquad \Sigma_w$ matrice della varianza di $w$ 
 3. $e_i$ sono i.i.d.
 ####
 4. più avanti altre

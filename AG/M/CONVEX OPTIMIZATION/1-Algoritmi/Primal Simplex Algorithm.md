@@ -130,7 +130,7 @@ Esistono 2 soluzioni:
 - *Bland's rule*: si cedono 2 gradi di liberta (la possibilità di scegliere $x_q$ e $x_{kp}$  quando sono prensenti più valori ugualmente validi) andando a scegliere sempre quello con indice minimo. Così fancendo si ha la certezza di  convergere.
 	Nella pratica è inutile ma è utilizzato per delle dimostrazioni
 - *Perturbation* Quando viene individuato un loop vengono aggiunte delle perturbazioni al sistema andando a rompere il ciclo. Sucessivamente si vanno a rimuovere tornando al problema iniziale
-# Exercise
+# Ex 1
 ![[SIMPLEEX|300]]
 
 $$
@@ -204,3 +204,90 @@ $x=[0\ 6\ 0\ 18]$
 #### Quarta iterazione:
 tramite i calcoli si vede che $d_1, d_3\geq 0$ quindi l'algoritmo termina
 $x=[0\ 6]$  $x_3, x_4$ possono essere riposse dato che erano artificiali
+
+# Ex 2
+$$
+\begin{cases}
+\min x_1-2x_2\\
+2x_1+3x_3=1\\
+3x_1+2x_2-x_3=5
+\end{cases}
+\qquad
+\begin{align}
+&\mathcal B=\set{x_1,x_2}\\
+&B=\begin{bmatrix}2&0\\3 &2\end{bmatrix}\\
+&B^{-1}=\begin{bmatrix}0.5&0\\-0.75 &0.5\end{bmatrix}\\
+\end{align}
+$$
+
+$$
+\beta=B^{-1}b=
+\begin{bmatrix}
+\frac12 \\
+\frac74 \\
+\end{bmatrix}
+\qquad 
+\begin{align}
+&\text{se uno di questi valori è 0} \\
+&\text{significa che la base è degenere.}\end{align}
+$$
+- $\pi^T=c_BB^{-1}=\begin{bmatrix}2 & -1 \\\end{bmatrix}$
+- $d_3=c_3-\pi^TA_3=-7$ significa che c'è una base migliore per $x_3$
+$x_3$ entra a far parte della base
+- $\alpha_3=B^{-1}A_3=\begin{bmatrix}\frac32 \\-\frac{11}4 \\\end{bmatrix}$
+dato che $x_1$ raggiunge $0$ per prima la togliamo dalla base
+
+$\mathcal B=\set{x_3,x_2}$
+$\Delta_z=d_3\theta=-\frac 73$ 
+se c'erano più iterazioni?
+	si sommavano i vari $\theta$ e $d$
+Se la base non è degenere allora l'iterazine non sara degenere
+	$\theta$ non sarà $0$
+# Ex 3
+$$
+\begin{cases}
+\min x_1+x_2+2x_3+4x_4\\
+2x_2-3x_4=1\\
+-x_1-x_3=1
+\end{cases}
+$$
+1. $\mathcal B=\set{x_2,x_1,x_3}$ è ottima?
+2. che valore ha $x$ nella best fesible solution?
+3. è degenerate?
+
+$$
+B\vdots I
+\begin{bmatrix}
+2 & 0 & 0 & \vdots & 1 & 0 & 0 \\
+0 & 1 & 0 & \vdots & 0 & 1 & 0 \\
+0 & -1 & 1 & \vdots & 0 & 0 & 1 \\
+\end{bmatrix}\rightarrow
+\begin{bmatrix}
+1 & 0 & 0 & \vdots & \frac12 & 0 & 0 \\
+0 & 1 & 0 & \vdots & 0 & 1 & 0 \\
+0 & 0 & 1 & \vdots & 0 & 1 & 1 \\
+\end{bmatrix}
+=I\vdots B^{-1}
+$$
+$$
+\beta=B^{-1}b=\begin{bmatrix}
+x_2 \\
+x_1 \\
+x_3 \\
+\end{bmatrix}=
+\begin{bmatrix}
+\frac12 \\
+0 \\
+1 \\
+\end{bmatrix}\geq 0
+$$
+ i tre valori sono $\geq$ quindi fesible
+- $\pi^T=c_B^TB^{-1}=[1\ 1\ 2]B^{-1} = \big[\frac 12\ 3\ 2\big]$ 
+- $d_4=c_4-\pi^TA_4=\frac {17}2\geq 0$ 
+ è la miglior base
+1. si
+2. $x=\big[0\ \frac12\ 1\ 0\big]$ 
+3. si, in $\beta$ c'è uno zero
+
+
+ 
