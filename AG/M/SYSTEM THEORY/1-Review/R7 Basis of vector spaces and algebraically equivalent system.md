@@ -8,8 +8,9 @@ Diciamo che $\Sigma$ e $\bar\Sigma$ sono algebricamente equivalenti  se rapprese
 - $\bar G =TG$
 - $\bar H = HT$
 - $\bar D=D$
-#ST-L8
+
 ### Basis of vector spaces
+#ST-L8
 Consideriamo l'esempio di
 ![[Linear discrete time s.s.m.#Linear DT ssm#General]]
 
