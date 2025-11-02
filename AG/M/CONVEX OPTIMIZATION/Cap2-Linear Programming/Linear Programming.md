@@ -1,12 +1,12 @@
 #CO-L5
 
-## Definition
+### Linear Programming
 E' un caso particolare di [[CONVEX OPTIMIZATION#Convex Programming|convex programming]]  che può essere scritto come:
 $$
 \begin{cases}
-&\min c^Tx\\
-&a^T_ix \sim b_i\quad\qquad i=1\dots m\quad \sim\in\{\leq, =, \geq\}&\text{per forza lineare}\\
-&l_j\leq x_j\leq u_j\qquad l_j\in \mathbb{R}\cup\{-\infty\}\quad u_j\in \mathbb{R}\cup\{+\infty\}&\text{lineare}
+\min c^Tx=\sum_{j=1}^n c_jx_j&\text{lineare}\\
+a^T_ix \sim b_i\quad\qquad i=1\dots m\quad \sim\in\{\leq, =, \geq\}&\text{lineare}\\
+l_j\leq x_j\leq u_j\qquad l_j\in \mathbb{R}\cup\{-\infty\}\quad u_j\in \mathbb{R}\cup\{+\infty\}&\text{lineare}
 \end{cases}
 $$
 Non sono ammessi $<$ e $>$  ed essendo che si trattano funzioni lineare è possibile, per cercare il massimo, invertire la funzione dato che rimane cominque lineare.

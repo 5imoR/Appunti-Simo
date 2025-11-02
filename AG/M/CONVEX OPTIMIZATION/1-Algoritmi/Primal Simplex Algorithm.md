@@ -206,6 +206,7 @@ tramite i calcoli si vede che $d_1, d_3\geq 0$ quindi l'algoritmo termina
 $x=[0\ 6]$  $x_3, x_4$ possono essere riposse dato che erano artificiali
 
 # Ex 2
+#CO-L9
 $$
 \begin{cases}
 \min x_1-2x_2\\

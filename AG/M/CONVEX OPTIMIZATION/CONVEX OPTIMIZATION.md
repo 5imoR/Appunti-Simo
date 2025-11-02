@@ -34,14 +34,7 @@ x\geq0
 $$
 Mettendo molti vincoli si va ad ottenere una soluzione che funziona perfettamente ma non ha utilizzi. Lo scopo di Convex Optimization è trovare l'equilibrio nella quantità dei vincoli.
 ---
-## Linear Programming
-$$
-\begin{cases}
-&min(c^Tx)=\sum_{j=1}^n c_jx_j&\text{per forza lineare}\\
-&a^T_ix \sim b_i\quad\qquad i=1\dots m\quad \sim\in\{\leq, =, \geq\}&\text{per forza lineare}\\
-&l_j\leq x_j\leq u_j\qquad l_j\in \mathbb{R}\cup\{-\infty\}\quad u_j\in \mathbb{R}\cup\{+\infty\}&\text{non possono esserci buchi}
-\end{cases}
-$$
+![[Linear Programming#Linear Programming]]
 #### Diet Problem
 - $n$ tipi di cibi
 - $c_j$ costo di ogni cibo
@@ -58,12 +51,7 @@ x_j\geq 0\quad j=1\dots n
 \end{cases}
 $$
 
-## Integral Programming
-E' identico all'linear programming ma con l'aggiunta di un nuovo vincolo:
-$$
-x_j\in\mathbb{Z} \quad \forall j \in J\subseteq\mathbb{N}
-$$
-questo permette la possibilità di usare gli int come $1$ e $0$ per dire vero o falso ed altro.
+![[Integral Programming#Integral Programming]]
 #### Knapsack Problem
 - $n$ oggetti
 - $p_j$ profitto di un oggetto
@@ -78,6 +66,7 @@ $$
 x_j\in \{0,1\}\quad j=1\dots n
 \end{cases}
 $$
+
 ## Convex Programming
 [[Convex Set]]
 $$

@@ -38,7 +38,7 @@ $\Delta w=\displaystyle\max_{\substack{\Delta Y\\||\Delta Y||=\delta}}||\underbr
 	$\displaystyle\max_{\substack{\Delta Y\\||\Delta Y||=\delta}}||Av||=\delta\frac 1 {\sigma_k(x)}$
 	si può vedere che è la stessa formula per trovare la direzione dell'amplificazione massima nell' [[Singular Value Decomposition|SVD]].
 Il massimo è ottenuto quando $\Delta Y=\delta u_k$ dove $U_1=[u_1,\dots, u_k]$ 
-#ML-L9-HW
+#ML-HW-L9
 	Dimostra questo massimo
 
 

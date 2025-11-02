@@ -129,11 +129,11 @@ J=
 $$
 **Dati**
 
-| $i$ | $\lambda_i$ | n_i | molt. geom. |
-| --- | ----------- | --- | ----------- |
-| 1   | 1           | 3   | 2           |
-| 2   | 2           | 5   | 2           |
-| 3   | 0           | 1   | 1           |
+| $i$ | $\lambda_i$ | $n_i$ | molt. geom. |
+| --- | ----------- | ----- | ----------- |
+| 1   | 1           | 3     | 2           |
+| 2   | 2           | 5     | 2           |
+| 3   | 0           | 1     | 1           |
 Data una matrice $F\in\mathbb{R}^{n\times n}$ un polinomio $p(s)\in \mathbb{R}[s]$:
 $$
 p(s)=p_ds^d+p_{d-1}s^{d-1}+...+p_1s+p_0

@@ -149,9 +149,10 @@ y_1-x_1^Tw\\y_2-x_2^Tw\\\vdots\\y_m-x_m^Tw
 =Y-Xw
 $$
 
-$$L_S(w)=-\frac 2 m\left[X^TY-X^TXw\right]$$ 
-- $w^*=V_1S_1^{-1}U^T_1Y$  è la soluzione minima
-
+$$Y=Xw-E\qquad L_S(w)=-\frac 2 m\left[X^TY-X^TXw\right]$$ 
+- $w^*=V_1S_1^{-1}U^T_1Y$  è la soluzione minima (da chiedere)
+- $\nabla_wL_S(w)=0\iff X^TY=X^TXw$
+- $\hat w=\arg\min\frac1m||Y-Xw||^2\quad\rightarrow\quad \hat w=(X^TX)^{-1}X^TY\in \mathbb R^d$  
 ###
 
 $$

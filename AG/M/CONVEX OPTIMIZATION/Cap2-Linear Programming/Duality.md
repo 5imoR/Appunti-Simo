@@ -48,6 +48,7 @@ Non solo ha una dimensione polinomiale ma ha anche la stessa dimensione del LP o
 ![[Linear Programming#Standard form#Problem]]
 
 ## 
+#CO-L9
 $$
 \begin{align}
 &\text{Primal}&\text{Dual}\qquad\\
