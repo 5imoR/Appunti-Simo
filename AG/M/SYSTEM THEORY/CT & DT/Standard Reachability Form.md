@@ -73,7 +73,7 @@ $$
 e $(F_{11}G_{1})$ è un paio raggiungibile
 
 **NOTA**
-Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F.
+Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F. raggiungibile
 
 Gli autovalori di $F_{11} F_{22}$ non dipendono da $T$ mentre $F_{12}$ può essere portato a $0$
 

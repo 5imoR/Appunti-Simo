@@ -21,6 +21,19 @@ $dim\ x=n\quad dim\ u=m\quad dim\ y=p\quad$
 - $G\in R^{m\times m}$ Input Matrix
 - $H\in R^{p\times n}$ Output Matrix
 - $D\in R^{p\times m}$ Feedforward Matrix
+### Strictly Proper
+$$
+\begin {align}
+&\begin{cases}
+x(t+1)=Fx(t)+Gu(t)\qquad\qquad\qquad&t\in \mathbb Z+\\\\
+y(t)=Hx(t)
+\end{cases}
+\end{align}
+$$
+$dim\ x=n\quad dim\ u=m\quad dim\ y=p\quad$ 
+- $F\in R^{n\times n}$ State Matrix
+- $G\in R^{m\times m}$ Input Matrix
+- $H\in R^{p\times n}$ Output Matrix
 
 
 ## Ripasso di State Space Models a tempo discreto

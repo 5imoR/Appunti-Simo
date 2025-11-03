@@ -32,8 +32,22 @@ Dove
 - $G_r$ ha $n_r$ righe
 - $G_{i1}$ ha $n_i1$ righe
 - $G_{n_is_i}$ ha $n_is_i$ righe
-$(F,G)\text{ reachable}\iff \forall i\in \set{1\dots r}$  la famiglia dell'ultima riga dei blocchi $G_{i1}...$ sono linearmente indipendenti
+$(F,G)\text{ reachable}\iff \forall i\in \set{1\dots r}$  la famiglia dell'ultima riga dei blocchi $G_{i1}...G_{is_i}$ sono linearmente indipendenti quindi $m\geq s_i$ (lunghezza dei vettori riga$\geq$ numero di vettori riga)
+#ST-L15
+Allora si può dire che $(F,G)$ per essere reachable deve avere $m\geq s_i\quad \forall i=1\dots r$ 
+$\iff m\geq \max_{i=1\dots r} s_i =\max(\text{moltiplicità geometrica di }\lambda_i)$ 
+
+Questo claim non regge solo per $(F,G)$ dove $F$ è in [[R3 Jordan Form|Jordan Form]] ma per qualunque $(F,G)$ dato che $\exists T$ s.t.
+- $T^{-1}FT=J$ e
+	- $(F,G)$ è raggiungibile $\iff (J,T^{-1}G)$ è raggiungibile
+	- $m$ e le molteplicità geometriche sono le stesse per $(F,G)$ e $(J,T^{-1}G)$ 
+- Nel caso in cui $m=1$ (single input system)
+	Una condizione necessaria per la raggiungibilità di $(F,g)$ è che
+	$\forall i$ la molteplicità geometrica di $\lambda_i$ deve essere $1$
+	equivalentemente
+	$\forall i$ c'è un unico miniblocco associato al autovalore $\lambda_i$ 
 ### Esempio
+#ST-L14 
 $$
 F=J=\begin{bmatrix}
 \begin{bmatrix}
@@ -61,10 +75,10 @@ g_1\\g_2\\g_3\\g_4\\g_5\\g_6\\g_7\\g_8\\g_9
 \end{bmatrix}
 $$
 
-| $i$ | $\lambda_i$ | $n_i$ | $s_i$ | $n_i1$ |
-| --- | ----------- | ----- | ----- | ------ |
-| 1   | 2           | 5     | 3     | 3      |
-| 2   | 1           | 5     | 2     | 2      |
+| $i$ | $\lambda_i$ | $n_i$ | $s_i$ | $n_{i1}$ |
+| --- | ----------- | ----- | ----- | -------- |
+| 1   | 2           | 5     | 3     | 3        |
+| 2   | 1           | 5     | 2     | 2        |
 
 Vogliamo capire sotto quali condizioni di $G$ otteniamo che il paio $(F,G)=(J,G)$ è raggiungibile usando [[PHB Reachability Test]] 
 	Per  $(1)$  possiamo dire che  basta guardare il rango dei blocchi degli autovalori
@@ -127,6 +141,7 @@ g_1\\g_2\\g_3\\g_4\\g_5\\g_6\\\color{lightgreen}g_7\\g_8\\\color{lightgreen}g_9
 $\textcolor{lightgreen}{■}$ sono le righe linearmente dipendenti, quindi per avere la matrice con rango $n$ serve che $g_7,g_9$ siano indipendenti tra loro
 
 non serve che siano tutti e 5 linearmente indipendenti, basta che lo siano rispettivamente al loro "gruppo"
+
 ## Proof
 1 $\Rightarrow$ Per counter positive    (per provare $A\Rightarrow B$ proviamo $\bar B\Rightarrow \bar A$ )
 	Assumiamo che $\exists \lambda \in \mathbb C$ s.t. $rank [\lambda In-F|G]<n$
@@ -159,8 +174,8 @@ non serve che siano tutti e 5 linearmente indipendenti, basta che lo siano rispe
 2 $\Rightarrow$
 	Assumiamo che il paio $(F,G)$ non sia reachable e quindi esiste $(\bar F,\bar G)$  allora
 	$rank [\lambda In-F|G]=rank[\lambda I-\bar F|\bar G]<n$ 
-	Vogliamo provare  $\lambda \in \sigma(F_ {22})$  per alcuni valori  $\lambda\in \mathbb C$ 
-	Come il rango della matrice:$\begin{bmatrix}zI_\rho-F_{11}&-F_{12}&G_1\\0 &zI_{n-\rho}-F_{22} &0\end{bmatrix}<n$
+	Vogliamo provare  $\lambda \in \sigma(F_ {22})$ 
+	per avere il rango della matrice:$\begin{bmatrix}zI_\rho-F_{11}&-F_{12}&G_1\\0 &zI_{n-\rho}-F_{22} &0\end{bmatrix}<n$
 	allora:
 	$\exists \underline v^T=[\overbrace{v_1^T}^\rho |\overbrace{v_2^T}^{n-\rho}]\neq [0^T|0^T]$  s.t.
 	  $[{v_1^T} |{v_2^T}]\begin{bmatrix}zI_\rho-F_{11}&G_1\\0 &0\end{bmatrix}=[0^T|0^T]$ $\Rightarrow$ $v_1^T\begin{bmatrix}zI_\rho-F_{11}&G_1\end{bmatrix}=[0^T|0^T]\Rightarrow v_1=\underline 0$   
@@ -175,7 +190,205 @@ non serve che siano tutti e 5 linearmente indipendenti, basta che lo siano rispe
 
 
 
-## Remarks
+
+# Esercizi
+## 1
+$$
+F=J=
+\begin{bmatrix}
+	\begin{bmatrix}
+	2&1\\
+	&2
+	\end{bmatrix}\\
+	&\begin{bmatrix}
+	3&1\\
+	&3&1\\
+	&&3
+	\end{bmatrix}\\
+	&&2\\&&&2\\
+	&&&&\begin{bmatrix}
+	3&1\\
+	&3
+	\end{bmatrix}
+\end{bmatrix}
+$$
+- Determinare il valore minimo di $m$ tale che $\exists G\in \mathbb R^{n\times m}$ ($n=9$) per il quale $(F,G)$ sia raggiungibile
+
+| $i$ | $\lambda_i$ | $n_i$ | $s_i$ | $n_{i1}$ |
+| --- | ----------- | ----- | ----- | -------- |
+| 1   | 2           | 4     | 3     | 2        |
+| 2   | 3           | 5     | 2     | 3        |
+allora $m=\max\{s_i\}=3$  
+- Determinare la matrice corrispondente
+
+La matrice ha delle righe che si annullano per $\color{lightgreen}\lambda_1$ e $\color{orange}\lambda_2$ quindi tramite $G$ dibbiamo renderle indipendenti tra loro
+	I passaggi corretti sono come quelli di [[PHB Reachability Test#Esempio]] 
+$$
+\begin{bmatrix}
+	\begin{bmatrix}
+	\color{lightgreen}0&1\\
+	&\color{lightgreen}0
+	\end{bmatrix}\\
+	&\begin{bmatrix}
+	\color{orange}0&1\\
+	&\color{orange}0&1\\
+	&&\color{orange}0
+	\end{bmatrix}\\
+	&&\color{lightgreen}0\\&&&\color{lightgreen}0\\
+	&&&&\begin{bmatrix}
+	\color{orange}0&1\\
+	&\color{orange}0
+	\end{bmatrix}
+\end{bmatrix}
+G=
+\begin{bmatrix}
+\color{lightgreen}0 & \color{lightgreen}0 & \color{lightgreen}0 \\
+\color{lightgreen}1 & \color{lightgreen}0 & \color{lightgreen}0 \\
+\color{orange}0 & \color{orange}0 & \color{orange}0 \\
+\color{orange}0 & \color{orange}0 &\color{orange} 0 \\
+\color{orange}1 & \color{orange}0 & \color{orange}0 \\
+\color{lightgreen}0 & \color{lightgreen}1 & \color{lightgreen}0 \\
+\color{lightgreen}0 & \color{lightgreen}0 & \color{lightgreen}1 \\
+\color{orange}0 & \color{orange}0 & \color{orange}0 \\
+\color{orange}0 & \color{orange}1 & \color{orange}0 \\
+\end{bmatrix}
+$$
+## 2
+$$
+F=J=
+\begin{bmatrix}
+	\begin{bmatrix}
+	2&1\\
+	&2
+	\end{bmatrix}\\
+	&2\\
+	&&\begin{bmatrix}
+	\lambda&1\\
+	&\lambda
+	\end{bmatrix}\\
+	&&&\begin{bmatrix}
+	3&1\\
+	&3
+	\end{bmatrix}\\
+\end{bmatrix}
+$$
+- Per ogni valore di $\lambda$ determinare la matrice $G$ con il minimo numero di colonne s.t. $(F,G)$ sia reachable (sono tre casi $\lambda=2$, $\lambda=3$, $\lambda\neq 2,3$)
+$\lambda=2$
+
+| $i$ | $\lambda_i$           | $n_i$ | $s_i$ |
+| --- | --------------------- | ----- | ----- |
+| 1   | $\color{lightgreen}2$ | 5     | 3     |
+| 2   | $\color{orange}3$     | 2     | 1     |
+$m=3$
+$$
+\begin{bmatrix}
+	\begin{bmatrix}
+	\color{lightgreen}0&1\\
+	&\color{lightgreen}0
+	\end{bmatrix}\\
+	&\color{lightgreen}0\\
+	&&\begin{bmatrix}
+	\color{lightgreen}0&1\\
+	&\color{lightgreen}0
+	\end{bmatrix}\\
+	&&&\begin{bmatrix}
+	\color{orange}0&1\\
+	&\color{orange}0
+	\end{bmatrix}\\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 & 0 \\
+\color{lightgreen}1 & 0 & 0 \\
+0 & \color{lightgreen}1 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & \color{lightgreen}1 \\
+0 & 0 & 0 \\
+\color{orange}1 & \color{orange}1 & \color{orange}1 \\
+\end{bmatrix}
+$$
+
+$\lambda=3$
+
+| $i$ | $\lambda_i$           | $n_i$ | $s_i$ |
+| --- | --------------------- | ----- | ----- |
+| 1   | $\color{lightgreen}2$ | 3     | 2     |
+| 2   | $\color{orange}3$     | 4     | 2     |
+$m=2$
+$$
+\begin{bmatrix}
+	\begin{bmatrix}
+	0&1\\
+	&\color{lightgreen}0
+	\end{bmatrix}\\
+	&\color{lightgreen}0\\
+	&&\begin{bmatrix}
+	0&1\\
+	&\color{orange}0
+	\end{bmatrix}\\
+	&&&\begin{bmatrix}
+	0&1\\
+	&\color{orange}0
+	\end{bmatrix}\\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 \\
+\color{lightgreen}1 & 0 \\
+0 & \color{lightgreen}1 \\
+0 & 0 \\
+\color{orange}1 & 0 \\
+0 & 0 \\
+0 & \color{orange}1 \\
+\end{bmatrix}
+$$
+
+$\lambda\neq 2,3$
+
+| $i$ | $\lambda_i$           | $n_i$ | $s_i$ |
+| --- | --------------------- | ----- | ----- |
+| 1   | $\color{lightgreen}2$ | 3     | 2     |
+| 2   | $\color{cyan}\lambda$ | 2     | 1     |
+| 3   | $\color{orange}3$     | 2     | 1     |
+$m=2$
+$$
+\begin{bmatrix}
+	\begin{bmatrix}
+	\color{lightgreen}0&1\\
+	&\color{lightgreen}0
+	\end{bmatrix}\\
+	&\color{lightgreen}0\\
+	&&\begin{bmatrix}
+	\color{cyan}0&1\\
+	&\color{cyan}0
+	\end{bmatrix}\\
+	&&&\begin{bmatrix}
+	\color{orange}0&1\\
+	&\color{orange}0
+	\end{bmatrix}\\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 \\
+\color{lightgreen}1 & 0 \\
+0 & \color{lightgreen}1 \\
+0 & 0 \\
+\color{cyan}1 & 0 \\
+0 & 0 \\
+0 & \color{orange}1 \\
+\end{bmatrix}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Remarks
 
 ### Remark a
 $\forall z\notin\sigma(F)$  abbiamo che $zI_n-F$ è non singular square e quindi $zI_n-F|G$ ha rango $n$
@@ -184,3 +397,4 @@ $\forall z\notin\sigma(F)$  abbiamo che $zI_n-F$ è non singular square e quindi
 Supponiamo che $(\bar F,\bar G)$ è [[R7 Basis of vector spaces and algebraically equivalent system|algebricamente equivalente]] a $(F,G)$ che significa che $\exists T$ non singular square s.t. $(\bar F,\bar G)=(T^{-1}FT,T^{-1}G)$  allora:
 $[zIn-\bar F|\bar G]=[zT^{-1}InT-T^{-1}FT|T^{-1}G]=T^{-1}[zIn-F|G]\begin{bmatrix}T & 0 \\0 & Im \\\end{bmatrix}$ 
 $\Rightarrow \forall z\in \mathbb C\qquad rank[zIn-\bar F|\bar G]=rank[zIn-F|G]=\begin{bmatrix}zI_\rho-F_{11}&-F_{12}&G_1\\0 &zI_{n-\rho}-F_{22} &0\end{bmatrix}$ 
+
