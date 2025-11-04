@@ -224,7 +224,7 @@ $$
 
 ## Standard Case 
 #ST-L13
-Riscriviamo il sistema in [[Standard Reachability Form]] senza perdita di generalità w.l.o.g.
+Riscriviamo il sistema in [[SRF Standard Reachability Form]] senza perdita di generalità w.l.o.g.
 - $\bar H=[H_1|H_2]$ dove $H_1$ con $\rho$ colonne ed $H_2$ con $n-\rho$ colonne
 - $\bar x(t)=\begin{bmatrix}x_1(t)\\x_2(t)\end{bmatrix}$ dove $x_1$ con $\rho$ righe e $x_2$ con $n-\rho$ righe
 riscriviamo il sistema equivalente:

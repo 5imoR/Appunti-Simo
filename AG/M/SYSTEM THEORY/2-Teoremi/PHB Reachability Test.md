@@ -1,14 +1,15 @@
 ---
 tags:
   - "#ST-L14"
+  - DTCT
 ---
-## Theorem
+## Theorem 
 Dato un paio$(F,G)$ con $F\in\mathbb R^{n\times n}$ e $G\in\mathbb R^{n\times m}$ 
 1. Il paio $(F,G)$ è reachable $\iff rank[z-In-F|G]=n\quad \cancel{\forall z\in \mathbb C}\rightarrow \forall z\in\sigma(F)$ 
 	![[PHB Reachability Test#Remark a]]
 	Questo remark ci permette di dover testare questa condizione solo per $\forall z\in\sigma(F)$ 
 2. Il paio non è reachable $\Rightarrow rank[\lambda In-F|G]<n\iff \lambda\in \sigma(F_{22})$
-	Dove $F_{22}$ è la matrice del non reachable subsystem nella [[Standard Reachability Form]] associata al paio $(F,G)$
+	Dove $F_{22}$ è la matrice del non reachable subsystem nella [[SRF Standard Reachability Form]] associata al paio $(F,G)$
 
 Questo criterio torna utile dato che ci permette di identificare $\sigma(F_{22})$ senza dover calcolare la SRF
 ## Corollary
@@ -165,7 +166,7 @@ non serve che siano tutti e 5 linearmente indipendenti, basta che lo siano rispe
 
 1 $\Leftarrow$ Per counter positive
 	Assumiamo che $(F,G)$ non è reachable e proviamo che *PBH reachability matrix*  perde rank per alcuni punti in $\mathbb C$.
-	Se$(F,G)$ non è raggiungibile alebricamente equivalente ad un paio $(\bar F,\bar G)$ in ![[Standard Reachability Form#Riassunto]] mentre per![[PHB Reachability Test#Remark b]] Se $z=\lambda\in\sigma(F_{22})$ allora
+	Se$(F,G)$ non è raggiungibile alebricamente equivalente ad un paio $(\bar F,\bar G)$ in ![[SRF Standard Reachability Form#Riassunto]] mentre per![[PHB Reachability Test#Remark b]] Se $z=\lambda\in\sigma(F_{22})$ allora
 	le righe di $[zIn-\bar F|\bar G]$ sono linearmente dipendenti
 	e di conseguenza lo sono anche quelle di: $[0\ \ zI_{n-\rho}-F_{22}\ \ 0]$ 
 	quindi $rank [\lambda I-F|G]<n$ 

@@ -1,4 +1,4 @@
-#ST-L13
+#ST-L13 #DTCT
 E'  una forma alla quale possiamo ridurre tutti i CT e DT non reachable tramite un cambio di base in $X$
 Il risultato sulla qualesi basa questa forma è il fatto che $X^R=Im\mathcal R$ (The reachability subspace) è F-invariant ed include $Im\ G$
 ![[Linear discrete time s.s.m.#Linear DT ssm#General]]
@@ -71,6 +71,7 @@ $$
 \bar G=\begin{bmatrix}G_1\\ 0\end{bmatrix}
 $$
 e $(F_{11}G_{1})$ è un paio raggiungibile
+Essendo $\bar F$ *block triangular* questo implica che  $\Delta_{F+GK}(s)=\Delta_{F_{11}+G_1K_1}\cdot\Delta_{F_{22}}$  
 
 **NOTA**
 Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F. raggiungibile

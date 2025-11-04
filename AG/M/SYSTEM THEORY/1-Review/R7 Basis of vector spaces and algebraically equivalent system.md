@@ -1,4 +1,4 @@
-#ST_L9
+#ST-L9
 ### Definition algebraically equivalent
 Dati due s.s.m. $\Sigma (F,G,H,D)$ e $\bar \Sigma(\bar F,\bar G,\bar H,\bar D)$ 
 - con stessa dimensione

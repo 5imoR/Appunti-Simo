@@ -50,7 +50,7 @@ $$
 Consideriamo un paio $(F,G)$ non raggiungibile con:
 - $F\in R^{n\times n}$ 
 - $G\in R^{n\times m}$ 
-e lo assumiamo in [[Standard Reachability Form#Riassunto|Standard Reachability Form]]  con $(F_{11},G_1)$  raggiungibile
+e lo assumiamo in [[SRF Standard Reachability Form#Riassunto|Standard Reachability Form]]  con $(F_{11},G_1)$  raggiungibile
 Allora $\forall K\in R^{m\times n}$  il paio $(F+GK,G)$  non è raggiungibile in *Standard Reachability Form* ed ha la stessa matrice $F_{22}$ del sistema originale $(F,G)$
 #### Proof
 Assumiamo $K=[K_1|K_2]$ 
@@ -89,3 +89,29 @@ $$
 Per la [[State Feedback#Proposition 1| Prop 1]] possiamo dire che $(F_{11}+G_1K_1,G_1)$ è reachable
 Mentre $F_{22}$ rimane invariato. 
 	Se lui da problemi ci costringe a cambiare il controllore
+## Riassunto
+#ST-L16
+$$\Huge
+\substack{\Sigma=(F,G,H)\\dim \Sigma=n\\m\ Input\\p\ Output}
+\xrightarrow[\substack{u(t)=v(t)+kx(t)\\K\in\mathbb R^{m\times n}}]{}
+\substack{\Sigma=(F+GK,G,H)\\dim \Sigma=n\\m\ Input\\p\ Output}
+$$
+[[State Feedback#Proposition 1|P1]] dice che per $\forall K\in \mathbb R^{m\times n}$ $$((F+GK),G)\text{ è reachable}\iff(F,G)\text{ è reachable}$$
+[[State Feedback#Proposition 2|P2]] se $(F,G)$ è in [[SRF Standard Reachability Form#Riassunto|SRF]]  allora  $\forall K\in \mathbb R^{m\times n}$  $((F+GK),G)$ è in SRF con lo stesso $F_{22}$ 
+
+Se abbiamo un paio generico non reachable $(F,G)$ non necessariamente in SRF il risultato rimane vero
+##
+$$\Huge
+\substack{(F,G)non\\reachable}\xrightarrow[T\in \mathbb R^{n\times n}]{}(\bar F,\bar G)=(T^{-1}FT,T^{-1}G)\xrightarrow[\forall \bar K\in \mathbb R^{m\times n}]{}(\bar F+\bar G\bar K,\bar G)
+$$
+$\rightarrow$ con $\Delta_{\bar F+\bar G\bar K}(s)$ è un multiplo di $\Delta_{F_{22}}$ 
+$$\Huge
+(\bar F+\bar G\bar K,\bar G)\xrightarrow[T^{-1}]{}\substack{(F+GK,G)non\\reachable}
+$$
+$\rightarrow$ con $\Delta_{F+GK}(s)$ è un multiplo di $\Delta_{F_{22}}$ 
+
+Questo implica che:
+$\Large\Delta_{F+GK}(s)=\Delta_{F_{11}+G_1K_1(s)}\Delta_{F_{22}}$ 
+Per trovare una relazione tra $K$ e $\bar K$ è sufficente osservare:
+$\bar F+\bar G\bar K\quad=\quad T^{-1}FT+T^{-1}G\bar K\quad =\quad T^{-1}[F+G{\color {orange}\bar K T^{-1}}]T$  
+quindi $K=\bar KT^{-1}$ 
