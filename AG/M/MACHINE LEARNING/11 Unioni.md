@@ -16,7 +16,7 @@ Equivale ad una variabile della quale non sappiamo la media ma la varianza
 
 Un [[11 Confidence Interval]]  di livello $(1-\alpha)\times 100\%$ è per $w_i$ è dato da:
 $$I_{\hat w_i}=\big[\hat w_i-\sigma_{\hat w_i}z_{1-\frac \alpha 2},\hat w_i+\sigma_{\hat w_i}z_{1-\frac \alpha 2}\big]$$
-![[Drawing 2025-11-02 10.17.11.excalidraw|600]]
+![[Interval|600]]
 In questo caso è improbabile che il valore $\hat w_i$ abbia valore $0$ dato che è fuori dall'intervallo
 ### Remark
 #riguardare
@@ -38,3 +38,5 @@ $L_D(h)=E[l(h,z)]$
 - $h_w(x)=w^Tz$  dove $w^T$ è la parametrizzazione del predittore h
 - $L_D(h)=E_\mathcal D[(y-w^Tx)^2]$
 	- $\mathcal D$ è la joint distribution su $x$ ed $y$
+
+

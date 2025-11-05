@@ -50,7 +50,7 @@ $\displaystyle\large I_x=\big[m-\sigma z_{(1-\frac\alpha2)},m+\sigma z_{(1+\frac
 
 ## Valutare Confidence of Predictions
 #ML-L11
-![[Drawing 2025-11-03 18.02.26.excalidraw]]
+![[errorofpred]]
 Oltre a dire il valore $\hat y_0$ serve anche conoscere l'intervallo che siamo praticamente sicuri che contiene $y_0$ 
 ### Assunzioni
 - $y_0=x_0^Tw+e_0$ 

@@ -6,7 +6,7 @@ Dato un Sample serve trovare una funzione adeguata
 **Notazione** $\large [x_i]_j$  componente $j$ di $x_i$ 
 $y=w^T x+b=\sum_{i=1}^dw_i[x]_i$ 
 
-## Classification
+## [[Linear Classification]]
 ![[classification]]
 L'esempio è di binary combination
 $w^Tx+b=w_1[x]_1+w_2[x]_2+b=0$

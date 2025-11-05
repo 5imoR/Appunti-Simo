@@ -11,7 +11,7 @@ Dato un set $C\subset \mathbb R^n$ diciamo che una *linear inequality* $\alpha^T
 $$\alpha^Tx\geq \beta\quad \forall x\in C$$
 
 Il *dual point of view* consiste nel trovare il vincolo $Ax=b, x\geq 0$  definendo la feasible region $P$ del problema più stretta possibile. 
-![[Drawing 2025-10-24 15.30.43.excalidraw|300]]
+![[dual|300]]
 Questo equivale a: $c^Tx\geq c_0 \forall x\in P$ possiamo quindi scriverlo come un problema di massimizzazione nella forma:
 $$
 \begin{cases}
