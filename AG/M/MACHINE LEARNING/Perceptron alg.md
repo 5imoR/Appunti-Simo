@@ -6,7 +6,7 @@ E' iterativo
 - $(x_i,y_i)\quad i=1\dots m$
 - $w^Tx+b=\begin{bmatrix}w& b\end{bmatrix}\begin{bmatrix}x \\ 1\end{bmatrix}=w^Tx$
 - 
-Assumption: i dati sono linearmente separabili
+Assumption: i dati sono linearmente separabili.
 # Perceptron alg.
 Computiamo una sequenza $w^{(0)},w^{(1)},\dots$ 
 
