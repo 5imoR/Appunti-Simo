@@ -1,4 +1,4 @@
-#CO-L10
+ #CO-L10
 # Integral Programming
 $$
 \begin{cases}
@@ -11,7 +11,7 @@ $$
 Permette di usare valori discreti permettendo di avere varibili utilizzabili come vero e falso o simili
 
 ###
-![[Drawing 2025-11-05 20.10.19.excalidraw]]
+![[integral prob]]
 Se tutti i vertici fossero int potrebbe essere trattato come un [[Linear Programming|LP]] 
 
 
@@ -73,13 +73,46 @@ $$
 - $M$ è un numero molto grande che serve a "disattivare" il vincolo quando l'$y$ corrispondente è a $0$ 
 	Se x va da 5 a 10 e noi mettiamo M=20 il vincolo non ha più senso dato che x non poteva già superare il 10
 
-### MIP representability
-Un set $S\subseteq \mathbb R^n$  è MIP-rapresentable se esiste un set di constraint nella forma:
-$$
-P=
-\begin{cases}
-Ax+Bu+Dy\le b\\
-x\in \mathbb R^n, u\in \mathbb R^m, y_k\in \set{0,1}\forall k
-\end{cases}
-$$
-tale che la sua projection del suo feasible set su $x$ è $S$ 
+### 
+![[MIP representability#MIP representability]]
+
+#### Restriction
+#CO-L11 
+Consideriamo
+- $P$ un optimization problem
+- $F(P)$ il set delle feasible solution
+$Q$ è la restriction di $P$ se $F(Q)\subset F(P)$ e si ottiene andando ad aggiungere vincoli aggiuntivi
+![[restriction|200]]
+- Quando $F(Q)=\emptyset$  non possiamo dedurre niente
+- Se trovo una soluzione ottima in $F(Q)$ allora è una feasible solution di $P$ e quindi  la soluzione ottima di $P$ è migliore o uguale a questa
+
+#### Search
+Dato un problema $P$ fare un "search" significa andare a risolvere una sequenza di restriction $Q_1\dots Q_m$.  
+L'idea è che andando a ridurre il "solution space" il problema di ottimizzazione diventa molto più semplice![[search|200]]
+
+Si parla di *exaustive search* se 
+$$\bigcup^k_{i=1}F(Q_i)=F(P)$$
+- questo deve coprire esattamente $F(P)$ (ne più grande ne più piccolo)
+- si vuole evitare di coprire una zona 2 volte dato che sarebbe uno spreco di risorse
+#### Relaxation
+Consideriamo
+- $P$ un optimization problem
+- $F(P)$ il set delle feasible solution
+$R$ è la relaxation di $P$ se si ottiene andando a: (e/o)
+- rimuovere dei vincoli      $F(P\subseteq)F(R)$
+- sostituire l'objective function $f(x)$ con una sua approssimazione $g(x)$ $g(x)\le f(x)\ \forall x\in F(P)$
+	$g(x)$ deve essere un lower-bound della funzione iniziale
+![[relaxation|300]]
+##### Proprietà
+- $F(R)=\emptyset\Rightarrow F(P)=\emptyset$ 
+- $x^*$ è una soluzione ottima per  $R\Rightarrow g(x^*)$ è un lower bound di $P$
+- $x^*$ è una soluzione ottima per $R$ se $x^*\in F(P)$ allora è una soluzione ottima per $P$ 
+## Algoritmi
+
+![[INT Generate and Test algorithm#Generate and Test]]
+
+**Tree search**
+Utile perche permette di dividere in problemi più piccoli quello iniziale.
+- bisogna guardare i valori della frontiera
+- se non è fatto bene e si arriva ad avere che ogni nodo è una soluzione, è peggio del Generate and Test
+

@@ -39,7 +39,7 @@ Per mostrare che $\alpha^Tx\geq \beta$ è valida per $P$ serve trovare un vettor
 $$\alpha^T\geq u^TA\quad u^Tb\geq \beta$$
 ![[Theorem (Farka's Lemma)#Theorem (Farka's Lemma)]]
 
-Sia $x^*$ la soluzione ottimale computata dal [[Primal Simplex Algorithm]] associato alla base $B$
+Sia $x^*$ la soluzione ottimale computata dal [[LIN Primal Simplex Algorithm]] associato alla base $B$
 Una volta partizionate le variabili in basic e non basic possiamo definire un vettore di moltiplicatori $u=\alpha_BB^{-1}$ che soddisfa 
 - $\alpha^T\geq u^TA$  ovvero tutti i reduced cost $d_j$ sono positivi
 - $u^Tb\geq \beta$ è ottenuta come: $\beta\leq z^*=\alpha^Tx=\alpha_B^TB^{-1}b=u^Tb$ 

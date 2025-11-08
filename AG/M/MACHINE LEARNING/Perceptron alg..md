@@ -1,6 +1,7 @@
+E' iterativo
 #ML-L14
 ### Binary Classification
-![[Drawing 2025-11-06 11.07.56.excalidraw]]
+![[binclass]]
 - $y_i\in\set{0,1}$
 - $(x_i,y_i)\quad i=1\dots m$
 - $w^Tx+b=\begin{bmatrix}w& b\end{bmatrix}\begin{bmatrix}x \\ 1\end{bmatrix}=w^Tx$

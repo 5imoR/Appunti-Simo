@@ -74,5 +74,5 @@ Se $x_R =0$ si ottiene
 **NOTA** Il rapporto tra basi e vertici non è $1:1$  dato che un vertice può essere rappresentato da più matrici diverse nel caso siano degenerate.
 
 ## Algoritmo
-![[Primal Simplex Algorithm#Primal Simplex]]
+![[LIN Primal Simplex Algorithm#Primal Simplex]]
 ##
