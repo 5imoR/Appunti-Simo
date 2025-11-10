@@ -1,8 +1,7 @@
 ---
 tags:
-  - ST-L16
-  - DTCT
 ---
+#ST-L16 #DTCT
 ## Theorem
 Assumiamo:
 - $F\in\mathbb R^{n\times n}$  
@@ -17,7 +16,7 @@ T^{-1}FT=F_c
 0 & 0 & 0 & \ddots & 1 \\
 -a_0 & -a_1 & -a_2 & \dots & -a_{n-1} \\
 \end{bmatrix}\qquad
-T^{-1}g=g_c
+T^{-1}g=g_c=
 \begin{bmatrix}
 0 \\
 0 \\
@@ -147,3 +146,4 @@ $F$ è [[Cyclic matrix|cyclic]]
 $\iff\exists g\in \mathbb R^n\ s.t.\ (F,g)$ è reachable
 $\iff \exists g\in \mathbb R^n$ e $T\in \mathbb R^{n\times n}$ invertibile s.t. $T^{-1}FT=F_c$ e $T^{-1}g=g_c$ 
 $\iff \exists T\in \mathbb R^n\times n$ invertibile s.t. $T^{-1}FT=F_c$ (in companion form)
+

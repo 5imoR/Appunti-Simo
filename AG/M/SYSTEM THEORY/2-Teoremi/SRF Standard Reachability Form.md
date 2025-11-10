@@ -49,6 +49,7 @@ $$
 \bar F=\begin{bmatrix}F_{11}&F_{12}\\0& F_{22}\\\end{bmatrix}
 \qquad
 \bar G=\begin{bmatrix}G_1\\ 0\end{bmatrix}
+\qquad (F_{11},G_1)\text{ è reachable}
 $$
 
 Siccome $(F,G)$ e $(\bar F,\bar G)$ sono [[R7 Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|algebricamente equivalenti]]  sappiamo che $\bar {\mathcal R}=T^{-1}\mathcal R$ 
