@@ -33,4 +33,3 @@ $P_w[y|x]=\sigma(z)\ \circ\ w^Tx$   ottenendo:             $\large\displaystyle\
 $\Rightarrow$ possiamo calcolare la probabilità come segue:
 - $\displaystyle P_w[y=+1|x]=\frac 1 {1+ {e^{-w^Tx}}}$ 
 - $\displaystyle P_w[y=-1|x]=1-P_w[y=+1|x]$ 
-

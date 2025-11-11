@@ -63,3 +63,21 @@ Come risolviamo:
 $$\hat w_{ML}=\arg\min_{\large w\in\mathbb R^d}\underbrace{-\frac 1m\sum_{i=1}^m\log \left({1+e^{-y_iw^Tx_i}}\right)}_{\large L_S(w)}$$?
 $\displaystyle\frac{\partial L_s}{\partial{w}}=\frac 1m\sum_{i=1}^m{\Huge\frac{-y_ix_ie^{-y_iw^Tx_i}}{1+e^{-y_iw^Tx_i}}}=0$  
 Sappiamo che $L_s(w)$ è convessa
+### Gradient descent methods
+
+$w^{(k+1)}=w^{(k)}-\gamma_k\nabla_wL_S(w)$ 
+- $\gamma_k$ è detto *step size*: può essere una funzione o una costante se viene preso troppo grande si può andare a creare un errore andando oltre il munto di minimo e andando a risalire d'all'altro lato
+	
+	![[stepIncident]]
+- $k=1,\dots$
+
+###
+$L_w$ è convessa $\iff$ Hessian ($H_w$)$\big[\frac{\partial^2L_s(w)}{\partial w_i\ \partial w_j}\Big]\ge 0$ 
+$$\begin{align}
+H_w&=\frac 1m\sum^m_{i=1}\frac{y_i^2x_ix^T_ie^{-y_iw^Tx_i}(1+e^{-y_iw^Tx_i})-(-y_ix_ie^{-y_iw^Tx_i})(-y_ix_i^Te^{-y_iw^Tx_i})}
+{(1+e^{-y_iw^Tx_i})^2}\\
+&=\frac1m\sum^m_{i=1}\underbrace{x_ix_i^T}_{\ge0}\underbrace{\frac{e^{-y_iw^Tx_i}}{(1+e^{-y_iw^Tx_i})^2}}_{\ge0}
+\end{align}$$
+- $x_ix_i^T$ è simmetrica e *Positive Semi Definite* ($\ge 0$)
+dato che la somma di matrici P.S.D. è P.S.D. allora $H_w\ge 0$ 
+

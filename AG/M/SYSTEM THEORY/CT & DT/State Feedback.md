@@ -90,7 +90,7 @@ Per la [[State Feedback#Proposition 1| Prop 1]] possiamo dire che $(F_{11}+G_1K_
 Mentre $F_{22}$ rimane invariato. 
 	Se lui da problemi ci costringe a cambiare il controllore
 ## Riassunto
-#ST-L16
+#ST-L16-1
 $$\Huge
 \substack{\Sigma=(F,G,H)\\dim \Sigma=n\\m\ Input\\p\ Output}
 \xrightarrow[\substack{u(t)=v(t)+kx(t)\\K\in\mathbb R^{m\times n}}]{}
