@@ -96,7 +96,7 @@ $X_1^C\subset X_2^C\subset\ldots\subset X_\bar k^C= X_{\bar k+1}^C=\ldots\subset
 ###
 #ST-L10 
 Di conseguenza $X_1^C\subset X_2^C\subset...\subset X_\bar k^C= X_{\bar k+1}^C\subseteq X=\mathbb R^n$.
-Se oriac chiamiamo $X^C$ il set di stati che possono essere controllati a zero in un numero finito di step allora:
+Se ora chiamiamo $X^C$ il set di stati che possono essere controllati a zero in un numero finito di step allora:
 $$
 X^C=X_n^C\Big\{x\in X:F^nx\in Im\mathcal R_n=Im\mathcal R\Big\}
 $$

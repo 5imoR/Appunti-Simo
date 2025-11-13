@@ -162,7 +162,7 @@ det(A) =&\\
 &\dots+\\
 &(-1)^{i+n}a_{in}\cdot det(A_{in})\\
 \end{aligned}\\\\
-&det(A)=\sum_{j=1}^n \left[(-1)^{i+j}\cdot det(A_{ij})\right] = \sum_{j=1}^n a_{ij}^*
+&det(A)=\sum_{j=1}^n \left[(-1)^{i+j}a_{ij}\cdot det(A_{ij})\right] = \sum_{j=1}^n a_{ij}^*
 \end{align}
 $$
 - Più zeri sono presenti nella riga $i$ o colonna $j$  più saranno semplici i conti

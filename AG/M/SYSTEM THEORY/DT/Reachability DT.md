@@ -146,14 +146,7 @@ $X^R=Im[G|FG|\ldots|F^{n-1}G]$
 Vogliamo provare che $X^R$ sia F-invariant
 
 $$
-\begin{align}
-FX^R&=F\ \Big(Im[G|FG|\ldots|F^{n-1}G]\Big)\\
-&=Im\Big({\color{orange}F}\big[G|FG|\ldots|F^{n-1}G\big]\Big)\\
-&=Im\Big([{\color{orange}F}G|F^2G|\ldots|F^{n-1}G|{\color {orange} F^{n}G}]\Big)\\
-&\subseteq Im[G|FG|\ldots|F^{n}G]\\
-Hamilton\rightarrow&\equiv Im[G|FG|\ldots|F^{n-1}G]=X^R\\
-\Rightarrow FX^R\subseteq X^R
-\end{align}
++++
 $$
 Ora ci manca solo di provare che se $S$ è un sottospazio vettoriale di $X$ e che quindi include $Im(G)$  ed è *F-invariant* allora $S\supseteq X^R$
 
