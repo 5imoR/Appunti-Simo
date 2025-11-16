@@ -116,3 +116,4 @@ Utile perche permette di dividere in problemi più piccoli quello iniziale.
 - bisogna guardare i valori della frontiera
 - se non è fatto bene e si arriva ad avere che ogni nodo è una soluzione, è peggio del Generate and Test
 
+![[INT Branch and Bound algorithm]]

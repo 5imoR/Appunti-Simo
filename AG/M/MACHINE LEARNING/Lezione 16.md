@@ -32,7 +32,7 @@ $\displaystyle P_w[y=2|x]=\frac {e^{w_2^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}+e^{w_3^Tx}}=\
 ### Gradient Descent (& Stochastic Gradient Descent)
 Goal: data una cost function $J(w)$
 Bisogna risolvere  $w=\arg\min_w J(w)$
-![[Drawing 2025-11-11 16.50.01.excalidraw]]
+![[fforgraddesc]]
 Quando $J$ non è convessa non sappiamo quando siamo in un minimo locale o globale
 L'update step-size generico è:
 $$w^{(k+1)}=w^{(k)}-\gamma_k\nabla_wJ(w)|_{w=w^{(k)}}$$
@@ -56,5 +56,5 @@ $w^{(k+1)}=w^{(k)}-\gamma_k\nabla_wJ(w)|_{w=w^{(k)}}$
 - $l(z,w)$ quadratica in $w$
 - $J_w=\frac 1{m}\sum_{i=1}^ml(z_i,w)$
 - $J_{\mathcal B^{(k)}}=\frac 1{|\mathcal B^{(k)}|}\sum_{j\in\mathcal B^{(k)}}l(z_j,w)$ 
-![[Drawing 2025-11-11 17.17.54.excalidraw]]
+![[graddescminibatch]]
 dovrebbe essere come dovrebbe essere la nostra funzione avendo solo i campioni della minibatch
