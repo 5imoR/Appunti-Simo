@@ -1,3 +1,4 @@
+#ST-L20-2
 ### Equivalence Relation
 Dato un set $S$ una relazione su $S$ è chiamata equivalence Relation($\sim$) se soddisfa tre proprietà:
 - Reflexivity: $\forall a\in S\ a\sim a$
