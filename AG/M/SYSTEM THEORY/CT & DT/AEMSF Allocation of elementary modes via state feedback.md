@@ -127,3 +127,92 @@ $J \longleftrightarrow\set {\Psi_1(s) \dots \Psi_c(s)}$
 $\Rightarrow$ La famiglia di invarianti è un invariante completo per la similarità.
 ### Example 2
 Assumiamo: $S\triangleq\set{(F,G):F\in\mathbb R^{n\times n}\ G\in\mathbb R^{n\times m}\ (F,G)\text{ reachable}}$ e consideriamo [[R7 Basis of vector spaces and algebraically equivalent system|equivalenza algebrica]]  tra i paii $(F_1,G_1)\sim(F_2,G_2)$ se $\exists T\in \mathbb R^{n\times n}$ s.t. $(F_2=T^{-1}F_1T)$
+
+
+Assumiamo che $(F,G)\in J$ , dato che è reachable ha un reachability index $r=\min\{k:rank[G|FG|\dots|F^{k-1}G]=n\}$
+$\Rightarrow$$q\triangleq rank\ G$
+$\vdots$ 
+$\Rightarrow$$q+\dots+q_2\triangleq rank\ [G|\dots|F^{k-1}G]$ 
+
+
+#ST-L21-1
+$q_1,q_2\dots q_r>0$          $q_1+q_2+\dots+q_r=m$
+
+$k_1,k_2\dots k_q>0$          $k_1+k_2+\dots+k_q=n$
+
+$$
+\begin {array}{ccccccc}
+\text{Level 1: } &{\color{orange}g_1}& {\color{lightgreen}g_2}&{g_3}&{\color{cyan}g_4}&\dots & {\color{pink}g_{m-1}}&{g_m}\\
+\text{Level 2: }  &  {\color{orange}Fg_1}&{\color{lightgreen}Fg_2}&{Fg_3}& {\color{cyan}Fg_4}& \dots & {Fg_{m-1}}&{Fg_m}\\
+\text{Level 3: }&{\color{orange}F^2g_1}& {\color{lightgreen}F^2g_2}&{F^2g_3}& {\color{cyan}F^2g_4}& \dots & {F^2g_{m-1}}& {F^2g_m}\\
+\vdots\\
+\text{Level r: }&{\color{orange}F^{r-1}g_1}& {F^{r-1}g_2}&{F^{r-1}g_3}& {\color{cyan}F^{r-1}g_4}& \dots & {F^{r-1}g_{m-1}}& {F^{r-1}g_m}\\
+& k_1=r&k_3=3&&k_2=r&&k_4=1
+\end{array}
+$$
+- Al primo livello si scelgono $q$ colonne linearmente indipendenti e $I_1\triangleq$ {indici delle colonne indipendenti}
+
+- Al secondo livello si scelgono $q_2$  colonne linearmente indipendenti anche con quelle di $I_1$  e quindi si hanno $q+q_2$ colonne lin. ind. $I_2\subseteq I_1$
+	Vogliamo provare che posso sempre scegliere $q_2$ colonne sotto le colonne scelte al livello 1 ovvero $I_2\subseteq I_1$  allora:
+	$g_i=\sum_{j\in I_1}\alpha_j\ g_j$ 
+	$\Rightarrow$$Fg_i=\sum_{j\in I_1} \alpha_j\ Fg_j$ 
+
+- Al terzo livello si scelgono $q_3$  colonne linearmente indipendenti anche con quelle di $I_1, I_2$  e quindi si hanno $q+q_2+q_3$ colonne lin. ind. $I_3\subseteq I_2$ 
+	 Vogliamo provare che posso sempre scegliere $I_3\subseteq I_2$, supponendo che $i\notin I_2$ allora:
+	$Fg_i\qquad =\sum_{j\in I_1} \alpha_j\ g_j+\sum_{j\in I_1} \beta_j\ Fg_j$ 
+	$\Rightarrow$ $F^2g_i\ =\sum_{j\in I_1} \alpha_j\ Fg_j+\sum_{j\in I_1} \beta_j\ F^2g_j$ 
+
+$\dots$  si ripete fino al livello $r$ 
+
+Al livello $r$ si può notare che abbiamo ottenuto $n$ colonne linearmente indipendenti(andando ad unire quelle ottenute ad ogni livello)
+Chiamiamo Control invariant e li denomiamo $k_1,\dots k_r$ la lunghezza delle catene verticli ottenute con questo procedimento dalla più grande alla più piccola $k_1\ge k_2\ge\dots\ge k_q$
+$k_1,k_2\dots k_q>0$          $k_1+k_2+\dots+k_q=n$
+
+Vogliamo provare che anche se la selezione degli indici ad ogni livello non è unica, quindi la scelta di $I_1\supseteq I_2\supseteq\dots\supseteq I_r$ non è unica, nemmeno le lunghezze delle catene sono unicamente determinate.
+#### Proof
+Lungezza delle catene $k_1,k_2\dots k_q>0$ 
+   $\updownarrow$ Corrispondenza Biiettiva
+Numero di catene lunghe $r,r-1,\dots 2,1$  ovvero $q_r,q_{r-1}-q_r,q-q_2$ 
+   $\updownarrow$ Corrispondenza Biiettiva
+$q_1,q_2\dots q_r>0$ 
+#### Ex
+Determina il control invariant del seguente paio reachable:
+$$
+F=
+\begin{bmatrix}
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+1 & 2 & -1 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 \\
+\end{bmatrix}
+\qquad G=
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+1 & -1 & 0 \\
+0 & 0 & 0 \\
+0 & 2 & 1 \\
+\end{bmatrix}
+$$
+
+Level 1         $g_1=\begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\quad g_2=\begin{bmatrix} 0 \\ 0 \\ -1 \\ 0 \\ 2 \end{bmatrix}\quad g_3=\begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \\ 1\end{bmatrix}$        $I_1=\set{1,3}\quad q=2$ 
+
+Level 2         $Fg_1=\begin{bmatrix} 0 \\ 1 \\ -1 \\ 0 \\ 0 \end{bmatrix}\quad Fg_2\phantom{=\begin{bmatrix} 0 \\ 0 \\ -1 \\ 0 \\ 2 \end{bmatrix}}\quad Fg_3=\begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \\ 0\end{bmatrix}$        $I_2=\set{1,3}\quad q=2$ 
+
+Level 3         $F^2g_1=\begin{bmatrix} 1 \\ -1 \\ 3 \\ 0 \\ 1 \end{bmatrix}$  Stop, ho ottenuto $n=5$ colonne indipendenti       $I_3=\set{1}\quad q=1$ 
+$k_1= 3\quad k_2 =2$ 
+####
+Siamo partiti da $S\triangleq\set{(F,G):F\in \mathbb R^{n\times n}, G\in\mathbb R^{n\times m}}$ con $(F,G)$ reachable 
+L'[[R8 Equivalence Relations]]  equivale alla [[R7 Basis of vector spaces and algebraically equivalent system|algebric equivalence]]  tra i paii in $S$.
+I control invariants sono una famiglia di invarianti per  l'equivalence relation?
+Si perchè i control invariant $\set{k_1,k_2\dots k_q}$ sono biiettivi in relazione al rango delle reachability matrices in $1,2\dots r$ steps ma:
+$$
+(F,G)\sim(\bar F,\bar G)\iff\begin{cases}
+\bar F=T^{-1}FT\\\bar G=T^{-1}G\\ \exists T \text{ non singular square}
+\end{cases}
+$$
+$\Rightarrow$ $\forall i =1\dots r\quad rank[\bar G|\bar F\bar G|\dots|\bar F^{i-1}\bar G]=q+q_2+\dots +q_i$ 
+
+**NOTE** I control invariants sono invarianti per lo state feedback che signiufica che se $(F,G)\in S$ allora $\forall K\in \mathbb R^{m\times n} (F+GK,G)\in S$ ha gli stessi control invariants.
+Questo segue da: [[State Feedback#Proposition 1|Proposition 1]] 

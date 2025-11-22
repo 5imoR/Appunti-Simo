@@ -1,3 +1,4 @@
+#ML-L16
 ### Riassunto L15
 - $\Large P_w[y|x]=\frac 1 {1+ {e^{-y\ \hat w^T_{}x}}}$
 
@@ -58,3 +59,10 @@ $w^{(k+1)}=w^{(k)}-\gamma_k\nabla_wJ(w)|_{w=w^{(k)}}$
 - $J_{\mathcal B^{(k)}}=\frac 1{|\mathcal B^{(k)}|}\sum_{j\in\mathcal B^{(k)}}l(z_j,w)$ 
 ![[graddescminibatch]]
 dovrebbe essere come dovrebbe essere la nostra funzione avendo solo i campioni della minibatch
+
+### Esempio perceptron
+
+![[SGDperc]]
+$$w^{(k+1)}=w^{(k)}+y_ix_i$$
+Introduciamo una perdita per il perceptron.
+Se $yw^Tx$ è negativo allora aumenta il costo.

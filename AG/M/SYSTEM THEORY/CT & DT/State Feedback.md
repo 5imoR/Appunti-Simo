@@ -40,7 +40,8 @@ Dato un paio $(F,G)$ con:
 - $K\in R^{m\times n}$
 per ogni $i\in \mathbb Z\quad i\geq 1$ si ha:
 $$Im [G|(F+GK)G|\dots|(F+GK)^{i-1}G]\equiv Im[G|FG|\dots|F^{i-1}G]$$
-Questo implica che:
+
+Questo implica che hanno lo stesso rango e:
 $$
 ((F+GK),G)\text{ è reachable}\iff(F,G)\text{ è reachable}
 $$
