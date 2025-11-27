@@ -73,8 +73,6 @@ $$
 
 Il polinomio caratteristico di $F$ è $\triangle_F(Z)\triangleq det(zIm-F) = z^n+a_{n-1}z^{n-1}+...a_1\ z\in \mathbb{R}[z]$ 
 
-Un polinomio si dice *monic* se il coefficiente di $z^n$ è $1$ 
-
 Il grado(degree) del polinomio è $deg\triangle_F(z)=n$ 
 
 Gli zeri di $\triangle_F(z)$ sono gli autovalori della matrice $F$

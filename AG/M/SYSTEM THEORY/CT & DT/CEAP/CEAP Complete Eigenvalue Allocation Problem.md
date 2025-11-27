@@ -8,7 +8,7 @@ Una formulazione equivalente:
 Sia $F\in \mathbb R^{n\times n}$ e $G\in\mathbb R^{n\times m}$
 Sotto quali condizioni $\forall$ monic polynomial $p(s)$ con coefficenti reali di grado $n$ $p(s)\in \mathbb R[s]$ 
 
-$\exists k\in \mathbb R^{m\times n}\ s.t.\ \Delta _{F+GK}(s)\equiv p(s)$ (?)
+$\exists k\in \mathbb R^{m\times n}\ s.t.\ \Delta _{F+GK}(s)\equiv p(s)$
 
 
 # From [[State Feedback#Proposition 2|Prop2]]

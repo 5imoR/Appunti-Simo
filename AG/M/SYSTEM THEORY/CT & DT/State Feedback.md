@@ -116,3 +116,18 @@ $\Large\Delta_{F+GK}(s)=\Delta_{F_{11}+G_1K_1(s)}\Delta_{F_{22}}$
 Per trovare una relazione tra $K$ e $\bar K$ è sufficente osservare:
 $\bar F+\bar G\bar K\quad=\quad T^{-1}FT+T^{-1}G\bar K\quad =\quad T^{-1}[F+G{\color {orange}\bar K T^{-1}}]T$  
 quindi $K=\bar KT^{-1}$ 
+
+
+# Stabilizzazione
+#ST-L23-3 
+### Definition
+Dato un paio $(F,G)$  con $F\in\mathbb R^{n\times n}$ e $G\in\mathbb R^{n\times m}$ diciamo che $(F,G)$ è stabilizzabile se $\exists k\in\mathbb R^{m\times n}$ s.t. $F+GK$ sia asintoticamente stabile
+$$
+\longleftrightarrow
+\begin{array}{c}
+CT\quad \forall\lambda\in \sigma(F+GK),& Re(\lambda)<0\\
+DT\quad \forall\lambda\in\sigma(F+GK),&|\lambda|<1
+\end{array}
+$$
+![[State Feedback stabilization#Theorem\[State Feedback stabilization]]
+

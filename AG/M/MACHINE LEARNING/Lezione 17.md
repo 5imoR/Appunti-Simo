@@ -46,7 +46,7 @@ $|H^*|$ è l' $m$ migliore ovvero il numero di elementi nel nostro dataset(?)
 
 
 $$\Large\underbrace{L_D(\hat h_s)}_\text{generalization error}=\underbrace{L_D(\hat h_s)-L_S(\hat h_s)}_\text{generalization gap}+\underbrace{L_S(\hat h_s)}_\text{empirical risk}$$ 
-![[Drawing 2025-11-17 17.29.35.excalidraw|700]]
+![[underoverfit|700]]
 Non vogliamo ne overfitting ne underfitting. Possiamo restare solo in mezzo.
 Quello che succede a destra è per $m$ molto elevate, non viene coperto da questo corso.
 

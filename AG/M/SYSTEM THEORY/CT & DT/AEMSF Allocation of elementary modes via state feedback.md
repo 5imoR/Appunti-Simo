@@ -41,7 +41,8 @@ Quali sono le possibili $J$ [[R3 Jordan Form]] che posso ottenere dalle matrici 
 	Invariant polynomials $\Psi_1(s),\dots,\Psi_c(s)$ 
 #ST-L20-1
 (Quello che andiamo a fare è trovare dei vincoli su $\Psi_i$ basati su $k_i$)
-Per introdurre control invariant e invariant polynomials serve un ripasso di ![[R8 Equivalence Relations]]
+Per introdurre control invariant e invariant polynomials serve un ripasso di
+![[R8 Equivalence Relations]]
 ### Example 1
 Assumiamo $S=\mathbb C^{n\times n}$  scegliamo come equivalence relation in $S$ la similitudine tra le matrici:
 $$A,B\in S=\mathbb C^{n\times n} \Rightarrow A\sim B\ \text{ if } \exists T\in\mathbb C^{n\times n}\ s.t.\ B=T^{-1}AT$$
@@ -216,3 +217,203 @@ $\Rightarrow$ $\forall i =1\dots r\quad rank[\bar G|\bar F\bar G|\dots|\bar F^{i
 
 **NOTE** I control invariants sono invarianti per lo state feedback che signiufica che se $(F,G)\in S$ allora $\forall K\in \mathbb R^{m\times n} (F+GK,G)\in S$ ha gli stessi control invariants.
 Questo segue da: [[State Feedback#Proposition 1|Proposition 1]] 
+![[Rosenbrock's Theorem]]
+### Proposition
+#ST-L23-2 
+Ogni paio $(F,G)$ con $F\in \mathbb R^{n\times n}, G\in\mathbb R^{n\times m}$  reachable con control invariant $k_1\ge \dots\ge k_q\ge 1$  $q=rank\ G$ è [[R7 Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|algebricamente equivalente]]  al paio $(F_c,G_c)$ in [[MCCF Multivariable Controllable Canonical Form|MCCF]] con gli stessi control invariant.
+###
+$$
+\begin{align}
+\begin{array}{c}
+(F,G)\ \text{reachable con i}\\
+\text{  control invariant }k_1\ge\dots\ge k_q\\
+\end{array}
+&\color{lightblue}\qquad
+\phantom{s}\xrightarrow[{\Large T}\text{ non singular}]{}
+&\begin{array}{c}
+(F_c,G_c) \text{ in MCCF con}\\
+\text{  control invariant }k_1\ge\dots\ge k_q\\
+\end{array}\\
+\\
+&&{\color{lightblue}\Huge\downarrow
+\Large\exists K_c \in \mathbb R^{m\times n}
+}\\
+\\\begin{array}{c}
+F+GK\ \text{ha gli}\\
+\text{  invariant polinomial desiderati}\\
+\end{array}
+&\color{lightblue}\phantom{sssss}\xleftarrow
+[\Large K=K_c T^{-1}
+\Large
+]{\Large T^{-1}
+}&
+\begin{array}{c}
+F_c+G_cK_c\ \text{ha gli}\\
+\text{  invariant polinomial desiderati}\\
+\end{array}
+\end{align}
+$$
+
+## Ex 1
+Dato il paio seguente in MCCF
+$$
+F_c=\begin{bmatrix}
+0 & 1 & 0 & 0 & 0  \\
+0 & 0 & 1 & 0 & 0 \\
+-1 & 0 & 2 & 1 & 0 \\
+0 & 1 & 2 & 1 & 1 \\
+-1 & 0 & 0 & 1 & 0 \\
+\end{bmatrix}
+\qquad G_c=\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+$$
+Determinare per ognuno dei seguenti casi, se possibile, $k_c\in\mathbb R^{3\times 5}$  s.t.
+- $\Psi_1(s)=(s+1)^3\quad \Psi_2(s)=\Psi_3(s)=s+1$
+	Quindi si ha:
+	- $c=q=3\quad rank\ G_c=3=k_1>k_2=k_3=1$ 
+	
+	Per avere:$\Psi_1(s)=(s+1)^3= s^3+3s^2+3s+1\quad \Psi_2(s)=\Psi_3(s)=s+1$ $$
+	F_c+G_cK_c= \begin{bmatrix}
+	0 & 1 & 0 \\
+	0 & 0 & 1 \\
+	-1 & -3 & -3 \\
+	 &  &  & -1 \\
+	 &  &  &  & -1 \\
+	\end{bmatrix}
+	$$
+	quindi per ottenere questa matrice serve che
+	$$
+	K_c=\begin{bmatrix}
+	0 & -3 & -5 & -1 & 0 \\
+	0 & -1 & -2 & -2 & -1 \\
+	1 & 0 & 0 & -1 & -1 \\
+	\end{bmatrix}
+	$$
+
+- $\Psi_1(s)=s^2(s+1)^3$
+	Quindi si ha:
+	- $c=1\quad \deg \Psi_1=n=5$  
+	Essendo $c=1$ siamo nel first limit case
+	
+	Per avere:$\Psi_1(s)=(s+1)^3= s^5+3s^4+3s^3+s^2+0s+0\quad \Psi_2(s)=\Psi_3(s)=s+1$ $$
+	F_c+G_cK_c= \begin{bmatrix}
+	0 & 1 & 0 & 0 & 0 \\
+	0 & 0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 0 & 1 \\
+	0 & 0 & -1 & -3 & -3 \\
+	\end{bmatrix}
+	$$
+	NOTA:$\Delta_{F_c+G_cK_c}\equiv \Psi_1(s)$, la matrice è in companion form e  ciclica allora $\Psi_{F+GK}=\Psi_1(s)$
+	
+	quindi per ottenere questa matrice serve che
+	$$
+	K_c=\begin{bmatrix}
+	1 & 0 & -2 & 0 & 0 \\
+	0 & -1 & -2 & -1 & 0 \\
+	1 & 0 & -1 & -4 & -3 \\
+	\end{bmatrix}
+	$$
+- $\Psi_1(s)=(s+1)^3\quad \Psi_2(s)=(s+1)^2$ 
+	 Quindi si ha:
+	- $c=2<q=3\quad \deg\Psi_1=3\ge k_1=3\quad \deg \Psi_1+\deg\Psi_2=3+2=5$    
+	Siamo nel secondo caso limite
+	Per avere:$\Psi_1(s)=(s+1)^3\quad \Psi_2(s)=(s+1)^2$
+	$$F_c+G_cK_c=
+	\begin{bmatrix}
+	0 & 1 & 0 \\
+	0 & 0 & 1 \\
+	-1 & -3 & -3 \\
+	 &  &  & 0 & 1 \\
+	 &  &  & -1 & -2 \\
+	\end{bmatrix}
+	\begin{array}{c}
+	\tilde J_1=\begin{bmatrix}
+	-1 & 1 & 0 \\
+	0 & -1 & 1 \\
+	0 & 0 & -1 \\
+	\end{bmatrix}\\
+	\tilde J_2=\begin{bmatrix}
+	-1 & 1 \\
+	0 & -1 \\
+	\end{bmatrix}
+	\end{array}
+	$$
+	
+	quindi per ottenere questa matrice serve che
+	$$
+	\begin{bmatrix}
+	0 & -3 & -5&-1 & 0 \\
+	0 & -1 & -2 & -1 & 0 \\
+	1 & 0 & 0 & -2 & -2 \\
+	\end{bmatrix}
+	$$
+
+## Ex 2
+
+Dato il paio  $F,G)$ con
+$$
+F_c=\begin{bmatrix}
+0 & 0 & 0  \\
+1 & 0 & 0 \\
+-1 & 0 & 1 \\
+\end{bmatrix}
+\qquad G_c=\begin{bmatrix}
+1 & 0  \\
+0 & 0  \\
+0 & 2  \\
+\end{bmatrix}
+$$
+Determinare se possibile $K\in \mathbb R^{2\times 3}$ s.t. $\Psi_{F+GK}=(s+1)(s+2)=\Psi_1(s)$ 
+	 stessa cosa di chiedere una delle seguenti:
+	$\Psi_1(s)=(s+1)(s+2)\wedge\Psi_2(s)=s+1$ 
+	$\Psi_1(s)=(s+1)(s+2)\wedge\Psi_2(s)=s+2$ 
+Controlliamo se il paio è reachable:
+$$
+\mathcal R=[g_1|g_2||Fg_1|Fg_2||F^2g_1|F^2g_2]=
+\begin{bmatrix}
+1 & 0 & 0 & \dots \\
+0 & 0 & 1 \\
+0 & 2 & 1 & \dots \\
+\end{bmatrix}
+rank\ \mathcal R=3\Rightarrow\text {reachable}
+$$
+$$
+\begin{align}
+g_1&=\begin{bmatrix}1 \\0 \\0 \\\end{bmatrix}
+\qquad
+g_2=\begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix}\\
+Fg_1&=\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
+\end{align}
+$$
+$k_1=2\qquad k_2=1$
+entrambi i casi sono risolvibili e corrispondono al secondo caso limite.
+Osserviamo che:
+$$
+K=\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+\end{bmatrix}
+\qquad F+GK=\begin{bmatrix}
+a & b & c \\
+1 & 0 & 0 \\
+1+2d & 2e & 1+2f \\
+\end{bmatrix}\equiv
+\begin{bmatrix}
+a & b & 0 \\
+1 & 0 & 0 \\
+0 & 0 & -1 \\
+\end{bmatrix}
+$$
+noi vogliamo renderla diagonale a blocchi quindi(la matrice più a destra, abbiamo scelto $\Psi_2(s)=s+1$):
+$$
+K=\begin{bmatrix}
+-3 & -2 & 0 \\
+-\frac12 & 0 & -1 \\
+\end{bmatrix}
+$$

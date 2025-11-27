@@ -2,7 +2,7 @@
 tags:
 ---
 #ST-L16-3 #DTCT
-## Theorem
+## Theorem CCF
 Assumiamo:
 - $F\in\mathbb R^{n\times n}$  
 - $g\in\mathbb R^n$ 

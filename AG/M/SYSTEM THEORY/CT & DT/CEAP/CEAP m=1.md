@@ -1,5 +1,5 @@
 ## Step 1 m=1
-![[CCF Controlled Canonical Form#Theorem]]
+![[CCF Controlled Canonical Form#Theorem CCF]]
 ![[CCF Controlled Canonical Form#Remarks]]
 ## Se CCF allora [[CEAP Complete Eigenvalue Allocation Problem|CEAP]] è risolvibile
 Dato un paio $(F_c,g_c)$ in *CCF* il CEAP è sempre risolvibile
@@ -117,7 +117,7 @@ Dentro quaderno rosso prima lezione nera
 ## SISO Reachable system: the effect of state Feedback
 #ST-L18-1
 Consideriamo un sistema SISO di dimensione $n$ in CCF
-![[CCF Controlled Canonical Form#Theorem]]
+![[CCF Controlled Canonical Form#Theorem CCF]]
 Con l'aggiunta di $H_c$
 $$
 H_c=\begin{bmatrix}

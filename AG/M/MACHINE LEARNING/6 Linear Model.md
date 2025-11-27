@@ -240,7 +240,7 @@ Quindi possiamo vedere $X^TY=(X^TX)w$ come: $b=Aw$
 #ML-L8 
 $w\in \arg\min L_s(w)=\frac 1 m ||Y-Xw||^2\iff (X^TX)w=X^TY$ 
 
-Se  $X^TX$ non è invertibile?[[Singular Value Decomposition|Si usa SVD]]
+Se  $X^TX$ non è invertibile?[[SVD Singular Value Decomposition|Si usa SVD]]
 - $X=USV^T=U_1S_1V^T_1\qquad rank (X)=k<d$  
 - $X\in \mathbb R^{m\times d}\quad X^TX\in\mathbb R^{d\times d}$    $m\geq d$ 
 	Un esempio per $m\geq d$ è che se sei su $\mathbb R^2$ e devi rappresentare una retta ti servono almeno $2$ o più punti 

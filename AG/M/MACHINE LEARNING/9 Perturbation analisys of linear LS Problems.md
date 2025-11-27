@@ -1,4 +1,4 @@
-#ML-L9 [[Singular Value Decomposition]] LS=Least Square
+#ML-L9 [[SVD Singular Value Decomposition]] LS=Least Square
 ## Deterministic worst case perturbation analysis
 $\hat w =\arg\min_w ||Y-Xw||^2\qquad X=U_1S_1V_1^T$ 
 tramite [[Pseudo Inverse of the matrix A]] possiamo dire che:
@@ -19,7 +19,7 @@ $$
 $$
 dove:
 - $\displaystyle\frac{||\Delta w||}{||\hat w||}$ : relative part on the solution
-- $\displaystyle\frac{||\Delta w||}{||\hat w||}$ : relative part on the data
+- $\displaystyle\frac{||\Delta Y||}{||Y||}$ : relative part on the data
 
 ### Lemma
 Vedremo che $\max_{\Delta Y, Y}\ \displaystyle\frac{||\Delta w||}{||\hat w||}\Big/\displaystyle\frac{||\Delta w||}{||\hat w||}=\frac{\sigma_1(x)}{\sigma_k(x)}$ dove:
