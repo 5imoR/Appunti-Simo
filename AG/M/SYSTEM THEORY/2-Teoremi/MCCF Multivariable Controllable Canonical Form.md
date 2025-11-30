@@ -2,7 +2,7 @@
 tags:
 ---
 #ST-L22-2
-## Theorem
+## Theorem \[MCCF]
 Diciamo che un paio $(F_c,G_c)$  con $F\in \mathbb R^{n\times n}, G\in\mathbb R^{n\times m}$   è detto in Multivariable Controllable Canonical Form se $\exists$ una permutation matrix $P\in \mathbb R^{m\times m}$ s.t.:
 $$
 F_c=\begin{bmatrix}

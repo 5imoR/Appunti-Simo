@@ -67,17 +67,21 @@ Per hemilton il rank della matrice è $\rho$ e di conseguennza $(F_{11}G_1)$ è 
 # Riassunto 
 Un paio$(\bar F,\bar G)$ è in S.F.R. è:
 $$
+\begin{align}
 \bar F=\begin{bmatrix}F_{11}&F_{12}\\0& F_{22}\\\end{bmatrix}
+\begin{array}{c}\}\rho\phantom{ssss} \\\}n-\rho\end{array}
 \qquad
 \bar G=\begin{bmatrix}G_1\\ 0\end{bmatrix}
-$$
+\begin{array}{c}\}\rho\phantom{ssss} \\\}n-\rho\end{array}\\
+\underbrace{}_\rho\underbrace{}_{n-\rho}\phantom{sssssssssssssssss}\underbrace{}_{m}\phantom{sssssss}
+\end{align}
+$$ 
 e $(F_{11}G_{1})$ è un paio raggiungibile
-Essendo $\bar F$ *block triangular* questo implica che  $\Delta_{F+GK}(s)=\Delta_{F_{11}+G_1K_1}\cdot\Delta_{F_{22}}$  
 
 **NOTA**
-Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F. raggiungibile
-
-Gli autovalori di $F_{11} F_{22}$ non dipendono da $T$ mentre $F_{12}$ può essere portato a $0$
+- Essendo $\bar F$ *block triangular* questo implica che  $\Delta_{F+GK}(s)=\Delta_{F_{11}+G_1K_1}\cdot\Delta_{F_{22}}$  
+- Abbiamo quindi dimostrato che qualunque paio $( F,G)$ non raggiungibile è algebricamente equivalente al paio $(\bar F,\bar G)$  in S.R.F. raggiungibile
+- Gli autovalori di $F_{11} F_{22}$ non dipendono da $T$ mentre $F_{12}$ può essere portato a $0$
 
 
 # Exercise

@@ -29,16 +29,13 @@ $$\begin{align}
 
 allora $\exists K \in \mathbb R^{m\times n}$ s.t. gli invariant polinomials $\Psi_i(s)$  di $F+GK$ coincidono con $p_1(s),\dots,p_c(s)$.
 $$\Psi_i(s)=p_i(s)\quad \forall i$$
-## Riassunto
-- Tramite l'analisi partendo da $K$ mi trovo gli invariant polynomials
-- Tramite la sintesi partendo dagli invariant polynomials ottengo $K$
-## Proof
+
 #ST-L22-1
-### Casi limite
+#### Casi limite
 - $c=1$
 - $(c=q)\wedge(\deg p_i=k_i\quad i=1\dots c_{=q})$  
-Saltato un trafilette che non ritengo importante
-#### Case 1) c=1
+Saltato un trafiletto che non ritengo importante
+##### Case 1) c=1
 $c=1\iff$ c'è un singolo polinomio invariante $\Psi_1(s)=\Psi_{F+GK}(s)$ con grado: $\deg \Psi_1(s)=n$ allora vuol dire che: [[Cyclic matrix]]
 $$\Psi_1(s)=\Delta_{F+GK}(s)=\Psi_{F+GK}(s)\iff F+GK\ \text{  è ciclica}$$ Sappiamo che è sempre così nel caso [[CEAP m=1|m=1]] 
 $$\big[(F,g)\text { reachable}\Rightarrow(F_+gk,g)\text{ reachable} \Rightarrow F+gk \text{ cyclic}  \big]$$
@@ -48,10 +45,10 @@ $\Rightarrow F+GM_i+g_ik_i$ è cyclic
 
 $(F,G)$ è reachable con i control invariant $k_1\ge k_2\dots k_q\ge 1\quad q= rank\ G$ 
 
-#### Case 2) $(c=q)\wedge(\deg p_i=k_i\quad i=1\dots c_{=q})$ 
+##### Case 2) $(c=q)\wedge(\deg p_i=k_i\quad i=1\dots c_{=q})$ 
 Prima risolviamo il problema per un tipo specifico di paia e poi lo generaliziamo per ogni paio raggiungibile.
 
-![[MCCF Multivariable Controllable Canonical Form#Theorem]]
+![[MCCF Multivariable Controllable Canonical Form#Theorem [MCCF]]
 E' facile vedere che il paio $(F_c, G_c)$ in MCCF  è reachable con control invariant pari a $k_1,k_2\dots k_q$  
 Vogliamo provare che per questo paio $F_c,G_c$ il *second limit case*  è risolvibile per ogni scelta di $p_1(s),\dots,p_c(s)$
 $$
@@ -121,7 +118,8 @@ k_{21} & k_{22} & \dots & k_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 k_{q1} & k_{q2} & \dots & k_{qn} \\
 \end{bmatrix}
-$$ da ottenere:
+$$
+da ottenere:
 $$
 G_cPS\Delta^{-1}\bar K_c=
 G_cPS\Delta^{-1}=
@@ -172,7 +170,7 @@ x & x & \dots & x \\
 \end{bmatrix}
 $$
 Dove nell'ultima riga di ogni  blocco è presente $p_1(s),\dots,p_c(s)$
-##### Proof
+###### Proof
 Vogliamo provare che gli invariant polynomials di $F_C+G_cK_c$ coincidono con $p_1(s),\dots,p_c(s)$ 
 	Ripasso [[CCF Controlled Canonical Form]]
 - Tutti i blocchi sulla diagonale sono companion matrices e quindi sono cyclic.
@@ -220,10 +218,16 @@ Questo si può ripetere per ogni  miniblocco.
 
 Do conseguenza $F_c+G_cK_c$ ha esattaamente $p_1(S)\dots p_q(s)$  come invariant polynomials
 
+###### Riassunto
 #ST-L23-1
-## Riassunto
 Fino ad ora abbiamo visto che:
 SE
 	$(F_c,G_c)\quad F\in \mathbb R^{n\times n}, G\in\mathbb R^{n\times m}$  in [[MCCF Multivariable Controllable Canonical Form|MCCF]] 
 ALLORA
 	$\forall$ scelta di $q$ polinomi monici $p_1(s)\dots p_q(s)\in\mathbb R^{n\times m}$ s.t. $p_q|\dots|p_2|p_1$ e $\deg p_i=k_i\ \forall i$  $\exists K_c\in \mathbb R^{m\times n}$ s.t. $F_c+G_cK_c$ abbia $p_1(s)\dots p_q(s)$ come invariant polinomials
+
+
+## Riassunto
+- Tramite l'analisi partendo da $K$ mi trovo gli invariant polynomials
+- Tramite la sintesi partendo dagli invariant polynomials ottengo $K$
+## Proof
