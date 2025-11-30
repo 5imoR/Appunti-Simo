@@ -73,4 +73,4 @@ Un esempio è chiamato backtracking e consiste nel prendere uno step, usarlo, no
 Se $t$ è maggiore di $t_0$ viene ridotto di un fattore $\beta$ di conseguenza il risultato di $t$ sarà sempre $t=\min\set{\beta t_0,1}$ 
 
 ![[UNB Gradient Descent]]
-
+ddd

@@ -10,7 +10,8 @@ a meno che il gradiente non sia nullo, ma in quel caso vuol dire che abbiamo rag
 
 ![[Descent Lemma#Descent Lemma]]
 
-Questo implica un upper bound quadratico  sulla funzione $f$  che è minimizzato per:
+#CO-L14-2
+La descent lemma implica un upper bound quadratico  sulla funzione $f$  che è minimizzato per:
 $$\displaystyle\hat y=x-\frac 1 M\nabla f(x)\ \ \text{ e quindi }\ \ t^k=\frac 1M$$
 #### Proof
 Abbiamo $t=\frac 1M$ e la direzione $-\nabla f(x)$ allora:
@@ -23,6 +24,7 @@ f(x^{k*1})&\le f(x^k)+\nabla f(x^k)^T{\color{orange}(x^{k+1}-x^k)}+\frac 1 2M {\
 &=f(x^k)-\underbrace{\frac 1{2M}||\nabla f(x^k)||^2}_{\text{fattore di miglioramento}}
 \end{align}
 $$
+####
 Possiamo dire:
 $$
 \begin{align}
@@ -43,7 +45,7 @@ s\ge \frac{2M(f(x_0)-f(p^*))}\varepsilon
 $$
 Il problema è che per passare da una precisione di $0.1$ a $0.01$ mi servono 10 volte tanti valori
 - Questo si applica anche al caso non convesso, ma non garantisce che quello che otteniamo sia un minimo globale
-Esiste una soluzione migliore data da ![[PL Inequality]]
+Esiste una soluzione migliore data da ![[PL Inequality#Polyak-Lojasiewicz Inequality]]
 Tramite conti e PL inequaliti possiamo arrivare a:
 $$
 \Large

@@ -1,4 +1,5 @@
 [[UnconstrainedOptimization.pdf]]
+#CO-L14-3
 ### Polyak-Lojasiewicz Inequality
 
 $$\frac 12 ||\nabla f(x)||^2\ge m(f(x)-p^*)\quad \forall x\in S\ \text{some } m>0$$

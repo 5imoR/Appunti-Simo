@@ -9,7 +9,7 @@ implica la descend lemma:
 $$f(y)\le \overbrace{\underbrace{f(x)+\nabla f(x)^T(y-x)}_{\text{lower bound}}+\frac 1 2M||y-x||^2}^{\text{upper bound}}$$
 ![[Drawing 2025-11-14 11.46.49.excalidraw]]
 
-## Proo
+## Proof
 #CO-L14-1
 $$
 \begin{align}
