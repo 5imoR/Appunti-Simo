@@ -15,3 +15,8 @@ Data $F\in\mathbb R^{n\times n}$ quanto segue è equivalente:
 Data una nilpotent matrix $F\in\mathbb R^{n\times n}$ definiamo come nilpotency index il più piccolo valore di $\bar k\in\mathbb Z,\quad k>0$ s.t. $F^\bar k=0_{n\times n}$ 
 
 Nilpotency index di $F$ $\equiv$ $\deg \Psi_F(s)=\deg\Psi_1(s)\equiv$ dimensione del più largo miniblock in $J_F$ (associato con $\lambda =0$)
+
+##### NI x SRF
+$$
+\text{nil.index}=\max\set{\text{nil. index di } F_{22},\ \ \text{reach. index di }(F_{11},G_1) }
+$$

@@ -1,4 +1,4 @@
-#ST-L16-3 #DTCT [[State Feedback]]
+#ST-L16-2 #DTCT [[State Feedback]]
 Sia $F\in \mathbb R^{n\times n}$ e $G\in\mathbb R^{n\times m}$ 
 Sotto quali condizioni sul paio $(F,G)$  io posso , per qualunque $n$ numeri complessi (non necessariamente distinti) $\lambda_1\dots\lambda_n\in\mathbb C$  posso sempre determinare una matrice $K$ di dimensioni $m\times n$ s.t. $$\sigma(F+GK)=\set{\lambda_1\dots\lambda_n}$$   
 	Dato che $F+GK$ è reale e quindi $\Delta_{F+GK}(s)\in \mathbb R[s]$. Chiaramente non ogni *n-tupla* di numeri complessi può essere proposta:
