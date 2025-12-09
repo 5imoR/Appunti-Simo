@@ -7,7 +7,7 @@ con un iteration cost di $O(n)$.
 ### Iteration complexity
 Consideriamo la scelta della variabile $x_{jk}$  per aggiornare una scelta a random.
 Assumiamo:
-Ogni componente è Lipschitz continuous, $\nabla_jf(\cdot)$ è M-Lipschitz continuous
+Ogni componente è [[Lipscitz continuity|Lipschitz continuous]], $\nabla_jf(\cdot)$ è M-Lipschitz continuous
 $$|\nabla_j f(x+\gamma e_j) -\nabla_jf(x)|\le M|\gamma|\qquad f\in\mathbb C^n$$
 Per $f\in\mathbb C^2$ equivale a: $|\nabla_{jj}^2f(x)|\le M$
 	Prima stavamo mettendo restrizioni sull'intera Hessian, ora solo sugli elementi della diagonale( weaker restriction )

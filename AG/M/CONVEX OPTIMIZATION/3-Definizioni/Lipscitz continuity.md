@@ -1,0 +1,2 @@
+Una **funzione lipschitziana** è una [funzione di variabile reale](https://it.wikipedia.org/wiki/Funzione_di_variabile_reale "Funzione di variabile reale") che ha una _crescita limitata_, nel senso che il rapporto tra variazione di ordinata e variazione di ascissa non può mai superare un valore fissato, detto **costante di Lipschitz**. È una condizione più forte della continuità
+![[523px-Lipschitz_Visualisierung.gif|200]]

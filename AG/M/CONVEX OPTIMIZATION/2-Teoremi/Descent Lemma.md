@@ -3,7 +3,7 @@ tags:
 ---
 #CO-L13-3
 ## Descent Lemma
-Lipschitz continuous: ($M$ è una costante che non sappiamo)
+ [[Lipscitz continuity|Lipschitz continuous]]: ($M$ è una costante che non sappiamo)
 $$||\nabla f(x)-\nabla(f(y)||\le M||x-y||\forall x,y\qquad \text{Lipschitz continuous}$$
 implica la descend lemma:
 $$f(y)\le \overbrace{\underbrace{f(x)+\nabla f(x)^T(y-x)}_{\text{lower bound}}+\frac 1 2M||y-x||^2}^{\text{upper bound}}$$

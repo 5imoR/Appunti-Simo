@@ -23,6 +23,7 @@ $$
 ### Descent methods
 C'è un miglioramento ad ogni step  
 - $f(x^{k+1})<f(x^k)\quad \forall k$  
+### Subset
 Equivalentemente possiamo creare un subset w.l.o.g.
 $S=\set{x\in dom f|f(x)\le f(x^0)}$     
 	$x^0$ punto di partenza
