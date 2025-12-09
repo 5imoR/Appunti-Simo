@@ -74,4 +74,4 @@ Ogni feature ha il suo peso $\gamma_i$
 $$\lambda ||w||_1\to\sum_i\frac {|w_i|}{\gamma_i}$$
 ### Towards Non Linear Models
 
-First step $h(x)=w^Tx\longrightarrowh(x)=w^T\$
+First step $h(x)=w^Tx\longrightarrow h(x)=w^T$
