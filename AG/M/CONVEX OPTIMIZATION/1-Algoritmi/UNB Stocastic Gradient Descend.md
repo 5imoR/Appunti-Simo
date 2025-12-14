@@ -62,7 +62,7 @@ Per strongly convex function:
 - $t_k=a<\frac 12m$ ci dà: $O(\rho^s)+O(a)$ 
 
 Da questo si può notare che con uno stepsize costante si ottene una convergenza più rapida ma limitata dal valore di $a$
-![[Drawing 2025-11-30 09.13.33.excalidraw]]
+![[probleminside]]
 ### Mini-batch SGD
 Si prende più di un campione(solitamente si sceglie il numero in base alle statistiche della macchina che si usa) ad ogni terazione in modo da avere una approssimazione migliore del vero gradiente a $x^k$.
 I campioni vengono scelti randomicamente e vanno a formare $B^k$ (cambia ad ogni iterazione)

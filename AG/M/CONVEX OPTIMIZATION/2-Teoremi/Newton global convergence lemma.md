@@ -1,4 +1,4 @@
-
+#CO-L17-3
 
 ### Newton global convergence lemma
 Assumiamo [[Newton Method#Newton method|newton method]] con [[Unconstrained Optimization#Line search (backtracking)|backtracking line search]] $\exists 0<\eta\le \frac {m^2}L\qquad \gamma>0$ s.t. iniziando con $t=1$ 

@@ -41,7 +41,7 @@ Assumiamo:
 - $W=\mathbb R^p$ 
 - assumiamo l'inner product in $V$ e $W$ 
 	$<w_1,w_2>\triangleq W_1^TW_2^T\qquad\forall w_1,w_2\in W$
-	$<v_1,v_2>\triangleq V_1^TV_2^T1\quad \qquad\forall v_1,v_2\in V$
+	$<v_1,v_2>\triangleq V_1^TV_2^T\quad \qquad\forall v_1,v_2\in V$
 Sia:
 - $\mathcal A:V\rightarrow W$ una trasformazione lineare
 

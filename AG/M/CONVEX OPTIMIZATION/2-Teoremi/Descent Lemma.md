@@ -7,7 +7,7 @@ tags:
 $$||\nabla f(x)-\nabla(f(y)||\le M||x-y||\forall x,y\qquad \text{Lipschitz continuous}$$
 implica la descend lemma:
 $$f(y)\le \overbrace{\underbrace{f(x)+\nabla f(x)^T(y-x)}_{\text{lower bound}}+\frac 1 2M||y-x||^2}^{\text{upper bound}}$$
-![[Drawing 2025-11-14 11.46.49.excalidraw]]
+![[lowup]]
 
 ## Proof
 #CO-L14-1
