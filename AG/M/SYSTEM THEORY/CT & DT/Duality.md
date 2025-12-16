@@ -143,3 +143,20 @@ $\Sigma_{no}$ non ha alcun effetto sull'output
 $$
 W(s)= H(sI-F)^{-1}G\equiv W_o(s)=H_1(sI-F_{11})^{-1}G_1
 $$
+
+C'è una relazione tra  controllability e reconstructasbility? Nel caso DT, dato che in CT sono già la stessa cosa
+$$
+\begin{align}
+(F,H) \text{ is reconstractable}&\iff \ker F^n\supseteq\ker \mathcal O\\
+&\phantom{ssssss}\Updownarrow\\
+Im\ (F^T)^n\subseteq Im\ \mathcal O^\perp=Im\ \mathcal R_d&\iff (\ker F^n)^\perp\supseteq(\ker \mathcal O)^\perp\\
+\Updownarrow\phantom{sssssssssss}\\
+(F^T,H^T) \text{ is controllable}
+\end{align}
+$$
+Quindi in breve abbiamo che:
+$$(F,H) \text{ is reconstractable}\iff(F^T,H^T) \text{ is controllable}$$
+
+$$
+W_d(s)=G^T(sI-F^T)^{-1}H^T\equiv[H(sI-F)^{-1}G]^T=W(s)^T
+$$

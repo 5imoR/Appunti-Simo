@@ -174,7 +174,7 @@ $$
 Dato un [[Linear discrete time s.s.m.#Strictly Proper|DT system strictly proper]] e supponiamo di conoscere:
 - $u(1)\dots u(k-1)$
 - $y(0)\dots y(k)$ 
-Come abbiamo [[Observation Problems DT#Soluzione del observation problem in [0,k|già visto]] possiamo identificare  la "real initial condition" $x_0$.
+Come abbiamo [[Observability & Reconstructability DT#Soluzione del observation problem in [0,k|già visto]] possiamo identificare  la "real initial condition" $x_0$.
 Nel primo caso  potevamo identificare $x_0$ e di conseguenza anche $x(k)$.
 E' possibile fare lo stesso nel secondo caso?$$x(k)=F^kx(0)+\mathcal R_k\begin{bmatrix}u(k-1)\\u(k-2)\\\vdots\\u(0)\end{bmatrix}$$
 	Si conosce sia $F^k$ che $\small\mathcal R_k\begin{bmatrix}u(k-1)\\u(k-2)\\\vdots\\u(0)\end{bmatrix}$  mentre $x(0)$ è un qualunque vettore in $\hat x_0+X_{[0,k]}^{no}$ 

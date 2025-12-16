@@ -25,7 +25,7 @@ $\phi(x)$ è una costante perchè $x$ è fissata.
 $h(x)$ è un *"gaussian random vector"* (la trasformazione lineare di vettori gaussiani)
 $E[h(x)]=\sum^d_{i=1}\varphi_i(x)E[w_i]=0$ 
 $Var\set {h(x)}=\phi^T(x)\ \big[\gamma I\big]\ \phi(x)$ 
-![[Drawing 2025-12-11 10.15.21.excalidraw]]
+![[gaussianProcesses]]
 Il disegno rappresenta:
 - In verde la probabilità che $h(x)$ passi a quell'altezza, quindi più è "grande" la gaussiana più è probabile che sulla linea tratteggiata passi $h(x)$
 - In arancione una possibile $h(x)$, la nostra candidata
@@ -106,4 +106,4 @@ dove:
 - $\mu_{1|2}=\mu_1\Sigma_{11}\Sigma_{22}^{-1}(Z_2-\mu_2)$
 - $\Sigma_{1|2}=\Sigma_{11}-\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$
 
-Manca la parte di giovedi
+Manca la parte di giovedi e un trafiletto di fine lezione

@@ -63,7 +63,7 @@ $$\hat w_L=\arg\min_{w\in\mathbb R^d}L_S(w)+\lambda||w||_1$$
 	K-cross validation
 - Come cambia la soluzione in funzione di $\lambda$?
 
-![[Drawing 2025-11-25 16.17.03.excalidraw|700]]
+![[Lasso|700]]
 Man mano che si aumenta il valore di $\lambda$ più variabili diventano irrilevanti.
 Le linee tratteggiate sono nel caso della Ridge Regression
 Andando ad utilizzare il $\hat \lambda_{opt}$ della lezione precedente, si possono trovare le variabili utili in quel momento. E' presente un problema: ti sei liberato dei valori inutili MA sei andato a ridurre anche i valori che ti interessano, serve quindi trovare il giusto tradeoff.
