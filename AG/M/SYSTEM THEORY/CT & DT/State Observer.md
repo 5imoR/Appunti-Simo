@@ -150,3 +150,43 @@ A\triangleq T^{-1}FT=\begin{bmatrix}A_{11}&A_{12}\\A_{21}& A_{22}\\\end{bmatrix}
 \underbrace{}_{n-p}\underbrace{}_{p}\phantom{sssssssssssssssssssssssssssss}\phantom{sssssssssssssssasssss}\underbrace{}_\rho\underbrace{}_{n-\rho}
 \end{align}
 $$
+#ST-L29-1
+Di conseguenza il sistema è rappresentato  w.r.t. la nuova base come:
+$$
+\begin{cases}
+W(t+1) = A_{11} W(t) + A_{12} y(t) + B_1 u(t) \\
+y(t+1) = A_{21} W(t) + A_{22} y(t) + B_2 u(t) 
+\end{cases}
+$$
+Introduciamo una nuova variabile di stato $v(t)\triangleq W(t)+Ly(t)$ dove  $L\in \mathbb R^{(n-p)\times p}$ è una design matrix parameter
+$$
+\begin{align*}
+v(t+1) &= W(t+1) + L y(t+1) \\
+&= [A_{11} W(t) + A_{12} y(t) + B_1 u(t)] + L [A_{21} W(t) + A_{22} y(t) + B_2 u(t)]\\
+&= [A_{11} + L A_{21}] W(t) + [A_{12} + L A_{22}] y(t) + [B_1 + L B_2] u(t) \\\\
+W(t+1) &= v(t+1) - L y(t+1) \\
+W(t+1) &= [A_{11} + L A_{21}] W(t) + \underbrace{[[A_{12} + L A_{22}] - [A_{11} + L A_{21}] L]}_{\triangleq M} y(t) + \underbrace{[B_1 + L B_2]}_{\triangleq N} u(t)
+\end{align*}
+$$
+$$
+\begin{align*}
+v(t+1) &= W(t+1) + L y(t+1) \\
+&= [ {\color{lightgreen}A_{11}} W(t) + {\color{lightblue}A_{12}} y(t) + {\color{orange}B_1} u(t)] + L [ {\color{lightgreen}A_{21}} W(t) + {\color{lightblue}A_{22}} y(t) + {\color{orange}B_2} u(t)]\\
+&= [{\color{lightgreen}A_{11} + L A_{21}}] W(t) + [{\color{lightblue}A_{12} + L A_{22}}] y(t) + [{\color{orange}B_1 + L B_2}] u(t) \\\\
+W(t+1) &= v(t+1) - L y(t+1) \\\\
+&= [{\color{lightgreen}A_{11} + L A_{21}}] v(t) + \underbrace{[ [ {\color{lightblue}A_{12} + L A_{22}}] - [ {\color{lightgreen}A_{11} + L A_{21}}] L]}_{\triangleq M} y(t) + \underbrace{[ {\color{orange}B_1 + L B_2}]}_{\triangleq N} u(t)
+\end{align*}$$
+$\Rightarrow v(t+1)=[A_{11}+LA_{21}]v(t)+\begin{bmatrix} M & N \end{bmatrix}\begin{bmatrix} y(t) \\ u(t) \end{bmatrix}$ 
+
+Introduciamo ora un [[State Observer#Full Order Open Loop Observer|FOOLO]]  per $v(t)$
+$$
+\hat v(t+1)=[A_{11}+LA_{21}]\hat v(t)+\begin{bmatrix} M & N \end{bmatrix}\begin{bmatrix} y(t) \\ u(t) \end{bmatrix}\qquad \blacktriangleleft
+$$
+L'estimation error è 
+$$
+e_v(t)\triangleq v(t)-\hat v(t)\qquad e_v(t+1)=(A_{11}+LA_{21})e_v(t)
+$$
+Sappiamo che  
+$$
+e_v(t)_{\forall e_v(0)} \underset{t\to+\infty}{\longrightarrow} 0\iff A_{11}+LA_{21} \text{aspymptoticaly stable}
+$$

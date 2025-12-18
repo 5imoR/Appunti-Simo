@@ -63,7 +63,7 @@ $$
 ### Trovare i valori di $\hat w$ e $\hat b$
 $$\hat w=\sum^m_{i=1}\mu_iy_ix_i$$
  $\hat w$ dipende dalla soluzione dei moltiplicatori di $\hat mu=\arg\max_{\large\substack{\mu\in\mathbb R^n\\\mu\ge 0\\\exists \sum \mu_iy_i=0}} g(\mu)$ 
- ![[Drawing 2025-12-15 16.05.38.excalidraw]]
+ ![[svm qualcosa]]
  Ci interessano solo i valori positivi
  $$
  L(w,b,\mu)=\frac 12||w||^2+\sum^m_{i=1}\mu_if_i(w,b)
