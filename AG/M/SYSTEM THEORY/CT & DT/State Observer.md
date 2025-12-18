@@ -188,5 +188,18 @@ e_v(t)\triangleq v(t)-\hat v(t)\qquad e_v(t+1)=(A_{11}+LA_{21})e_v(t)
 $$
 Sappiamo che  
 $$
-e_v(t)_{\forall e_v(0)} \underset{t\to+\infty}{\longrightarrow} 0\iff A_{11}+LA_{21} \text{aspymptoticaly stable}
+e_v(t)_{\forall e_v(0)} \underset{t\to+\infty}{\longrightarrow} 0\iff A_{11}+LA_{21} \text{ aspymptoticaly stable}
 $$
+Usando la teoria del [[State Observer#Full Orded Closed Loop Observer|FOCLO]]  possiamo dire che 
+$$
+\begin{gather}
+\exists L\in\mathbb R^{(n-p)\times p}s.t. A_{11}+LA_{21} \text{ is asymptotically stable}\\
+\Updownarrow\\
+<A_{11},A_{21}>\text{ is detectable}\\
+\Updownarrow\\
+rank
+\begin{bmatrix} \lambda I_{n-p}-A_{11} \\ A_{21} \end{bmatrix}
+=n-p\qquad \forall\lambda\in\mathbb C\quad |\lambda|\ge 1
+\end{gather}
+$$
+![[Lemma Equivalenza di Osservabilità#Lemma]]
