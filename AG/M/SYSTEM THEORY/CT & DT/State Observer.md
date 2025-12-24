@@ -76,7 +76,7 @@ $$
 \hat y(t)=H\hat x(t) \qquad t\in\mathbb Z+
 \end{cases}
 $$
-![[Drawing 2025-12-15 18.14.18.excalidraw]]
+![[observer]]
 Se definiamo $e(t)=x(t)-\hat x(t)$  allora
 $$
 \begin{align}
@@ -203,3 +203,97 @@ rank
 \end{gather}
 $$
 ![[Lemma Equivalenza di Osservabilità#Lemma]]
+![[Lemma Equivalenza di Osservabilità#Conseguenze]]
+
+Block Diagram of reduced order observer
+![[reducedOrderObserver|600]]
+#### Ex
+Dato un DT sys. 
+$$
+\begin{align}
+&\Sigma:
+\begin{cases}
+x(t+1)&=Fx(t)=
+\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 2 & 0 \\
+1 & 1 & 0 \\
+\end{bmatrix}x(t)\\
+y(t)&=Hx(t)=
+\ \begin{bmatrix}
+1 & 0 & 0 \\
+\end{bmatrix}x(t)
+\end{cases}\\
+&n=3\qquad p=1\\
+\end{align}
+$$
+- Design if possible a full order closed loop DBO
+Il paio può $(F,H)$ lo si può vedere come:
+$$
+F=\begin{bmatrix}
+F_{11} & 0 \\
+F_{21} & F_{22} \\
+\end{bmatrix}\qquad
+H=\begin{bmatrix}
+H_1 & H_2 \\
+\end{bmatrix}
+$$
+Possiamo dire che:
+$\mathcal O=\begin{bmatrix}H_1\\H_1F_{11}\end{bmatrix}=\begin{bmatrix}1 & 0 \\1 & 2 \\\end{bmatrix}$ has full column rank $= 2$
+$\Rightarrow (F_{11},H_1)$ is observable
+$\Rightarrow(F,H)$ è in [[AG/M/SYSTEM THEORY/CT & DT/Duality#3 Standard Observability Form SOB|SOF]] e $F_{22}=[0_{1\times 1}]$ 
+Questo assicura che esiste un DBO
+Set $L=\begin{bmatrix} L_1 \\ L_2 \end{bmatrix}=\begin{bmatrix} a \\ b \\ c \end{bmatrix}$ 
+$$
+F+LH=
+\begin{bmatrix}
+1+a & 2 & 0 \\
+b & 2 & 0 \\
+1+c & 1 & 0 \\
+\end{bmatrix}
+$$
+Per far si che $F+LH$ sia [[Nilpotent matrix|nilpotent]] è sufficiente imporre che  $F_{11}+L_1H{1}=\begin{bmatrix}1+a & 2 \\b & 2 \\\end{bmatrix}$ sia nilpotent ovvero:
+$$
+\begin{align}
+&\det
+\begin{bmatrix}
+z-1-a & -2 \\
+-b & z-2 \\
+\end{bmatrix}=z^2\\\\
+&=(z-1-a)(z-2)-2b\\
+&=z^2+(-3-a)z+(2+2a-2b)\\
+&L=\begin{bmatrix} -3 \\ -2 \\ c \end{bmatrix}\quad c\in \mathbb R
+\end{align}
+$$
+- Design if possible a reduced order observer whose estimation error converges as $(\frac 12)^t$ for almost all initial conditions
+Che vuol dire: $\exists L\in \mathbb R^{2\times 1}$ s.t. $\frac 12\in\sigma(A_{11}+LA_{21})$. Qualunque altro autovalore di $A_{11}+LA_{21}\ge 1$  ha modulo minore di $\frac 12$ 
+
+Questo è possibile perchè:
+- $A_{11}+LA_{21}$ ha dimensione $2$ e quindi ha $2$ autovalori. uno di questi è vincolato e deve valere $0$   ($F_{22}$)
+- l'altro può essere assegnato liberamente e in particolare può essere settato come $\frac 12$ 
+
+$$\sigma(A_{11}+LA_{21})=\set{0,\frac 12}$$
+dato che $H=\ \begin{bmatrix}1 & 0 & 0 \\\end{bmatrix}$ full row rank allora:
+$$
+\begin{align}
+&T^{-1}=\begin{bmatrix} V \\ H \end{bmatrix}=
+\begin{bmatrix}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+\end{bmatrix}\equiv T\\\\
+&A=T^{-1}FT=\begin{bmatrix}
+0 & 1 & 1 \\
+0 & 2 & 0 \\
+0 & 2 & 1 \\
+\end{bmatrix}
+\begin{array}{c}\left.\begin{array}{c}\ \\\ \end{array}\right\}n-\rho \\  \}\rho\phantom{sss}
+\end{array}\\
+&A_{11}=\begin{bmatrix} 0 & 1 \\ 0 & 2 \end{bmatrix}\qquad
+A_{21}=\begin{bmatrix} 0 & 2 \end{bmatrix}\qquad
+L=\begin{bmatrix} a \\ b\end{bmatrix}\\
+&A_{11}+LA_{21}=\begin{bmatrix} 0 & 1+2a \\ 0 & 2+2b \end{bmatrix}=
+\begin{bmatrix} 0 & * \\ 0 & \frac12 \end{bmatrix}\\
+&L=\begin{bmatrix} a \\ -\frac 34\end{bmatrix}\quad a\in\mathbb R
+\end{align}
+$$

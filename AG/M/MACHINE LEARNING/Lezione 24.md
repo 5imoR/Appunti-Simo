@@ -1,4 +1,4 @@
-#ML-L23 
+#ML-L23 [[Lezione 23]]
 ## SVM as regularized ERM
 se $y_i(w^Tx_i+b)\ge1\Rightarrow \xi_i=0$
 se $y_i(w^Tx_i+b)\le1\Rightarrow \xi_i=\underbrace{1-y_i(w^Tx_i+b)}_{ei}$ 

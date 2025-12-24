@@ -1,4 +1,4 @@
-#ML-L23
+#ML-L23 [[Lezione 22]]
 # Support Vector Machine SVM
 \[Binary classification]
 Al momento siamo in grado di separare tramite una retta i nostri campioni.

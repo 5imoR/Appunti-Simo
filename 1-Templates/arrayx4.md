@@ -1,0 +1,19 @@
+$$
+\begin{align}
+\begin{array}{c}
+c
+\end{array}
+&\iff
+\begin{array}{c}
+c
+\end{array}\\
+\Updownarrow  &\qquad  \Updownarrow\\
+\begin{array}{c}
+c
+\end{array}
+&\iff
+\begin{array}{c}
+c
+\end{array}\\
+\end{align}
+$$

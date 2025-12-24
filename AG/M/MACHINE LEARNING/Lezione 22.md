@@ -1,4 +1,4 @@
-#ML-L22-1
+#ML-L22-1[[Lezione 21]]
 # Important
 $X$ gaussiana $\mathcal N(m_x,\Sigma_x)$ 
 $Y=AX+b$  $Y\sim\mathcal N(Am_x+b,\ \ A \big[\ \Sigma_x\ \big] A^T)$ 

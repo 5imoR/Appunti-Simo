@@ -1,4 +1,4 @@
-#ML-L16
+#ML-L16[[Lezione 15]]
 ### Riassunto L15
 - $\Large P_w[y|x]=\frac 1 {1+ {e^{-y\ \hat w^T_{}x}}}$
 

@@ -1,3 +1,4 @@
+#ML-20 [[Lezione 19]]
 ## $l_1$- Regularization
 Può essere usata per fare una selezione sulle variabili
 

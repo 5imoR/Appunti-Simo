@@ -1,4 +1,4 @@
-#ML-L18
+#ML-L18 [[Lezione 17]]
 On Avarange Replace One Stable
 ### Idea
 

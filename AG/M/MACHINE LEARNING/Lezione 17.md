@@ -1,4 +1,4 @@
-#ML-L17
+#ML-L17[[Lezione 16]]
 ### STG for Perceptron
 Partiamo con:
 - $\set{0,1}$ classification

@@ -1,0 +1,19 @@
+$$
+\begin{align}
+\begin{cases}
+c
+\end{cases}
+&\iff
+\begin{cases}
+c
+\end{cases}\\
+\Updownarrow  \qquad\qquad&\qquad\qquad\qquad  \Updownarrow\\
+\begin{cases}
+c
+\end{cases}
+&\iff
+\begin{cases}
+c
+\end{cases}\\
+\end{align}
+$$

@@ -1,4 +1,4 @@
-#ML-L19
+#ML-L19[[Lezione 18 OAROS alg]]
 ## Ridge Regression 
 ### Lin. Reg. with qyadratic loss & $e^2$ regularization
 Abbiamo:

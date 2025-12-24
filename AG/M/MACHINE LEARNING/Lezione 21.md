@@ -1,4 +1,4 @@
-#ML-L21
+#ML-L21 [[Lezione 20]]
 
 # Probabilistic interpretation of Regularization 
 **In particolare [[Lezione 19#Ridge Regression|Ridge Regression]] 
