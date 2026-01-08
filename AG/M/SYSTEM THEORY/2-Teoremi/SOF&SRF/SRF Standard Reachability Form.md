@@ -54,7 +54,7 @@ $$
 
 Siccome $(F,G)$ e $(\bar F,\bar G)$ sono [[R7 Basis of vector spaces and algebraically equivalent system#Definition algebraically equivalent|algebricamente equivalenti]]  sappiamo che $\bar {\mathcal R}=T^{-1}\mathcal R$ 
 e quindi $rank\bar{\mathcal R}=rank \mathcal R =\rho<n$
-Tramite [[Cayley-Hamilton's theorem]] possiamo dire che da $F_11^{\rho}G_1$ in poi è tutto inutile per la reachability quindi:
+Tramite [[Cayley-Hamilton's theorem]] possiamo dire che da $F_{11}^{\rho}G_1$ in poi è tutto inutile per la reachability quindi:
 $$
 \bar{\mathcal R}=
 \begin{bmatrix}

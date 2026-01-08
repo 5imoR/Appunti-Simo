@@ -5,7 +5,7 @@ tags:
 ---
 ## Theorem 
 Dato un paio$(F,G)$ con $F\in\mathbb R^{n\times n}$ e $G\in\mathbb R^{n\times m}$ 
-1. Il paio $(F,G)$ è reachable $\iff rank[z-In-F|G]=n\quad \cancel{\forall z\in \mathbb C}\rightarrow \forall z\in\sigma(F)$ 
+1. Il paio $(F,G)$ è reachable $\iff rank[zIn-F|G]=n\quad \cancel{\forall z\in \mathbb C}\rightarrow \forall z\in\sigma(F)$ 
 	![[PHB Reachability Test#Remark a]]
 	Questo remark ci permette di dover testare questa condizione solo per $\forall z\in\sigma(F)$ 
 2. Il paio non è reachable $\Rightarrow rank[\lambda In-F|G]<n\iff \lambda\in \sigma(F_{22})$

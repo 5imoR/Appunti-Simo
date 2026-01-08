@@ -2,7 +2,7 @@
 tags:
 ---
 #ST-31-2
-## Theorem \[Characterization ofg minimal realizations]
+## Theorem \[Characterization of minimal realizations]
 Data una strictly prtoper rational matrix $W(s)\in\mathbb R(s)^{p\times m}$  ed una $n$-dimensional realization $\Sigma=(F,G,H)$ di $W(s)$ i seguenti sono equivalenti:
 - $\Sigma$ è una [[Realization Theory#Definition [minimal realization|minimal realization]] di $W(s)$
 - $\Sigma$ è un reachable and observable realization di $W(s)$

@@ -85,6 +85,7 @@ x\in \ker R_t^*&\iff R_t^*x=0\in\mathcal U|_{[0,t]}\rightarrow\text{zero functio
 \end{align}
 $$
 	l'ultimo $\iff$ $\Rightarrow$  ovvio $\Leftarrow$ [[Cayley-Hamilton's theorem]]
+
 \* se questo è il caso l'espressione è la zero function ed ha un'unica  *power series expansion* (tutti i coefficienti devono essere $0$) Principle of identity of power series
 $$
 \iff

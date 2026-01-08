@@ -158,7 +158,7 @@ Data una strictly proper rational matrix $W(s)\in\mathbb R^{p\times m}$ uno stri
 - è una realization di $W(s)$
 - per qualunque altra realization $\Sigma$ di $W(s)$ $\dim \Sigma\ge \dim\bar\Sigma=\bar n$ 
 
-### ![[Characterization of minimal realizations#Theorem [Characterization ofg minimal realizations]]
+### ![[Characterization of minimal realizations#Theorem [Characterization of minimal realizations]]
 ![[Alg. to find a minimal realization of a proper rational matrix#Alg]]
 
 ## Ex
@@ -236,3 +236,203 @@ $$
 \end{align}
 $$
 Ha rango $4\Rightarrow (F_o,G_o,H_o)$ è anche reachable di conseguenza minima
+##
+### Proposition \[Minimality in the case m=p=1] 
+	 \[Characterization of minimality for realizations of scalar functions]
+Sia $W(s)\in\mathbb R(s)$ una strictly proper rational function e sia $\Sigma=(F,g,H)$ una n-dimensional realization di $W(s)$
+$$
+\Sigma \text{ è una minimal realization}\iff \text{I polinomi $H$ adj $(sI_n-F)g$ e $\Delta_F(s)$ sono coprimi}
+$$
+
+#### Proof
+#ST-32-1
+##### $\Rightarrow$ by counterpositive
+Assumiamo che esista un minic polinomial $\delta(S)\in\mathbb R(s), \deg \delta(s)\ge 1$ s.t.
+$$
+\begin{align}
+H \text{adj } (sIn-F)g&=\delta(s)\bar n(s)&\exists \bar n(s),\bar d(s)\in\mathbb R[s]\\
+\Delta_F(s)&=\delta(s)\bar d(s)
+\end{align}
+$$
+Nota che:
+- $\bar d(s)$ è monico
+- $\deg \bar d(s)<\deg\Delta_F(s)=n$ 
+Allora
+$$
+W(s)=\frac{\cancel{\delta(s)}\bar n(s)}{\cancel{\delta(s)}\bar d(s)}=\frac{\bar n(s)}{\bar d(s)}
+$$
+Questo implica il Remark alla fine della soluzione del [[Realization Theory#Case 1) $p=m=1$#Remark|problema della realizazione nel primo caso]] ovvero che esiste una realization:
+$$\bar\Sigma\text{ di $W(s)$ con } \dim \bar \Sigma=\deg\bar d(s)<n=\dim \Sigma$$
+Di conseguenza $\Sigma$ non è minima
+	Questa proposition diceva che era una minimal realization, fine prova
+
+##### $\Leftarrow$ by counterpositive
+Assumiamo che  $\Sigma$ non sia minimo. Allora $\exists \bar \Sigma=(\bar F,\bar g,\bar H)$ realizzazione di $W(s)$ con $\dim \bar \Sigma\triangleq \bar n<n=\dim\Sigma$. Possiamo anche calcolare 
+$$
+W(s)=\frac{H \text{adj } (sI_n-F)g}{\Delta_F(s)}
+    =\frac{\bar H \text{adj } (sI_n-\bar F)\bar g}{\Delta_\bar F(s)}
+$$
+Dato che $\deg \Delta_\bar F(s)=\bar n <n=\deg \Delta_F(s)$
+Le due rappresentazioni sono compatibili solo se $H \text{adj } (sI_n-F)g$  e $\Delta_F(s)$ hanno un fattore in comune
+	Questo contraddice la coprimality
+#### Remark 1
+Una conseguenza immediata di questa [[Realization Theory#Proposition [Minimality in the case m=p=1]|proposition]] è che dato uno strictly proper $W(s)\in\mathbb R(s)$ la dimensione di una minimal realization di $W(s)$ coincide con $\deg d(s)$ in qualunque coprime rappresentation $\displaystyle\frac {n(s)}{d(s)}$ di $W(s)$.
+#### Remark 2
+Assumiamo che $W(s)\in\mathbb R(s)$ è strictly proper e $\Sigma(F,g,H)$ è una n-dimensional realization di $W(s)$
+$$
+\begin{align}
+\begin{array}{c}
+\Sigma\text{ is a minimal}\\
+\text{realization}
+\end{array}
+&\iff
+\begin{array}{c}
+\Sigma \text{ is reachable}\\
+\text{ and observable}
+\end{array}\\
+\Updownarrow \qquad\qquad&\\
+\begin{array}{c}
+\text{$H$ adj $(sI_n-F)g$}\\\text{ and $\Delta_F(s)$}\\
+\text{are coprime}
+\end{array}
+\end{align}
+
+$$
+
+##### Conseguenze
+Se  $H \text{adj } (sI_n-F)g$ e $\Delta_F(s)$ hanno un fattore in comune $(s-\lambda)$, $\exists \lambda \in\mathbb C$ allora:
+- $(F,g,H)$ è non reachable o non observable o nessuno dei due
+- $\lambda$ è un autovalore della non-reachable part o del non-observable subsystem o entrambi
+
+Se sappiamo che $\Sigma=(F,g,H)$ è (per esempio) reachable allora automaticamente $\lambda$ sarà un autovalore del non-observable subsystem.
+###### Recall
+$$
+\begin{align}
+\begin{array}{c}
+\text{SISO REACHABLE SYSTEM}\\
+\Sigma=(F,g,H)\\
+\text{with transfer function}\\
+W(s)=\frac{n(s)}{d(s)}\\
+\text{where}\\
+n(s)=\text{$H$ adj $(sI_n-F)g$}\\
+d(s)=\Delta_F(s)
+\end{array}
+\xrightarrow[]{\displaystyle K\in\mathbb R^{1\times m}}
+\begin{array}{c}
+\text{SISO REACHABLE SYSTEM}\\
+\Sigma_K=(F+gK,g,H)\\
+\text{with transfer function}\\
+W_K(s)=\frac{n(s)}{\bar d(s)}\\
+\text{where}\\
+n(s)=\text{$H$ adj $(sI_n-F)g$}\\
+\bar d(s)=\Delta_{F+gK}(s)
+\end{array}
+\end{align}
+$$
+Questo implica che tutte le possibili cancellazioni tra $n(s)$ e $d(s)$ o tra $n(s)$ e $\bar d(s)$ sono relative ad autovalori non-observable e il feedback mi permette di ottenere un observable system $\Sigma_K$ anche se $\Sigma$ non è observable.
+
+## Ex
+Consider the stricltly proper function
+$W(s)=\frac{s+a}{s^2(s+1)}\quad a\in\mathbb R$ 
+- Determine for $\forall a\in\mathbb R$ a minimal realization of $W(s)$
+By remark 1 the dimension if a minimal realization coincides with the degree of the denominator in a coprime rapresentation of $W(s)$.
+Clearly the given rappresentation is coprime $\forall a\ne 0, 1$
+For $a=0$
+$\displaystyle W(s)= \frac 1 {s+(s+1)}=\frac {\color{lightgreen}1}{s^2+{\color {cyan}1}s+\color {orange}0}\to \dim\Sigma_{MIN}=2$
+$$\Sigma_{MIN}=(F_c,g_c,H_c)=\left(
+\begin{bmatrix}
+0 & 1\\\color {orange} 0 &\color {cyan}-1
+\end{bmatrix}
+\begin{bmatrix}
+0\\ 1
+\end{bmatrix}
+\begin{bmatrix}
+\color{lightgreen}1 &0
+\end{bmatrix}\right)
+$$
+For $a=1$
+$\displaystyle W(s)= \frac 1 {s^2}=\frac {\color{lightgreen}1}{s^2}\to \dim\Sigma_{MIN}=2$
+$$\Sigma_{MIN}=(F_c,g_c,H_c)=\left(
+\begin{bmatrix}
+0 & 1\\ 0 &0
+\end{bmatrix}
+\begin{bmatrix}
+0\\ 1
+\end{bmatrix}
+\begin{bmatrix}
+\color{lightgreen}1 &0
+\end{bmatrix}\right)
+$$
+For $a\ne 0,1$ 
+The representation is coprime $\Rightarrow$ $\dim \Sigma_{MIN}=3$
+$$
+\begin{align}
+s^2(s+1)=s^3+s^2+0s+0\\
+\Sigma_{MIN}=\left(
+\begin{bmatrix}
+0 & 1 & 0\\ 0 &0 &1\\ 0 & 0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+0\\0\\ 1
+\end{bmatrix}
+\begin{bmatrix}
+a &1 &0
+\end{bmatrix}\right)
+\end{align}
+$$
+
+- For $a=0$ provide a reachable realization of dimension $3$ is it observable?
+For $a=0$ $\dim\Sigma_{MIN}=2$ therefore a realization of dimension $3$ cannot be minimal. So if we impose it is reachable it cannot be observable. A possible realization of dimension $3$ is
+$$
+\begin{align}
+\Sigma=\left(
+\begin{bmatrix}
+0 & 1 & 0\\ 0 &0 &1\\ 0 & 0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+0\\0\\ 1
+\end{bmatrix}
+\begin{bmatrix}
+0 &1 &0
+\end{bmatrix}\right)
+\end{align}
+$$
+$H$ is not observable since $\mathcal O$ has rank $2<3$
+$$\mathcal O=\begin{bmatrix}
+H_c\\ H_cF_c\\
+H_cF_c^2
+\end{bmatrix}=
+\begin{bmatrix}
+0 &1& 0\\
+0 & 0 & 1\\
+0 & 0 &-1\\
+\end{bmatrix}
+$$
+- Design a state feedback s.t. $\Sigma_K=(F+gK,g,H)$ is also observable
+$$
+\begin{align}
+\begin{array}{c}
+\text{SISO REACHABLE SYSTEM}\\
+\Sigma=(F,g,H)\\
+\text{Reachable but not Observable}\\
+\text{with transfer function}\\
+W(s)=\frac{s}{s^2(s+1)}\\
+\end{array}
+\xrightarrow[\phantom{ssssssssssss}]{*}
+\begin{array}{c}
+\text{SISO REACHABLE SYSTEM}\\
+\Sigma_K=(F+gK,g,H)\\
+\text{Reachable and Observable}\\
+\text{since n(s) and d(s) are coprime}\\
+\text{with transfer function}\\
+W_K(s)=\frac{s}{(s+1)^3}\\
+\end{array}
+\end{align}
+$$
+$*$We impose $\Delta_{F+gK}(s)$ arbitrary but with non zero in zero for istance $\Delta_{F+gK}(s)=(s+1)^3=s^3+3s^2+3s+1$
+
+
+set $K=\begin{bmatrix} k_1 & k_2 &k_3\end{bmatrix}$
+
+$F_c+g_cK_c=\begin{bmatrix}0 & 1 & 0\\ 0 &0 &1\\ k_0 & k_1 & k_2-1\end{bmatrix}\begin{bmatrix}0 & 1 & 0\\ 0 &0 &1\\ -1 & -3 & -3\end{bmatrix}$
+$K=\begin{bmatrix} -1 & -3 &-2\end{bmatrix}$

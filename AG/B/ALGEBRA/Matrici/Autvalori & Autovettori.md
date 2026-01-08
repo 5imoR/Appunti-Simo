@@ -74,7 +74,7 @@ B\cdot v = \vec 0
 $$
 - Esistono più soluzioni quindi non è invertibile (Gramen) e quindi $det(B) =0$
 - $B$ è detto polinomio caratteristico ed il grado è pari all'ordine di $A$
-- $det(A-\lambda\cdot I =0$ è l'equazione caratteristica che fornisce gli autovalori
+- $det(A-\lambda\cdot I) =0$ è l'equazione caratteristica che fornisce gli autovalori
 Quindi per calcolarli si dovrà trovare il valore per il quale:
 $$
 det\left(

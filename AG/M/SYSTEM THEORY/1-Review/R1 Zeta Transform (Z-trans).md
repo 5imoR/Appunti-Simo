@@ -4,7 +4,7 @@ Sia $v(t),\ t\in\mathbb{Z}_t$ una ( possibilmente un valore vettoriale o matrici
 Definiamo la sua *Zeta Transform*(se esiste) la funzione a valori complessi (vettoriali o matriciali) di $z\in \mathbb{C}$ definita come:
 $$
 \begin{align}
-V(z)=\mathcal{Z}[v(t)]\triangleq\sum_{t=0}^{+\infty}v(t)z^-t&=v(0)\quad\ \ + v(1)z^{-1}\quad\ \ \ \ +v(2)z^{-2}\quad\ \ \ +...\\\\
+V(z)=\mathcal{Z}[v(t)]\triangleq\sum_{t=0}^{+\infty}v(t)z^{-t}&=v(0)\quad\ \ + v(1)z^{-1}\quad\ \ \ \ +v(2)z^{-2}\quad\ \ \ +...\\\\
 \{v(t)\}_{t\in\mathbb{C+}}&=v(0)\delta(t)+v(1)\delta(t-1)+v(2)\delta(t-2)+...
 \end{align}
 $$
@@ -89,3 +89,23 @@ $$
 \end{align}
 $$
 
+#GEMINI
+
+| **Segnale nel tempo v(t) (per t≥0)**                 | **Trasformata V(z)**                 | **Riferimento nell'Esercizio**                   |
+| ---------------------------------------------------- | ------------------------------------ | ------------------------------------------------ |
+| **Impulso unitario** $\delta(t)$                     | $1$                                  | Es. 4a                                           |
+| **Gradino unitario** $\delta_{-1}(t)$ oppure $1$     | $\displaystyle\frac{z}{z-1}$         | Es. 4a                                           |
+| **Esponenziale** $a^t$                               | $\displaystyle\frac{z}{z-a}$         | Es. 4a (con $a=1/2$)  <br><br>Es. 4b (con $a=3$) |
+| **Rampa** $t$                                        | $\displaystyle\frac{z}{(z-1)^2}$     | Es. 4b                                           |
+| **Binomiale** $\displaystyle\binom{t}{k}$ (parabola) | $\displaystyle\frac{z}{(z-1)^{k+1}}$ | Es. 4c                                           |
+### Proprietà fondamentali usate
+
+Oltre alle tabelle, gli esercizi sfruttano queste proprietà chiave:
+
+- **Linearità:** $Z[a \cdot v(t) + b \cdot w(t)] = a V(z) + b W(z)$ 
+    
+- **Ritardo temporale:** $Z[v(t-k)] = z^{-k} V(z)$
+    
+- **Moltiplicazione per $a^t$:** Cambia la scala in $z$.
+    
+- **Derivata rispetto a $z$:** Usata per ricavare la trasformata di $t \cdot a^t$ (citata implicitamente nella soluzione 4i dove compare l'operatore derivata $\frac{d}{dz}$ 

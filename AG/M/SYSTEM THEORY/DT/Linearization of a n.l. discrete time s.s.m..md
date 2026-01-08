@@ -63,6 +63,7 @@ $$
 $$
 Allora:
 1. se $F$ è shur stable( $|\lambda|<1$ ) allora $x_e$ è un asymptotic stable equilibrium point di $(A)$
+	$|\lambda|<1$ è come dire $-1<\lambda<1$ 
 2. se $\exists \lambda\in\sigma(F)$ con $|\lambda|>1$ allora $x_e$ NON è un equilibrium point di $(A)$
 3. se $\exists \lambda\in\sigma(F)$con $|\lambda|=1$ e nessun autovalore con $|\lambda|>1$ allora non possiamo dire nulla riguardo $x_e$ 
 	questo è dovuto all'approssimazione di o-piccolo
