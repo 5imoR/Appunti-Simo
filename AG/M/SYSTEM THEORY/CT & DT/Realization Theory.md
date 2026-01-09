@@ -245,7 +245,7 @@ $$
 $$
 
 #### Proof
-#ST-32-1
+#ST-L32-1
 ##### $\Rightarrow$ by counterpositive
 Assumiamo che esista un minic polinomial $\delta(S)\in\mathbb R(s), \deg \delta(s)\ge 1$ s.t.
 $$
