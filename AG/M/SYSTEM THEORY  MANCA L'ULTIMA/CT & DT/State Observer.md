@@ -111,7 +111,7 @@ $$
 \text{ of the unobservable subsystem is asimptoticaly stable}\\
 \end{align}
 $$
-Di conseguenza per la [[AG/M/SYSTEM THEORY/CT & DT/Duality|Duality]]  possiamo ereditare questi risultati:
+Di conseguenza per la [[AG/M/SYSTEM THEORY  MANCA L'ULTIMA/CT & DT/Duality|Duality]]  possiamo ereditare questi risultati:
 ### Proposition: 
 Dato un paio $(F,H)$ con $F\in\mathbb R^{n\times n}$ e $L\in\mathbb R^{n\times p}$  che rappresentano sia un DT che un CT system quello che segue è equivalente:
 - $\exists L\in \mathbb R^{n\times p}$  s.t. $F+LH$ è asintoticamente stabile (ovvero il paio ammette un A.C.L.Observer)
@@ -241,7 +241,7 @@ $$
 Possiamo dire che:
 $\mathcal O=\begin{bmatrix}H_1\\H_1F_{11}\end{bmatrix}=\begin{bmatrix}1 & 0 \\1 & 2 \\\end{bmatrix}$ has full column rank $= 2$
 $\Rightarrow (F_{11},H_1)$ is observable
-$\Rightarrow(F,H)$ è in [[AG/M/SYSTEM THEORY/CT & DT/Duality#3 Standard Observability Form SOB|SOF]] e $F_{22}=[0_{1\times 1}]$ 
+$\Rightarrow(F,H)$ è in [[AG/M/SYSTEM THEORY  MANCA L'ULTIMA/CT & DT/Duality#3 Standard Observability Form SOB|SOF]] e $F_{22}=[0_{1\times 1}]$ 
 Questo assicura che esiste un DBO
 Set $L=\begin{bmatrix} L_1 \\ L_2 \end{bmatrix}=\begin{bmatrix} a \\ b \\ c \end{bmatrix}$ 
 $$

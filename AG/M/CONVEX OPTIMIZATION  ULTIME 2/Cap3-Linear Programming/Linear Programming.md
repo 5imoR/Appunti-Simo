@@ -15,7 +15,7 @@ Non sono ammessi $<$ e $>$  ed essendo che si trattano funzioni lineare è possi
 Di per se non ha molti utilizzi ma può essere usato per risolvere altri tipo di problemi.
 
 - linear equality$\rightarrow$ hyperplane
-- lineaar inequality $\rightarrow$ halfspace
+- linear inequality $\rightarrow$ halfspace
 - fiesible region di un linear program è un polyhedron
 	polyhedron è la versione unbounded di polytope.
 

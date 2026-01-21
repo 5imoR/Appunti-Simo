@@ -1,5 +1,5 @@
 ### Theorem Bases=Vertex
-Un punto $x\in\mathbb R^n$ è il vertice di un non empty polyhedron
+Un punto $x\in\mathbb R^n$ è il vertice di un non empty polyhedron:
 $$P=\{x|Ax=b,x\geq0\} \iff x \text{ è una b.f.s. del sistema } Ax=b$$
 #CO-L6
 #### Corollario

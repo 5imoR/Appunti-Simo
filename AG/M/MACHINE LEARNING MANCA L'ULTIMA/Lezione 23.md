@@ -47,7 +47,7 @@ Questo  è convesso con dei vincoli lineari  [[LP.pdf]]
 Quello che si va a massiomizzare è la distanza tra le due righe tratteggiate. La soluzione è supportata da un piccolo subset di dati che corrispondono al Support Vector
 
 ### Lagrange Duality
-[[AG/M/CONVEX OPTIMIZATION/Zdomande|Zdomande]] 
+[[AG/M/CONVEX OPTIMIZATION  ULTIME 2/Zdomande|Zdomande]] 
 $$
 y_i(w^T x_i+b)\ge 1\ \to\ (1-y_i(w^Tx_i+b)\le 0)
 $$

@@ -5,7 +5,7 @@ Molto utile in convex optimization.
 Dati:
 - $C, D$  non empty, convex set
 - $C\cap D=\emptyset$ 
-Allora esiste un iperpiano $a\in \mathbb{R}^n\quad a\neq 0$ e $b\in \mathbb{R}$  tali che:
+Allora esiste un iperpiano separatore con $a\in \mathbb{R}^n\quad a\neq 0$ e $b\in \mathbb{R}$  tali che:
 $$
 \begin{align}
 a^Tx\leq b \quad \forall x\in C\\

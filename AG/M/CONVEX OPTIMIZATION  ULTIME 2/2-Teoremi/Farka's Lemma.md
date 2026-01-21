@@ -11,7 +11,7 @@ Il dual problem può essere riscritto come:
 $$
 \begin{cases}
 \max u^Tb\\
-e^T\geq u^TA
+c^T\geq u^TA
 \end{cases}
 $$
 

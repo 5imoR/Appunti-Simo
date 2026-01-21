@@ -171,7 +171,7 @@ Scelgo $d_1$ entra $x_1$
 - $\alpha=B^{-1}A_1=\begin{bmatrix}6\\3\end{bmatrix}$ $\rightarrow \begin{cases}x_3=24-6x_1\geq0\\x_4=6-3x_1\geq0\end{cases}$  
 - $\theta=\min\set{\frac {24} 6, \frac 6 3}$ 
 $x_4$ è la prima ad arrivare a $0$ quindi non è più una base
-- $B=\set{x_3, x_1}$
+- $\mathcal B=\set{x_3, x_1}$
 - $\beta=B^{-1}b=\begin{bmatrix}1&-2\\0&\frac 1 3\end{bmatrix}\begin{bmatrix}24\\6\end{bmatrix}=\begin{bmatrix}12\\2\end{bmatrix}$
 - $z=c_B^TB^{-1}b=c_B^T\beta=\begin{bmatrix}0&-1\end{bmatrix}\begin{bmatrix}12\\2\end{bmatrix}=-2$ 
 
@@ -186,9 +186,9 @@ $x_4$ è la prima ad arrivare a $0$ quindi non è più una base
 | $\set{x_3,x_1}$ | $\begin{bmatrix}1&6\\0&3\end{bmatrix}$ | $\begin{bmatrix}1&-2\\0&\frac 1 3\end{bmatrix}$ | $\begin{bmatrix}12\\2\end{bmatrix}$ | $\begin{bmatrix}0&0\end{bmatrix}$ | $-1$  | $-1$  | $\begin{bmatrix}6\\3\end{bmatrix}$ | $2$      | $-2$ |
 $\downarrow$
 
-| $\mathcal B$    | $B$                                     | $B^{-1}$                                                                                | $\beta$                                    | $\pi^T$                                   | $d_2$                   | $d_4$                   | $\alpha$                                   | $\theta$                 | $z$  |
-| --------------- | --------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------- | ----------------------- | ----------------------- | ------------------------------------------ | ------------------------ | ---- |
-| $\set{x_2,x_1}$ | $\begin{bmatrix}4&6\\-2&3\end{bmatrix}$ | $\begin{bmatrix} \frac{1}{8} & -\frac{1}{4}\\ \frac{1}{12} & \frac{1}{6} \end{bmatrix}$ | $\begin{bmatrix}\frac 3 2\\3\end{bmatrix}$ | $\begin{bmatrix}0&-\frac 13\end{bmatrix}$ | $\displaystyle-\frac53$ | $\displaystyle\frac 13$ | $\begin{bmatrix}8\\-\frac 23\end{bmatrix}$ | $-\displaystyle\frac 92$ | $-2$ |
+| $\mathcal B$    | $B$                                     | $B^{-1}$                                                                                | $\beta$                                    | $\pi^T$                                   | $d_2$                   | $d_4$                   | $\alpha$                                   | $\theta$                | $z$  |
+| --------------- | --------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------- | ----------------------- | ----------------------- | ------------------------------------------ | ----------------------- | ---- |
+| $\set{x_2,x_1}$ | $\begin{bmatrix}4&6\\-2&3\end{bmatrix}$ | $\begin{bmatrix} \frac{1}{8} & -\frac{1}{4}\\ \frac{1}{12} & \frac{1}{6} \end{bmatrix}$ | $\begin{bmatrix}\frac 3 2\\3\end{bmatrix}$ | $\begin{bmatrix}0&-\frac 13\end{bmatrix}$ | $\displaystyle-\frac53$ | $\displaystyle\frac 13$ | $\begin{bmatrix}8\\-\frac 23\end{bmatrix}$ | $\displaystyle\frac 32$ | $-2$ |
 $x=[3\ \frac 32\ 0\ 0]$ 
 #### Terza iterazione:
 
@@ -249,6 +249,7 @@ $$
 \begin{cases}
 \min x_1+x_2+2x_3+4x_4\\
 2x_2-3x_4=1\\
+x_1-x_4=0\\
 -x_1-x_3=1
 \end{cases}
 $$

@@ -26,7 +26,7 @@ E[\ f(x^{k+1})\ ]&\le f(x^k)-\frac 1{2M}E_{j\sim\mathcal U}[\ |\nabla_{jk}f(x^k)
 &=f(x^k)-\frac1{2M{\color{orange}n}}|\nabla f(x^k)|^2\\
 \end{align}$$
 Il gradient descent era: $f(x^{k+1})\le f(x^k)-\frac 1{2M}||\nabla f(x^k)||^2$ quindi ora il progresso è $n$ volte più piccolo. Guadagno $n$  fattori nell'iteration cost ma servono $n$ più iterazioni
-Se si assume strong convexiti questo risultato non cambia.
+Se si assume strong convexity questo risultato non cambia.
 
 Perchè torna utile in pratica?
 Per via di $M$ nella descent lemma. $M$ nel less dimension case è solitamente più piccolo. I vincoli sono più piccoli e possiamo prendere step più grandi.

@@ -23,7 +23,7 @@ $f(x)=\frac 1 {|D|}\sum_{i\in D}f_i(x)\quad O(n\cdot|D|)$  può succedere che $|
 	- $|D|$ numero di campioni
 	- $n$ numero di features
 ### Proof
-[[UnconstrainedOptimization.pdf#page=7|SGD.pdf]] 
+[[Unconstrained.pdf#page=7|SGD.pdf]] 
 
 $$
 \begin{align}

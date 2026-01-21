@@ -66,8 +66,8 @@ u \text{ free}
 $$
 ### Weak duality
 dati:
-- $\bar x\in P$ 
-- $\bar u \in D$
+- $\bar x\in Primal$ 
+- $\bar u \in Dual$
 allora è sempre vero che:
 $\bar u^T b\leq c^T\bar x$ 
 

@@ -1,63 +1,4 @@
-#ML-L26 [[Lezione 25]]
-### Gaussian Mixture Model GMM for clustering
-![[GMMforclustering|1000]]
-- $k$ clusters
-- $x\in\mathbb R^d$
-- $P(x)=\sum^k_{j=1}\pi_j p_j(x)$
-	- $1\ge\pi_j\ge 0$  dove $\pi_l$ è il numero di elementi di ogni cluster
-	- $p_j=p(x_i|z_i=j)\sim\mathcal N(\mu_j,\Sigma_j)$ 
-Il procedimento per trovare $x_i$ è campionare $z_i$ per poi campionare $x_i$ da $p(x_i|z_i)$ 
-
-$$
-\begin{align}
-p(x_i)&=\sum^k_{j=1}p(x_i|z_i=j)p(z_i=j)\\
-&=\sum_{j=1}^k p(x_i|z_i=j)\pi_j
-\end{align}
-$$
-### Assumption
-$\set{x_i}\in[m]$ 
-$$
-p(x_i)=\sum^k_{j=1}p(x_i|z_i=j)\pi_j\qquad (1)
-$$
-### Problem 1
-Dato $\set{x_i}$ stimare i parametri del modello $(1)$ ovvero:
-$$
-\theta=\set{\mu_j,\ \Sigma_j,\ \pi_j,\ j=1\dots k}
-$$
-### Problem 2
-Assumiamo che $\theta$ sia fissato e conosciuto, dato un nuovo datapoit  $x$ bisogna decidere a quale cluster appartenga
-
-Dato $\theta$ è possibile calcolare per ogni $x$ 
-$$
-p(z=j|x)=\frac{p(x|z=j)p(z=j)}{p(x)}
-$$
-La soluzione del problema 1 si risolve con il maximum likelihood:
-$$
-\hat \theta_{ML}=\arg\max \underbrace{P_{\theta}(x_1,\dots,x_m)}_{\displaystyle\prod^m_{i=1}\underbrace{P_\theta(x_i)}_{\displaystyle=(1)}}
-$$
-Si vuole introdurre una procedura iterativa che produca la sequenza di estimator $\hat\theta^{(k)}$  in modo tale che:$$\lim_{k\to\infty} \hat\theta^{(k)}=\hat \theta_{ML}$$
-	$$\frac{\log P_\theta(\underline x)}{m}=\frac1m\sum_{i=1}^m\log p_\theta(x_i)\quad\text{non so che sia}$$
-
-Quello che troviamo non è convesso rispetto a $\theta$ e quindi si può trovare un massimo locale invece che globale
-
-## EM-algorithm (expected maximization)
-Dobbiamo migliorare ad ogni step
-Si crea una stima di $\log p_\theta(x_1,z_1,\dots, x_m,z_m)$
-$$
-\begin{align}
-Q(\ \theta,\hat\theta^{(k)})=\underbrace{E_{P_{\hat\theta^{(k)}}(\underline Z|\underline X)}
-[\log p_\theta(X,Z)]}+c\qquad (2)\\
-\sum^k_{z_1=1}\dots\sum^k_{z_m=1}\log p_\theta(x_1,z_1\dots x_m,z_m)\cdot p_{\hat\theta^{(k)}}(z_1|x_1)\dots p_{\hat\theta^{(k)}}(z_m|x_m)
-\end{align}
-$$
-#### Gli step di questo algoritmo sono:
-Inizializzazione di $\hat\theta^{(0)}$ fissata per $k=1,2\dots$ 
-- Calcolo $Q(\theta,\hat\theta^{(k-1)})$ come in $(2)$    (Expectation step)
-- $\hat \theta^{(k)}=\arg\max Q(\theta,\hat\theta^{(k-1)})$             (Maximization step)
-![[EM algorithm]]
-
-
-![[KL divergence (kulback lieber)#KL divergence (kulback lieber)]]![[KL divergence (kulback lieber)#Theorem]]
+#ML-L27
 ### E-step
 #### I
 $$\begin{aligned} Q(\theta,\hat{\theta}^{(k)}) &:= E_{p_{\hat{\theta}^{(k)}}(z|x)}[\log(p_{\theta}(x|z)p_{\theta}(z))] \\ &= E_{p_{\hat{\theta}^{(k)}}(z|x)} \left[ \sum_{i=1}^{m} \log(p_{\theta}(x_i|z_i)p_{\theta}(z_i)) \right] \\ &= \sum_{i=1}^{m} E_{p_{\hat{\theta}^{(k)}}(z_i|x_i)} [\log(p_{\theta}(x_i|z_i)p_{\theta}(z_i))] \\ &= \sum_{i=1}^{m} \left\{ \sum_{l=1}^{K} \log(p_{\theta}(x_i|z_i=l) \underbrace{p_{\theta}(z_i=l)}_{\Large\pi_l}) \underbrace{p_{\hat{\theta}^{(k)}}(z_i=l|x_i)}_{\Large w_{li}} \right\} \\ &= \sum_{i=1}^{m} \left\{ \sum_{l=1}^{K} \log(p_{\theta}(x_i|z_i=l)\pi_l)w_{li} \right\} \end{aligned}$$
@@ -130,5 +71,13 @@ non è perfetto ma per dare un idea
 - $x_i\in\mathbb R^d\quad d=2$
 - $i=1\dots m\quad m=11$
 - ${\Large\color{#1971c2}\bullet} \equiv \hat x_i$    
+
+$\hat x_i\simeq x_i$ 
+$\hat x_i = V\alpha_i\qquad V\in\mathbb R^{d\times k}\quad k<<d$ 
+Nell'esempio del disegno si ha $k=1\quad d=2\quad V=v_1\in \mathbb R^d=\mathbb R^2$ 
+Quello che dobbiamo fare matematicamente è trovare $V$ e $\alpha_i\quad i\in[m]$ 
+tali che vadano a minimizzare:
+$$\frac 1m \sum^m_{i=1}||x_i-V\alpha_i||^2\qquad \alpha_i\in\mathbb R^k$$
+
 Immaginiamo di avere un immagine $I(t)\in\mathbb R^{200\times 300}\quad t\in[1,300]$  
 se $x(t)=\text{vectorization }(I(t))\qquad x(t)\in\mathbb R^{200\times 300}$ 
