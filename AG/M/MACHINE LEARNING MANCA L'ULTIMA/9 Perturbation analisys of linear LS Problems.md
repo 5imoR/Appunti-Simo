@@ -1,4 +1,4 @@
-#ML-L9 [[SVD Singular Value Decomposition]] LS=Least Square
+#ML-L09-3 [[SVD Singular Value Decomposition]] LS=Least Square
 ## Deterministic worst case perturbation analysis
 $\hat w =\arg\min_w ||Y-Xw||^2\qquad X=U_1S_1V_1^T$ 
 tramite [[Pseudo Inverse of the matrix A]] possiamo dire che:
@@ -36,9 +36,8 @@ $\Delta w=\displaystyle\max_{\substack{\Delta Y\\||\Delta Y||=\delta}}||\underbr
 
 	scrivendolo nella forma:
 	$\displaystyle\max_{\substack{\Delta Y\\||\Delta Y||=\delta}}||Av||=\delta\frac 1 {\sigma_k(x)}$
-	si può vedere che è la stessa formula per trovare la direzione dell'amplificazione massima nell' [[Singular Value Decomposition|SVD]].
+	si può vedere che è la stessa formula per trovare la direzione dell'amplificazione massima nell' [[SVD Singular Value Decomposition|SVD]].
 Il massimo è ottenuto quando $\Delta Y=\delta u_k$ dove $U_1=[u_1,\dots, u_k]$ 
-#ML-HW-L9
 	Dimostra questo massimo
 
 
@@ -105,8 +104,9 @@ $$
 		motivato dal teorema del limite centrale
 Possiamo dire che:
 $$\begin{align}
-&E=\begin{bmatrix}e_1\\\vdots\\e_m\end{bmatrix}\rightarrow \mathbb E(E)=0\rightarrow \mathbb{E}(E)=\begin{bmatrix}0\\\vdots\\0\end{bmatrix} \\
-&Var[E]=\mathbb E\Big[\ \underbrace{(E-\mathbb E(E))}_{1\times m}\underbrace{(E-\mathbb E(E))^T}_{m\times 1}\ \Big]=\sigma^2\underbrace{Im}_{m\times m}\\\\
+&E=\begin{bmatrix}e_1\\\vdots\\e_m\end{bmatrix}\rightarrow \mathbb E(e_i)=0\rightarrow \mathbb{E}(E)=\begin{bmatrix}0\\\vdots\\0\end{bmatrix} \\
+&Var[E]=\mathbb E\Big[\ \underbrace{(E-\mathbb E(E))}_{m\times 1}\underbrace{(E-\mathbb E(E))^T}_{1\times m}\ \Big]=\sigma^2\underbrace{Im}_{m\times m}
+\\\\
 \Rightarrow&\mathbb E[\tilde w]= \mathbb E\Big[\ \underbrace{(X^TX)^{-1}X^T}_{\text{fixed}}E\ \Big]=(X^TX)^{-1}X^T\ \mathbb E(E)=0\\
 &Var[\tilde w]=\mathbb E[\tilde w\ \tilde w^T]=\mathbb E\Big[\ (X^TX)^{-1}X^TE\ E^TX(X^TX)^{-1}\ \Big]\\
 &\qquad\qquad\qquad\qquad\,=\underbrace{(X^TX)^{-1}X^T}_{*}\ \  \underbrace{\mathbb E(E\ E^T)}_{Var\ E=\sigma^2I}\ \ \underbrace{X(X^TX)^{-1}}_{*^T}\\

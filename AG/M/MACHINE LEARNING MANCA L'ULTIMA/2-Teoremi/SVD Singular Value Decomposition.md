@@ -1,4 +1,4 @@
-#ML-L7
+#ML-L07-2
 #### Riassunto
 $$\begin{align}
 A=USV^T=U_1S_1V^T_1
@@ -13,8 +13,8 @@ $$
 $$
 Dove:
 $$
-U^TU=UU^T=Im\qquad
-V^TV=VV^T=Im
+U^TU=UU^T=I_n\qquad
+V^TV=VV^T=I_m
 $$
 Quindi le colonne di $U$ sono ortonormali(righe di $U^T$ ortonormali)
 $$
@@ -52,9 +52,9 @@ $$
 Qual'è la direzione in $\mathbb R ^m$ lungo la quale la nostra trasformazione lineare($L(A)$ ) da l'amplificazione massima?
 $\sup_{v\in\mathbb R^m}||Av||=\sigma_1$ 
 
-#ML-L8
+#ML-L08-1
 $\arg \max _{\substack{v\in\mathbb R^m\\||v||=1}}||Av||\subseteq\arg\max_{v\in\mathbb R^m}\frac{||Av||}{||v||}$ 
-	usiamo la norma di v perchè noi interessa solo la direzione non il modulo 
+	usiamo la norma di v perchè a noi interessa solo la direzione non il modulo 
 
 - $v_1=\arg \max _{\substack{v\in\mathbb R^m\\||v||=1}}||Av||$ se da più di un massimo vanno bene entrambi
 - $u_1=\frac{Av_1}{||Av_1||}$

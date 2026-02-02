@@ -1,6 +1,6 @@
 #ML-L19[[Lezione 18 OAROS alg]]
 ## Ridge Regression 
-### Lin. Reg. with qyadratic loss & $e^2$ regularization
+### Lin. Reg. with quadratic loss & $e^2$ regularization
 Abbiamo:
 $H=\set{h_w(x):h_w(x)=w^Tx,w\in \mathbb R^d}$ 
 $\hat W_R=\hat w_{RR}=\arg\min_{w\in\mathbb R^d}\underbrace{\frac 1m ||Y-Xw||^2}_{L_S(w)}+\lambda\underbrace{||w||^2}_{\sum^d_{i=1}w_i^2}$ 

@@ -23,4 +23,15 @@ $$
 
 \end{align}
 $$
+VETTORI
+$$
+\begin{align}
+&\text{varianza}\\
+&Var[X]=E[(X-\mu x)(X-\mu x)^T]\qquad \mu x=E[X]\\\\
+&\text{derivazione di X}\\
+&\sigma^2 x={Var[X]}
+
+\end{align}
+$$
+
 ---

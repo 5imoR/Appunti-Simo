@@ -56,11 +56,11 @@ $$
 \hat w_{ML}&=\arg\max_{\large w\in\mathbb R^d} \prod^m_{i=1} \frac 1{1+e^{-y_iw^Tx_i}}\\\\
 &=\arg\max_{\large w\in\mathbb R^d}\log \left(\prod^m_{i=1} \frac 1{1+e^{-y_iw^Tx_i}}\right)\\
 &=\arg\min_{\large w\in\mathbb R^d}-\log \left(\prod^m_{i=1} \frac 1{1+e^{-y_iw^Tx_i}}\right)\\
-&=\arg\min_{\large w\in\mathbb R^d}-\frac 1m\sum_{i=1}^m\log \left(\underbrace{1+e^{-y_iw^Tx_i}}_{Log\ Loss}\right)
+&=\arg\min_{\large w\in\mathbb R^d}\frac 1m\sum_{i=1}^m\log \left(\underbrace{1+e^{-y_iw^Tx_i}}_{Log\ Loss}\right)
 \end{align}
 $$
 Come risolviamo:
-$$\hat w_{ML}=\arg\min_{\large w\in\mathbb R^d}\underbrace{-\frac 1m\sum_{i=1}^m\log \left({1+e^{-y_iw^Tx_i}}\right)}_{\large L_S(w)}$$?
+$$\hat w_{ML}=\arg\min_{\large w\in\mathbb R^d}\underbrace{\frac 1m\sum_{i=1}^m\log \left({1+e^{-y_iw^Tx_i}}\right)}_{\large L_S(w)}$$?
 $\displaystyle\frac{\partial L_s}{\partial{w}}=\frac 1m\sum_{i=1}^m{\Huge\frac{-y_ix_ie^{-y_iw^Tx_i}}{1+e^{-y_iw^Tx_i}}}=0$  
 Sappiamo che $L_s(w)$ è convessa
 ### Gradient descent methods

@@ -1,4 +1,4 @@
-#ML-L6[[MACHINE LEARNING]]
+#ML-L06-1[[MACHINE LEARNING]]
 ## Prediction problem
 Dato un Sample serve trovare una funzione adeguata
 ![[Prediction problem]]
@@ -127,7 +127,7 @@ $$
 $L_S(w)=\frac 1 m \sum_1^m e_i^2=\frac 1 m E^T E=\large\frac 1 m [Y^TY-Y^TXw-w^TX^TY+w^TX^TXw]$ 
 
 ## Regression 
-#ML-L7 
+#ML-L07-1 
 ### Linear Regression
 $$
 Y=\begin{bmatrix}
@@ -222,7 +222,8 @@ Si può verificare che:
 
 Quindi possiamo vedere $X^TY=(X^TX)w$ come: $b=Aw$ 
 
-- C'è sempre una soluzione?
+- C'è sempre una soluzione? SI
+	se $A$ full rank e quadrata
 	$\exists w$ s.t. $Aw=b\iff b\in Im(A)= Range\ A=col\ span(A)$
 	**Remark**
 	$x^Tx\in \mathbb R^{d\times d}$ 
@@ -237,7 +238,7 @@ Quindi possiamo vedere $X^TY=(X^TX)w$ come: $b=Aw$
 	quindi $w^* + \tilde w$ è una soluzione $\forall \tilde w \in ker(A)$   
 - Come le troviamo?
 	
-#ML-L8 
+#ML-L08-2 
 $w\in \arg\min L_s(w)=\frac 1 m ||Y-Xw||^2\iff (X^TX)w=X^TY$ 
 
 Se  $X^TX$ non è invertibile?[[SVD Singular Value Decomposition|Si usa SVD]]
@@ -247,7 +248,7 @@ Se  $X^TX$ non è invertibile?[[SVD Singular Value Decomposition|Si usa SVD]]
 - $X^TX=(V_1S_1\cancel{U_1^T})(\cancel{U_1}S_1V_1^T)=V_1S^2V_1^T$  
 $w$ è tale da:
 $(V_1S_1^2V_1^T)w=V_1S_1U_1^TY\iff (X^TX)w=X^TY$
-  \*                        **   
+  \*                                                       **   
 ### Lemma
 $w^*=V_1S_1^{-1}U^T_1Y$ 
 - $w^*$ è una soluzione di  * e **

@@ -1,4 +1,4 @@
-#ML-L14 
+#ML-L14-2 
 ### Classification rule
 
 $$h_{w,b}=sign\set{w^Tx}$$
@@ -27,7 +27,7 @@ $$\large P_w[y|x]=\frac 1 {1+ {e^{-y\ w^Tx}}}$$
 si ottiene $P_w[y|x]$ andando a mappare $w^Tx(\in P)$ nell' intervallo $[0,1]$ 
 	(andando ad ottenere una probabilità)
 
-$P_w[y|x]=\sigma(z)\ \circ\ w^Tx$   ottenendo:             $\large\displaystyle\sigma(z)= \frac1 {1+e^z}$             $z=-y\ w^Tx$ 
+$P_w[y|x]=\sigma(z)\ \circ\ yw^Tx$   ottenendo:             $\large\displaystyle\sigma(z)= \frac1 {1+e^z}$             $z=-y\ w^Tx$ 
 
 ![[mapping logistic]]
 $\Rightarrow$ possiamo calcolare la probabilità come segue:

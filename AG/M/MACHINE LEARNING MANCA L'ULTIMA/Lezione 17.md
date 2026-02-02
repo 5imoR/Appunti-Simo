@@ -41,7 +41,7 @@ Definiamo:
 - $\epsilon_\text{app}=\min L_D(h)+\epsilon$    (approximation) ed è la migliore linear rule
 - $\epsilon_\text{est}=L_D(\hat h_s)-\epsilon_\text{app}$      (estimation) stima dell'errore
 ![[epsilonsauce|1200]]
-$$E[L_D(\hat h_s)=E[\epsilon_\text{est}(H)]+E[\epsilon_\text{app}(H)]$$
+$$E[L_D(\hat h_s)]=E[\epsilon_\text{est}(H)]+E[\epsilon_\text{app}(H)]$$
 $|H^*|$ è l' $m$ migliore ovvero il numero di elementi nel nostro dataset(?)
 
 

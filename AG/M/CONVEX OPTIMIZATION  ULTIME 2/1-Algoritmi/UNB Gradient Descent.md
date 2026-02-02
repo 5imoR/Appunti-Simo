@@ -46,7 +46,7 @@ $$
 Il problema è che per passare da una precisione di $0.1$ a $0.01$ mi servono 10 volte tanti valori
 - Questo si applica anche al caso non convesso, ma non garantisce che quello che otteniamo sia un minimo globale
 Esiste una soluzione migliore data da ![[PL Inequality#Polyak-Lojasiewicz Inequality]]
-Tramite conti e PL inequaliti possiamo arrivare a:
+Tramite conti e PL inequality possiamo arrivare a:
 $$
 \Large
 s\ge \frac{\frac{\log(f(x^0)-p^*)}\varepsilon}{\log\frac 1\rho}=O\left(\log\frac1\varepsilon\right)

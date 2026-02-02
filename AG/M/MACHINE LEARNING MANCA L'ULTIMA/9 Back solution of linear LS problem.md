@@ -1,7 +1,7 @@
-#ML-L9 (LS dovrebbe essere least square)
+#ML-L09-1 (LS dovrebbe essere least square)
 
 - $\hat w =\arg\min\frac 1m||Y-Xw||^2$
-- $x=USV^T=U_1S_1V_1^T$
+- $X=USV^T=U_1S_1V_1^T$
 - $\hat w =V_1S_1^{-1}U_1^TY$ è la soluzione minima
 In un LS problem generico:
 - $w=\arg\min ||b-Aw||^2$

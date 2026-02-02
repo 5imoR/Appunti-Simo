@@ -32,7 +32,7 @@ $x_j=\begin {cases}1\quad \text {se e è }\\0\quad \text{altrimenti}\end{cases}$
 
 $$
 \begin{cases}
-\min\sum_\\
+\min\sum_i\\
 \sum_{j=i\in F_j}x_j\ge 1\qquad \forall i\in I\\
 x_j\in \set{0,1}\qquad \forall j\in\set 1\dots n
 \end{cases}

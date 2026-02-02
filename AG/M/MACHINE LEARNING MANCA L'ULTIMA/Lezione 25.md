@@ -20,6 +20,7 @@ $$
 y=\underbrace{\sum^N_{i=1}\alpha_i\sigma\left(\sum^d_{j=1}w_{ij}[x]_j+w_{i,d+1}\right)+\alpha_{N+1}}_{\large h_\theta(x)}
 $$
 $\theta$ è l'insieme di tutti gli $w_{ij}$ e gli $\alpha_i$  con $i\in[1,N+1]\quad j\in[1,d+1]$ 
+- $N$ numero di neuroni presenti nell'HL
 
 ## NN for Regression
 Dati:

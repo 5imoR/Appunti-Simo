@@ -1,11 +1,11 @@
 E' iterativo
-#ML-L14
+#ML-L14-1
 ### Binary Classification
 ![[binclass]]
 - $y_i\in\set{0,1}$
 - $(x_i,y_i)\quad i=1\dots m$
 - $w^Tx+b=\begin{bmatrix}w& b\end{bmatrix}\begin{bmatrix}x \\ 1\end{bmatrix}=w^Tx$
-- 
+
 Assumption: i dati sono linearmente separabili.
 # Perceptron alg.
 Computiamo una sequenza $w^{(0)},w^{(1)},\dots$ 
@@ -20,7 +20,7 @@ $(x_i,y_i)$ è errato se $y_i\ w^Tx_i<0$
 ### Theorem
 Se i dati sono linearmente separabili    $\exists w_0$ s.t. $y_iw_0^Tx_i>0\quad \forall i$
 Allora il perceptron alg. termina in  $k=B^2M^2$ steps
-- $B=\max_{i\in[m]}||X||$        $[m]$ sono gli indici di $S$
+- $B=\max_{i\in[m]}||x_i||$        $[m]$ sono gli indici di $S$
 - $M=\min_{w}||W||$           s.t. $y_iw^Tx_i\ge 1\quad \forall i\in [m]$ 
 #### Remark 
  Questo implica che $\exists c>0$ s.t.
@@ -39,7 +39,10 @@ $$
 ||w^{(k+1)}||^2&=(w^{(k)}+y_ix_i)^T(w^{(k)}+y_ix_i)\\
 &=||w^{(k)}||^2+ \underbrace{||x_i||^2}_{\substack{\le B^2\\y=\set{-1,1}}}+\underbrace{2y_i(w^{(k)})^Tx_i}_{<0}\\
 \\
-||w^{(k+1)}||^2&\le ||w^{(k)}||^2+B^2\\\\&\Rightarrow \Large ||w^{(k)}||^2\le kB^2
+||w^{(k+1)}||^2&\le ||w^{(k)}||^2+B^2\\\\
+&\text{siamo partiti con $w^{(0)}=0$ quindi $w^{(1)}=B^2$ o più generalmente:}\\
+&\Rightarrow \Large 
+||w^{(k)}||^2\le kB^2
 \end{align}
 $$
 ###### 2
@@ -52,6 +55,6 @@ $$
 $$
 ######
 $$\frac{<w^{(k)},w_0>}{\underbrace{||w_0||}_M\ ||w^{(k)}||}\ge \frac k{M\underbrace{||w^{(k)}||}_{\sqrt{kB^2}}}\ge\frac k{M\ \sqrt{kB^2}}=\frac {\sqrt k}{MB}$$
- Inoltre possiamo dire per *cauchy-swartz*(non ho capito)
+ Inoltre possiamo dire per [[Prodotti scalari#Teorema di Cauchy-Schwarz|Cauchy-Schwarz]] 
  $$\left|\frac{<w^{(k)},w_0>}{||w_0||||w^{(k)}}\right|\le1\Rightarrow \frac {\sqrt k}
 {BM}\le 1\Rightarrow k\le M^2B^2 $$ 

@@ -1,9 +1,10 @@
 #ML-L12
 [[11 Confidence Interval]]
 ![[6 Linear Model#Regression#Linear Regression]]
+
 Dato $x_0$ performare una predizione su  $\hat y_0=x^T\hat w$ 
 - l'errore sarà: $\tilde y_0=\hat y_0-y_0=x_0^T(\hat w-w)-e_0$ 
-- Var dell'errore sarà: $Var(\tilde y)x_0^TVar(\hat w)x_0+\sigma^2\qquad Var(\hat w)=\Sigma_w =\sigma^2(X^TX)^{-1}$ 
+- Var dell'errore sarà: $Var(\tilde y)=x_0^TVar(\hat w)x_0+\sigma^2\qquad Var(\hat w)=\Sigma_w =\sigma^2(X^TX)^{-1}$ 
 Vogliamo calcolare  $L_D$ associata con $\bar w$
 $$L_D=E[\underbrace{l(\bar w,z)}_{square\ loss}] \qquad\hat y=x^T\bar w\qquad l(\bar w, z)=(y-x^T\bar w)^2$$
 Stiamo facendo la media rispetto alla distribuzione $z\sim \mathcal D$ dove $z=(x,y)$ 
@@ -40,9 +41,9 @@ $$
 \\\\
 E[x^T(w-\bar w)+e)^2|x]&=\int x^T(w-\bar w)+e)^2p(y|x)\ dy\qquad p(y|x)\sim \mathcal N(x^Tw,\sigma^2)\\
 E=[l(w,z)|x]&=\int x^T(w-\bar w)+e)^2p(e)\ de\qquad p(e)\sim \mathcal N(0,\sigma^2)\\
-&= [x^T(w-\bar w)]^2+e^2+2ex^T(w-\bar w)\\
-&=[x^T(w-\bar w)]^2+\sigma^2+0\\
-&=(w-\bar w)^Txx^T(w-\bar w)+\sigma^2\\
+&= \int[x^T(w-\bar w)]^2+e^2+2ex^T(w-\bar w)\\
+&=\int[x^T(w-\bar w)]^2+\sigma^2+0\\
+&=\int(w-\bar w)^Txx^T(w-\bar w)+\sigma^2\\
 \end{align}
 $$
 

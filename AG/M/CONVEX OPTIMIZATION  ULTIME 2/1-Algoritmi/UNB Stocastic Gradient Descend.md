@@ -84,4 +84,4 @@ $$
 $$
 che tende a zero per $|B^k|\to d$
 
-Si possono sviluppare delle regola per andare ad aumentare $|B^k|$ poichè vanno ad aumentare la dimensione di $B$ troppo in fretta. In pratica si raddoppia la dimensione di $B$ quando viene rilevato uno stallo.
+Si potrebbero sviluppare delle regole per andare ad aumentare $|B^k|$  ma iIn pratica si raddoppia la dimensione di $B$ quando viene rilevato uno stallo.

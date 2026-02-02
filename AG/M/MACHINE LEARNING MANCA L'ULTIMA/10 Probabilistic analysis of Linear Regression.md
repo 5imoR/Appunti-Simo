@@ -1,15 +1,15 @@
-#ML-L10
+#ML-L10-1
 ![[6 Linear Model#Regression# Linear Regression]]
 
 Inoltre abbiamo le assunzioni probabilistiche sull'errore: **ASS1**
 ![[9 Perturbation analisys of linear LS Problems#Probabilistic analysis#Assunzioni probabilistiche su E]]
 
 Aggiungiamo un altra assunzione:  **ASS2**
-- $\displaystyle e_i\sim \mathcal N(0,\sigma^2)\rightarrow P(e)=\left(\frac 1 {2\pi\sigma^2}\right)^m\exp\left\{-\frac 1 2\frac{e^2}{\sigma^2}\right\}$  
+- $\displaystyle e_i\sim \mathcal N(0,\sigma^2)\rightarrow P(e)=\frac 1 {\sqrt{2\pi\sigma^2}}\exp\left\{-\frac 1 2\frac{e^2}{\sigma^2}\right\}$  
 #### Recall
 $P[A_1,A_2]=P[A_1\cap A_2]=A_1\ AND\ A_2=P[A_1]P[A_2]$ 
 ####
-$\displaystyle p(e_1,\dots,e_m)=\prod_{i=1}^m p(e_i)=$$\displaystyle\left(\frac 1 {2\pi\sigma^2}\right)^m\exp\left\{-\frac 1 2\frac{e^2}{\sigma^2}\right\}$  
+$\displaystyle p(e_1,\dots,e_m)=\prod_{i=1}^m p(e_i)=$$\displaystyle\left(\frac 1 {\sqrt{2\pi\sigma^2}}\right)^m\exp\left\{-\frac 12\frac{\sum^m_{i=1}e_i^2}{\sigma^2}\right\}$  
 
 
 #### Fact
@@ -33,11 +33,11 @@ $w\sim \mathcal N(m_w,\Sigma_w)\quad w\in\mathbb R^n$  quant'è la $P(w)$ ?
 
 Dalla seconda assumption possiamo dire che:
 se $e\sim\mathcal N(m,\sigma^2)$
-$\displaystyle P(e)=\left(\frac 1 {2\pi\sigma^2}\right)^m\exp\left\{-\frac 1 2\frac{(e-m)^2}{\sigma^2}\right\}$
+$P(e)=\displaystyle\frac 1 {\sqrt{2\pi\sigma^2}}\exp\left\{-\frac 1 2\frac{(e-m)^2}{\sigma^2}\right\}$
 
 quindi:
 $$
-P(w)=\frac 1 {\sqrt{(2\pi)^n\det\Sigma_w}}\exp\set{-\frac 1 2(w-m_w)^T\Sigma_w^{-1}(w-m_w)}
+P(w)=\frac 1 {\sqrt{(2\pi)^n\det\Sigma_w}}\exp\left\{-\frac 1 2(w-m_w)^T\Sigma_w^{-1}(w-m_w)\right\}
 $$
 Che da uno scalare quindi ok
 

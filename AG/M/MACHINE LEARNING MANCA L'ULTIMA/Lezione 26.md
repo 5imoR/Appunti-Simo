@@ -4,7 +4,7 @@
 - $k$ clusters
 - $x\in\mathbb R^d$
 - $P(x)=\sum^k_{j=1}\pi_j p_j(x)$
-	- $1\ge\pi_j\ge 0$  dove $\pi_l$ è il numero di elementi di ogni cluster
+	- $1\ge\pi_j\ge 0$  dove $\pi_l$ sono le x del cluster rispetto al totale: $\color{lightgreen}\frac6{19}$ 
 	- $p_j=p(x_i|z_i=j)\sim\mathcal N(\mu_j,\Sigma_j)$ 
 Il procedimento per trovare $x_i$ è campionare $z_i$ per poi campionare $x_i$ da $p(x_i|z_i)$ 
 

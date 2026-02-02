@@ -1,5 +1,5 @@
 [[MACHINE LEARNING]]
-#ML-L2 
+#ML-L02-2
 - $x \in X (= \mathbb{R}^d)$
 - $y\in \{0,1\}$
 - $S=\{z_i\quad i=1 ... n\}$ 
@@ -27,7 +27,7 @@ Probabilità d'errore considerando solo il training set
 Probabilità d'errore effettiva
 - $L_D(h) =\mathbb{E}[l(h,z)]$ 
 
-#ML-L3
+#ML-L03-1
 
 **Remark**
 $L_D(h)= 1\cdot P[l(h,z)=1]+0\cdot(1-P(l(h,z)=0)$ 

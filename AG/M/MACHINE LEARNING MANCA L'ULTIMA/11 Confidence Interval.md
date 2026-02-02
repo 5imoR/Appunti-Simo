@@ -1,4 +1,4 @@
-#ML-L10 
+#ML-L10-2 
 ![[confidence|300]]
 Non si vuole sapere solo l'eventuale valore corrispondente all'input, ma anche quanto può essere grande l'errore secondo i nostri dati
 
@@ -22,6 +22,7 @@ $$
 $$
 
 ### Definition
+#ML-L11-1
  Diciamo che $I_x$ è un Confidence Interval di livello $(1-\alpha)\times100\%$ per  $m$ se 
  $$P[I_x\ni m]=1-\alpha$$
 
@@ -49,7 +50,7 @@ $\displaystyle\large I_x=\big[m-\sigma z_{(1-\frac\alpha2)},m+\sigma z_{(1+\frac
 
 
 ## Valutare Confidence of Predictions
-#ML-L11
+#ML-L11-3
 ![[errorofpred]]
 Oltre a dire il valore $\hat y_0$ serve anche conoscere l'intervallo che siamo praticamente sicuri che contiene $y_0$ 
 ### Assunzioni
@@ -70,5 +71,5 @@ $$\begin{align}
 \end{align}$$
 Posso costruire l'intervallo:
 $$\Large
-P[\hat y_0-y_0\in [\hat y_0-\sigma_{\hat y_0}z_{(1-\frac\alpha2)},\hat y_0+\sigma_{\hat y_0}z_{(1-\frac\alpha2)}]=1-\alpha
+P[y_0\in [\hat y_0-\sigma_{\hat y_0}z_{(1-\frac\alpha2)},\hat y_0+\sigma_{\hat y_0}z_{(1-\frac\alpha2)}]=1-\alpha
 $$

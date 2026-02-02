@@ -94,7 +94,7 @@ $$
 x^{k+1}=x^k-t_kG_{t_k}(x^k)
 $$
 ### Proposition 6.3
-Come per  il GD:
+Simile al GD:
 
 $x^*$ è ottimo $\iff G_\alpha(x^*)=0$ 
 

@@ -6,7 +6,7 @@ $P(w)=||w||_1=\sum_{i=1}^d|w_i|$  è chiamato *penalty term*
 
 Si vuole sapere quali $[x]_i$ sono utili per predirre.
 Fin ora usavamo i confidence intervals per rispondere a questa domanda.
-Ora usiamo un regularization term in gradop di mandare a zero i termini $w_i$ che corrispondono alle feature irrilevanti.
+Ora usiamo un regularization term in grado di mandare a zero i termini $w_i$ che corrispondono alle feature irrilevanti.
 #### Example linear prediction
 $h(x)=w^Tx=\sum^d_{i=1}w_i[x]_i$  dove $[x]_i$ non è utile se  $w_i=0$
 
@@ -52,8 +52,8 @@ Quando ci troviamo su un vertice anche in presenza di piccole perturbazioni il p
 Il minimo è al di fuori dei vincoli,il minimo è la tangente $\hat w_1\ne 0\ \hat w_2\ne 0$.
 Questo è un punto differenziabile e tangente alla level curve
 ![[Case 3]]
-### Case  R.R.
-$$\hat w_L=\arg\min_{\substack{w\in\mathbb R^d\\||w||^2\le k}}{\color{orange}\frac 1m ||Y-Xw||^2}+\lambda||w||^2$$
+### Mantenere la sparsità è impossibile R.R.
+$$\hat w_L=\arg\min_{\substack{w\in\mathbb R^d\\||w||^2-k\le 0}}{\color{orange}\frac 1m ||Y-Xw||^2}+\lambda||w||^2$$
 ![[Case RR]]
 Quello nel disegno è un caso sparse, che scompare alla minima perturbazione. La probabilità di essere in uno dei casi sparsi, in questo caso è statisticamente nulla.
 
@@ -75,4 +75,4 @@ Ogni feature ha il suo peso $\gamma_i$
 $$\lambda ||w||_1\to\sum_i\frac {|w_i|}{\gamma_i}$$
 ### Towards Non Linear Models
 
-First step $h(x)=w^Tx\longrightarrow h(x)=w^T$
+First step $h(x)=w^Tx\longrightarrow h(x)=w^T$ manca roba

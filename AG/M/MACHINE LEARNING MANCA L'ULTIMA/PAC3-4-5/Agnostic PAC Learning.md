@@ -1,4 +1,4 @@
-[[PAC Learning]] #ML-L5
+[[PAC Learning]] #ML-L05-1
 ![[LDh_graph|600]]
 
 Sono entrambe strettamente positive

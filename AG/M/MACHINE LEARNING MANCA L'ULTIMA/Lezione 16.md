@@ -25,8 +25,8 @@ $\displaystyle P_w[y=2|x]=\frac {e^{w_2^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}}\cdot \frac {
 - $\Delta_{31}=w_3-w_1$
 - $\Delta_{32}=w_3-w_2$ 
 
-$\displaystyle P_w[y=1|x]=\frac {e^{w_1^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}+e^{w_3^Tx}}=\frac 1 {1+ e^{\Delta_{21}^Tx}+e^{\Delta_{31}^Tx}}$
-$\displaystyle P_w[y=2|x]=\frac {e^{w_2^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}+e^{w_3^Tx}}=\frac 1 {1+ e^{-\Delta_{21}^Tx}+e^{\Delta_{32}^Tx}}$ 
+$\displaystyle P_w[y=1|x]=\frac {e^{w_1^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}+e^{w_3^Tx}}=\Large\frac 1 {1+ e^{\Delta_{21}^Tx}+e^{\Delta_{31}^Tx}}$
+$\displaystyle P_w[y=2|x]=\frac {e^{w_2^Tx}}{e^{w_1^Tx}+e^{w_2^Tx}+e^{w_3^Tx}}=\Large\frac 1 {1+ e^{-\Delta_{21}^Tx}+e^{\Delta_{32}^Tx}}$ 
 #####
 ![[logisticRegin multiclass]]
 	Il prof l'aveva fatta 2D ma ha detto che era 3D

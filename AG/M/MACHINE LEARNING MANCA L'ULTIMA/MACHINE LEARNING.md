@@ -1,12 +1,12 @@
 
-#ML-L1
+#ML-L01-1
 Presentazione del corso e cose inutili
 
 - $\hat .$ valore calcolato = $.^*$ miglior valore possibile
 - $\tilde .$ errore valore calcolato
 - $\bar .$  predittore
 - $.$ valore effettivo
-#ML-L2
+#ML-L02-1
 # Componenti dell'insegnamento
 - Input $x \in X = \mathbb{R}^{d=p}$ \[vettore di $p$ valori dal quale vogliamo fare predizioni]
 - Output $y\in Y$           \[valore che vogliamo prevedere]

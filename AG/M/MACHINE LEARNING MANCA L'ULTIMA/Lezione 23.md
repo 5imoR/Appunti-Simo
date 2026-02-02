@@ -62,7 +62,7 @@ $$
  $$
 ### Trovare i valori di $\hat w$ e $\hat b$
 $$\hat w=\sum^m_{i=1}\mu_iy_ix_i$$
- $\hat w$ dipende dalla soluzione dei moltiplicatori di $\hat mu=\arg\max_{\large\substack{\mu\in\mathbb R^n\\\mu\ge 0\\\exists \sum \mu_iy_i=0}} g(\mu)$ 
+ $\hat w$ dipende dalla soluzione dei moltiplicatori di $\hat \mu=\arg\max_{\large\substack{\mu\in\mathbb R^n\\\mu\ge 0\\\exists \sum \mu_iy_i=0}} g(\mu)$ 
  ![[svm qualcosa]]
  Ci interessano solo i valori positivi
  $$

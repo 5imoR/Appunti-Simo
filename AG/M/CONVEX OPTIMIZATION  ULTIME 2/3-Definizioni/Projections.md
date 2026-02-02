@@ -14,3 +14,4 @@ $$
 
 
 La poiezione di un punto $y$ in un set $C$ è  il punto in $C$ per la quale la distanza da $y$ è minima.
+La denominiamo con $P_C$

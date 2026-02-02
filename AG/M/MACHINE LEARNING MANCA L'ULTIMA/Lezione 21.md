@@ -38,7 +38,7 @@ $$
 \begin{align}
 \hat w_{MAP}=\arg\max_w P(Y|Xw)p(w)
 &=\arg\max \log P(Y|Xw)+\log P(w)\\
-&=\arg\max -\frac 12\frac {||Y-Xw||^2}{\sigma^2}-\frac 12\frac{||w||^2}{\gamma}\cdot 2\cdot\sigma^2\frac 1m\\
+&=\arg\max \left(-\frac 12\frac {||Y-Xw||^2}{\sigma^2}-\frac 12\frac{||w||^2}{\gamma}\right)\cdot 2\cdot\sigma^2\frac 1m\\
 &=\arg\max -\frac {||Y-Xw||^2}{m}-\frac{||w||^2\sigma^2}{m\gamma}\\
 &=\arg\min \underbrace{\frac {||Y-Xw||^2}{m}}_{L_S(w)}+\underbrace{\frac{\sigma^2}{m\gamma}}_\lambda\underbrace{||w||^2}_{p(w)}\qquad \text{uguale a R.R.}\\
 &=\arg\min L_S(w)+\lambda||w^2||
@@ -54,10 +54,10 @@ Yes, $\displaystyle\hat \sigma^2,\hat \gamma=\arg\max_{\sigma^2,\gamma}P_{\sigma
 #### Remark
 $Y=Xw+E=[X\quad I]\begin{bmatrix} w \\ E \end{bmatrix}$ 
 $w$ e $E$ sono indipendenti tra loro,quindi hanno covarianza nulla.
-esiste una matrice dove:$\begin{bmatrix}Var [w] & Cov \\Cov & Var[E] \\\end{bmatrix}$ quindi $\begin{bmatrix} w \\ E \end{bmatrix}=\mathcal N\left(0,\begin{bmatrix}\sigma^2 I& 0 \\0 & \gamma I \\\end{bmatrix}\right)$ 
+esiste una matrice dove:$\begin{bmatrix}Var [w] & Cov \\Cov & Var[E] \\\end{bmatrix}$ quindi $\begin{bmatrix} w \\ E \end{bmatrix}=\mathcal N\left(0,\begin{bmatrix}\gamma I& 0 \\0 & \sigma^2 I \\\end{bmatrix}\right)$ 
 ####
 $E[Y]=[X\quad I]E\begin{bmatrix} w \\ E \end{bmatrix}=0$
-$Var[Y]=[X\quad I]\begin{bmatrix}\sigma^2 I& 0 \\0 & \gamma I \\\end{bmatrix}\begin{bmatrix} w \\ E \end{bmatrix}=\gamma X^TX+\sigma^2I$ 
+$Var[Y]=[X\quad I]\begin{bmatrix}\gamma I& 0 \\0 & \sigma^2 I \\\end{bmatrix}\begin{bmatrix} w \\ E \end{bmatrix}=\gamma X^TX+\sigma^2I$ 
 ### Empirical Bayes
 $$P_{\sigma^2,\gamma}(Y|X)=\frac 1{\sqrt{(2\pi)^m\det(\gamma X^TX+\sigma^2 I)}}\cdot\exp\set{\frac 12 Y^T(\gamma X^TX+\sigma^2 I)^{-1}Y}\quad\text{not convex}$$
 $\displaystyle\hat \sigma^2_{ML},\hat \gamma_{ML}=\arg\max_{\sigma^2,\gamma}P_{\sigma^2,\gamma}(Y|X)\longrightarrow\hat w=\arg\min_w\frac{||Y-Xw||^2}m+\frac{\hat\sigma^2_{ML}}{m\hat\gamma_{ML}}||w||^2$   
@@ -69,3 +69,4 @@ Questo è più generico rispetto a K-fold ma non ce nè uno migliore tra i due.
 $\hat y=h(x)$ non lineare in $x$
 #### (1) 
 $$h_w(x)=\phi$$
+manca
